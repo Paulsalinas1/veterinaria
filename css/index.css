@@ -1,0 +1,21 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+#Menu li > a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f3f3f;
+
+}
+
+#Menu form > button {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.carousel-inner{
+    max-height: 36rem;
+    
+}
