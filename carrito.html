@@ -1,87 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <title>Carrito de Compras</title>
-        <link rel="stylesheet" href="css/carrito.css">
-        <link rel="icon" href="img/logo.png">
-    </head>
-    <body>
-        <header class="cotainer-fluid bg-success d-flex justify-content-center">
-            <p class="text-light pt-3 fs-2"> Veterinaria Santa Marta</p>
-        </header>
-        <!--barra de menu-->
-        <nav class="navbar navbar-expand-sm bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand"><samp class="fw-bold ml-3"><img src="img/logo.png" width="90"></samp></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="tienda.html">Tienda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="adopcion.html">Adopciones</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <div class="dropdown">
-                            <a class="btn btn-success dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Iniciar sesión
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="login_tienda.html">Iniciar sesión</a></li>
-                                <li><a class="dropdown-item" href="registro_tienda.html">Crear cuenta</a></li>
-                            </ul>
-                        </div>
-                    </form>
-                    
-                </div>
-            </div>
-        </nav>
-        <!--listado de productos añadidos al carro-->
-        <div class="container">
-            <h1>Carrito de Compras</h1>
-            <div class="producto">
-                <img src="img/comiaperro.png" alt="Producto 1">
-                <div class="producto-info">
-                    <h3>Royal Canin adulto Mini Adult alimento para perro</h3>
-                    <p>Precio: <span class="precio">$50.000</span></p>
-                    <p>Cantidad: </p>
-                    <input type="number" id="cantidad" name="Cantidad" min="0">
-                </div>
-            </div>
-            <div class="producto">
-                <img src="img/comiaperropollo.png" alt="Producto 2">
-                <div class="producto-info">
-                    <h3>Bravery Chicken Adult alimento para perro</h3>
-                    <p>Precio: <span class="precio">$85.000</span></p>
-                    <p>Cantidad: </p>
-                    <input type="number" id="cantidad" name="Cantidad" min="0">
-                </div>
-            </div>
 
-            <div class="total">
-                Total: $135.000
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="css/carrito.css">
+    <link rel="icon" href="img/logo.png">
+</head>
 
-            <a href="pago.html" class="boton">Comprar</a>
+<body>
+    <header class="cotainer-fluid bg-success d-flex justify-content-center">
+        <p class="text-light pt-3 fs-2"> Veterinaria Santa Marta</p>
+    </header>
+    <!--barra de menu-->
+    <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand"><samp class="fw-bold ml-3"><img src="img/logo.png" width="90"></samp></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="adopcion.html">Adopciones</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <div class="dropdown">
+                        <a class="btn btn-success dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Iniciar sesión
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login_tienda.html">Iniciar sesión</a></li>
+                            <li><a class="dropdown-item" href="registro_tienda.html">Crear cuenta</a></li>
+                        </ul>
+                    </div>
+                </form>
+
+            </div>
         </div>
-                <!-- contactos final -->
-        <header class="cotainer-fluid bg-success text-center">
-            <p class="text-light pt-3 fs-2"> Contactos: </p>
-            <p class="text-light pt-1 fs-2"> vet.santamarta@gmail.com</p>
-        </header>
-    </body>
-</html>            
+    </nav>
+    <!--listado de productos añadidos al carro-->
+    <div class="container">
+        <h1>Carrito de Compras</h1>
+        <div class="producto">
+            <img src="img/comiaperro.png" alt="Producto 1">
+            <div class="producto-info">
+                <h3>Royal Canin adulto Mini Adult alimento para perro</h3>
+                <p>Precio: <span class="precio">$50.000</span></p>
+                <p>Cantidad: </p>
+                <input type="number" id="cantidad" name="Cantidad" min="0">
+            </div>
+        </div>
+        <div class="producto">
+            <img src="img/comiaperropollo.png" alt="Producto 2">
+            <div class="producto-info">
+                <h3>Bravery Chicken Adult alimento para perro</h3>
+                <p>Precio: <span class="precio">$85.000</span></p>
+                <p>Cantidad: </p>
+                <input type="number" id="cantidad" name="Cantidad" min="0">
+            </div>
+        </div>
+
+        <div class="total">
+            Total: $135.000
+        </div>
+
+        <a href="pago.html" class="boton">Comprar</a>
+    </div>
+    <!-- contactos final -->
+    <header class="cotainer-fluid bg-success text-center">
+        <p class="text-light pt-3 fs-2"> Contactos: </p>
+        <p class="text-light pt-1 fs-2"> vet.santamarta@gmail.com</p>
+    </header>
+</body>
+
+</html>
