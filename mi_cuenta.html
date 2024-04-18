@@ -71,18 +71,15 @@
 
 
         <p class="d-inline-flex gap-1 justify-content-center">
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
-                aria-expanded="false" aria-controls="multiCollapseExample1">Datos de la Cuenta</a>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 ">Perfil usuario</button>
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="metodo_Pago">Datos del
-                usuario</button>
+                data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="metodo_Pago">compras revicion</button>
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="metodo_Pago">Datos de la
-                targeta</button>
+                data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="metodo_Pago">historial de compras</button>
         </p>
 
         <div class="row">
-            <div class="col-md-4  col-sm-12">
+            <div class="col-md-4 col-sm-12">
                 <div class="collapse multi-collapse" id="multiCollapseExample1">
                     <div class="card card-body">
                         <div class="col-md-12">
@@ -151,6 +148,18 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-4 col-sm-12">
+                <div class="collapse" id="multiCollapseExample4">
+                    <div class="card card-body">
+                        <div class="col-md-12 mb-1 col-sm-12">
+                            <label for="validationCustom05" class="form-label">Compra 1</label>
+                            <input type="text" class="form-control" id="validationCustom05" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- contactos final -->
