@@ -54,14 +54,15 @@
         <div class="container">
             <h1>Proceso de Pago</h1>
             <!--<form action="procesar_pago.js" method="POST">-->
-                <label for="tarjeta">Número de Tarjeta:</label>
+                <label for="tarjeta">Número de Tarjeta*:</label>
                 <input type="number" id="tarjeta" name="tarjeta" placeholder="Ej: 1234-5678-9101" min="0" required>
 
-                <label for="expiracion">Fecha de Expiración:</label>
+                <label for="expiracion">Fecha de Expiración*:</label>
                 <input type="number" id="expiracion" name="expiracion" placeholder="MM/AA" min="0" required>
 
-                <label for="cvv">CVV:</label>
+                <label for="cvv">CVV*:</label>
                 <input type="number" id="cvv" name="cvv" placeholder="Ej: 501" min="0" required>
+                <label>Método de pago*</label>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="tipoTarjeta" id="visa" value="visa">
                     <label class="form-check-label" for="visa">
@@ -79,6 +80,21 @@
                     <label class="form-check-label" for="mastercard">
                         Paypal
                     </label>
+                </div>
+                <div class="metodo-envio">
+                    <label>Método de envío*</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="metodoEnvio" id="retiroTienda" value="retiroTienda">
+                        <label class="form-check-label" for="retiroTienda">
+                            Retiro en tienda
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="metodoEnvio" id="envioDomicilio" value="envioDomicilio">
+                        <label class="form-check-label" for="envioDomicilio">
+                            Envío a domicilio
+                        </label>
+                    </div>
                 </div>
                 <div class="subtotal">
                     Subtotal: $22.050
