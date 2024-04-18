@@ -20,7 +20,6 @@
     <!-- un pequeño titulo-->
     <header class="cotainer-fluid bg-primary d-flex justify-content-center">
         <p class="text-light pt-3 fs-2"> Veterinaria Santa Marta</p>
-        <!--<img src="Materiales/perro.png" width="90">-->
     </header>
     <!-- Menu-->
 
@@ -75,18 +74,17 @@
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
                 data-bs-target="#multiCollapseExample4" aria-expanded="false" aria-controls="metodo_Pago">Compras revisión</button>
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="metodo_Pago">Historial de compras</button>
+                data-bs-target="#multiCollapseExample5" aria-expanded="false" aria-controls="metodo_Pago">Historial de compras</button>
         </p>
 
         <div class="row">
             <div class="col-md-4 col-sm-12">
                 <div class="collapse multi-collapse" id="multiCollapseExample1">
-                    <div class="card card-body mb-2">
+                    <div class="card card-body">
                         <div class="col-md-12">
                             <label for="validationCustom01" class="form-label">Correo</label>
                             <input type="text" class="form-control" id="validationCustom01" value="" required>
                         </div>
-
                         <div class="col-md-12 col-sm-12 ">
                             <label for="validationCustom01" class="form-label">Contraseña</label>
                             <input type="text" class="form-control" id="validationCustom01" value="" required>
@@ -99,7 +97,7 @@
             </div>
             <div class="col-md-4  col-sm-12">
                 <div class="collapse multi-collapse" id="multiCollapseExample2">
-                    <div class="card card-body mb-2">
+                    <div class="card card-body">
                         <div class="col-md-12 mb-1 col-sm-12">
                             <label for="validationCustom01" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="validationCustom01" value="" required>
@@ -127,7 +125,7 @@
             </div>
             <div class="col-md-4 col-sm-12">
                 <div class="collapse multi-collapse" id="multiCollapseExample3">
-                    <div class="card card-body mb-2">
+                    <div class="card card-body">
                         <div class="col-md-12 mb-1 col-sm-12">
                             <label for="validationCustom05" class="form-label">Targeta de crédito</label>
                             <input type="number" class="form-control" id="validationCustom05" required>
@@ -149,7 +147,7 @@
                 </div>
             </div>
             <div class="col-md-1 col-sm-0"></div>
-            <div class="col-md-10 col-sm-12 mb-2">
+            <div class="col-md-10 col-sm-12">
                 <div class="collapse" id="multiCollapseExample4">
                     <div class="card card-body">
                         <div class="col-md-12 mb-1 col-sm-12">
@@ -158,6 +156,10 @@
                                 <thead>
                                   <tr>
                                     <th scope="col">#</th>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">descripcion</th>
+                                    <th scope="col">precio</th>
+                                    <th scope="col">cantidad</th>
                                     <th scope="col">Nombre producto</th>
                                     <th scope="col">Descripción</th>
                                     <th scope="col">Precio</th>
@@ -185,7 +187,7 @@
                                     <td class="col-md-3">$85.000</td>
                                     <td class="col-md-2"><a href="compras.html" class=" boton bg-success"> Recibo</a></td>
                                     <td class="col-md-2">comida perro</td>
-                                    <td class="col-md-3">comida vaja en calorias </td>
+                                    <td class="col-md-3">comida baja en calorias </td>
                                     <td class="col-md-2">$50.000</td>
                                     <td class="col-md-1">2</td>
                                     <td class="col-md-2">$100.000</td>
@@ -199,17 +201,19 @@
                                     <td class="col-md-3">1</td>
                                     <td class="col-md-3">$60.000</td>
                                     <td class="col-md-2"><a href="compras.html" class=" boton"> Recibo</a></td>
+                                    <td >1</td>
+                                    <td>$60.000</td>
+                                    <td><a href="compras.html" class=" boton"> Resibo</a></td>
                                   </tr>
                                 </tbody>
                               </table>
-
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-1 col-sm-0"></div>
             <div class="col-md-1 col-sm-0"></div>
-            <div class="col-md-10 col-sm-12 mb-2">
+            <div class="col-md-10 col-sm-12">
                 <div class="collapse" id="multiCollapseExample5">
                     <div class="card card-body">
                         <div class="col-md-12 mb-1 col-sm-12">
@@ -222,6 +226,10 @@
                                     <th scope="col">Descripción</th>
                                     <th scope="col">Precio</th>
                                     <th scope="col">Cantidad</th>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">descripcion</th>
+                                    <th scope="col">precio</th>
+                                    <th scope="col">cantidad</th>
                                     <th scope="col">Total</th>
                                   </tr>
                                 </thead>
@@ -233,18 +241,22 @@
                                     <td class="col-md-3">$50.000</td>
                                     <td class="col-md-2">2</td>
                                     <td class="col-md-3">$100.000</td>
+                                    <td class="col-md-2">comida perro</td>
+                                    <td class="col-md-3">comida vaja en calorias </td>
+                                    <td class="col-md-2">$50.000</td>
+                                    <td class="col-md-1">2</td>
+                                    <td class="col-md-2">$100.000</td>
                                   </tr>
                                   <tr>
                                     <th scope="row">2</th>
                                     <td>comida perro</td>
                                     <td>comida para perros de raza x</td>
                                     <td>$60.000</td>
-                                    <td class="col-md-2">1</td>
-                                    <td class="col-md-3">$60.000</td>
+                                    <td >1</td>
+                                    <td>$60.000</td>
                                   </tr>
                                 </tbody>
                               </table>
-
                         </div>
                     </div>
                 </div>
