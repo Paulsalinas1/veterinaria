@@ -40,15 +40,14 @@
                     <div class="dropdown">
                         <a class="btn btn-success dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Iniciar sesión
+                            Mi Cuenta
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="login_tienda.html">Iniciar sesión</a></li>
-                            <li><a class="dropdown-item" href="registro_tienda.html">Crear cuenta</a></li>
+                            <li><a class="dropdown-item" href="mi_cuenta.html">Mi Cuenta</a></li>
+                        <li><a class="dropdown-item" href="tienda.html">Cerrar cuenta</a></li>
                         </ul>
                     </div>
                 </form>
-
             </div>
         </div>
     </nav>
@@ -58,14 +57,14 @@
         <h1>Carrito de Compras</h1>
         <!-- Producto 1 -->
         <div class="producto">
-            <img src="img/comiagato.png" alt="Producto 1">
+            <img src="img/comiaperro.png" alt="Producto 1">
             <div class="producto-info">
-                <h3>Purina gato</h3>
-                <p>Precio: <span class="precio">$14.950</span></p>
+                <h3>Royal Canin adulto Mini Adult alimento para perro</h3>
+                <p>Precio: <span class="precio">$50.000</span></p>
                 <p>Cantidad: </p>
                 <div class="d-flex align-items-center">
                     <button type="button" onclick="decrementarCantidad('cantidad1')">-</button>
-                    <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="5" readonly>
+                    <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="1" readonly>
                     <button type="button" onclick="incrementarCantidad('cantidad1')">+</button>
                 </div>
             </div>
@@ -86,14 +85,14 @@
         </script>
         <!-- Producto 2 -->
         <div class="producto">
-            <img src="img/pulgas.png" alt="Producto 2">
+            <img src="img/comiaperropollo.png" alt="Producto 2">
             <div class="producto-info">
-                <h3>Drontal plus perro</h3>
-                <p>Precio: <span class="precio">$7.100</span></p>
+                <h3>Bravery Chicken Adult alimento para perro</h3>
+                <p>Precio: <span class="precio">$85.000</span></p>
                 <p>Cantidad: </p>
                 <div class="d-flex align-items-center">
                     <button type="button" onclick="decrementarCantidad2('cantidad2')">-</button>
-                    <input type="number" id="cantidad2" name="Cantidad" min="0" step="1" value="1" readonly>
+                    <input type="number" id="cantidad2" name="Cantidad" min="0" step="1" value="2" readonly>
                     <button type="button" onclick="incrementarCantidad2('cantidad2')">+</button>
                 </div>
             </div>
@@ -113,15 +112,15 @@
             }
         </script>
         <div class="subtotal">
-            Subtotal: $22.050
+            Subtotal: $135.000
         </div>
         <div class="iva">
-            IVA: $4190
+            IVA: $25650
         </div>
         <div class="total" style="text-align: left;">
-            Total: $26.240
+            Total: $160.650
         </div>
-        <a href="pago.html" class="boton">Comprar</a>
+        <a href="compras_login.html" class="boton">Comprar</a>
     </div>
     
     <script>
