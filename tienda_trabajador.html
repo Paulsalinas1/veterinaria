@@ -69,6 +69,9 @@
             <!--productos existentes en la tienda-->
             <div class="container">
                 <h1>Tienda Online</h1>
+                <a class="btn btn-success d-flex justify-content-center" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    Añadir producto
+                  </a>
                 </h1>
                 <div class="producto">
                     <img src="img/comiaperro.png" alt="Producto 1">
@@ -251,6 +254,35 @@
                         </form>
                     </div>
                 </div>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Añadir productos</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div>
+                        <p> Ingrese datos del producto </p>
+                        <div class="card card-body">
+                            <div class="col-md-12 mb-1">
+                                <label for="validationCustom01" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="validationCustom01" value="" required>
+                            </div>
+                            <div class="col-md-12 col-sm-12 mb-2 ">
+                                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="file" class="form-control" id="inputGroupFile01">
+                              </div>
+    
+                            <div class="mb-3">
+                                <a class="btn btn-success w-100 " href="#">Agregar</a>
+                            </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
             <!-- Agrega más productos aquí con la misma estructura -->
             <header class="cotainer-fluid bg-success text-center">
                 <p class="text-light pt-3 fs-2"> Contactos: </p>
