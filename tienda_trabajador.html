@@ -11,7 +11,6 @@
         <link rel="icon" href="img/logo.png">
         <!-- Latest compiled JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     </head>
         <body>
             <header class="container-fluid bg-success d-flex justify-content-between align-items-center">
@@ -80,12 +79,27 @@
                         <p class="text-success">Stock disponible: 28</p>
                         <p>Descripción del producto: Alimento para perros de razas pequeñas.</p>
                         <p>Precio: <span class="precio">$50.000</span></p>
-                        
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad('cantidad1')">-</button>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad('cantidad1')">+</button>
+                            </div>
+                            <script>
+                                function incrementarCantidad(id) {
+                                    const input = document.getElementById(id);
+                                    input.value = parseInt(input.value) + 1;
+                                }
+                                function decrementarCantidad(id) {
+                                    const input = document.getElementById(id);
+                                    if (parseInt(input.value) > 0) {
+                                        input.value = parseInt(input.value) - 1;
+                                    }
+                                }
+                            </script>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto</button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto</button>
                         </form>
                     </div>
                 </div>
@@ -97,10 +111,26 @@
                         <p>Descripción del producto: Alimento completo para perros de razas medianas y grandes.</p>
                         <p>Precio: <span class="precio">$42.500</span></p>
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad2('cantidad2')">-</button>
+                                <input type="number" id="cantidad2" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad2('cantidad2')">+</button>
+                                <script>
+                                    function incrementarCantidad2(id) {
+                                        const input = document.getElementById(id);
+                                        input.value = parseInt(input.value) + 1;
+                                    }
+                                    function decrementarCantidad2(id) {
+                                        const input = document.getElementById(id);
+                                        if (parseInt(input.value) > 0) {
+                                            input.value = parseInt(input.value) - 1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto</button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto</button>
                         </form>
                     </div>
                 </div>
@@ -112,10 +142,26 @@
                         <p>Descripción del producto: Sobres alimento para gatos.</p>
                         <p>Precio: <span class="precio">$2.990</span></p>
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad3('cantidad3')">-</button>
+                                <input type="number" id="cantidad3" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad3('cantidad3')">+</button>
+                                <script>
+                                    function incrementarCantidad3(id) {
+                                        const input = document.getElementById(id);
+                                        input.value = parseInt(input.value) + 1;
+                                    }
+                                    function decrementarCantidad3(id) {
+                                        const input = document.getElementById(id);
+                                        if (parseInt(input.value) > 0) {
+                                            input.value = parseInt(input.value) - 1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto</button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto</button>
                         </form>
                     </div>
                 </div>
@@ -127,10 +173,26 @@
                         <p>Descripción del producto: Bewidog latas rico en ternera alimento húmedo para perros.</p>
                         <p>Precio: <span class="precio">$4.990</span></p>
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad4('cantidad4')">-</button>
+                                <input type="number" id="cantidad4" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad4('cantidad4')">+</button>
+                                <script>
+                                    function incrementarCantidad4(id) {
+                                        const input = document.getElementById(id);
+                                        input.value = parseInt(input.value) + 1;
+                                    }
+                                    function decrementarCantidad4(id) {
+                                        const input = document.getElementById(id);
+                                        if (parseInt(input.value) > 0) {
+                                            input.value = parseInt(input.value) - 1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto</button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto</button>
                         </form>
                     </div>
                 </div>
@@ -142,10 +204,26 @@
                         <p>Descripción del producto: Bewidog latas rico en venado alimento húmedo para perros.</p>
                         <p>Precio: <span class="precio">$8.990</span></p>
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad5('cantidad5')">-</button>
+                                <input type="number" id="cantidad5" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad5('cantidad5')">+</button>
+                                <script>
+                                    function incrementarCantidad5(id) {
+                                        const input = document.getElementById(id);
+                                        input.value = parseInt(input.value) + 1;
+                                    }
+                                    function decrementarCantidad5(id) {
+                                        const input = document.getElementById(id);
+                                        if (parseInt(input.value) > 0) {
+                                            input.value = parseInt(input.value) - 1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto</button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto</button>
                         </form>
                     </div>
                 </div>
@@ -157,10 +235,26 @@
                         <p>Descripción del producto: Bewidog latas rico en pollo alimento húmedo para perros.</p>
                         <p>Precio: <span class="precio">$4.990</span></p>
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad6('cantidad6')">-</button>
+                                <input type="number" id="cantidad6" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad6('cantidad6')">+</button>
+                                <script>
+                                    function incrementarCantidad6(id) {
+                                        const input = document.getElementById(id);
+                                        input.value = parseInt(input.value) + 1;
+                                    }
+                                    function decrementarCantidad6(id) {
+                                        const input = document.getElementById(id);
+                                        if (parseInt(input.value) > 0) {
+                                            input.value = parseInt(input.value) - 1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto</button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto</button>
                         </form>
                     </div>
                 </div>
@@ -172,10 +266,26 @@
                         <p>Descripción del producto: Bewidog latas rico en cordero alimento húmedo para perros.</p>
                         <p>Precio: <span class="precio">$7.990</span></p>
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad7('cantidad7')">-</button>
+                                <input type="number" id="cantidad7" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad4('cantidad7')">+</button>
+                                <script>
+                                    function incrementarCantidad7(id) {
+                                        const input = document.getElementById(id);
+                                        input.value = parseInt(input.value) + 1;
+                                    }
+                                    function decrementarCantidad7(id) {
+                                        const input = document.getElementById(id);
+                                        if (parseInt(input.value) > 0) {
+                                            input.value = parseInt(input.value) - 1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto</button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto</button>
                         </form>
                     </div>
                 </div>
@@ -187,10 +297,26 @@
                         <p>Descripción del producto: Bewidog latas rico en panza alimento húmedo para perros.</p>
                         <p>Precio: <span class="precio">$6.990</span></p>
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad8('cantidad8')">-</button>
+                                <input type="number" id="cantidad8" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad8('cantidad8')">+</button>
+                                <script>
+                                    function incrementarCantidad8(id) {
+                                        const input = document.getElementById(id);
+                                        input.value = parseInt(input.value) + 1;
+                                    }
+                                    function decrementarCantidad8(id) {
+                                        const input = document.getElementById(id);
+                                        if (parseInt(input.value) > 0) {
+                                            input.value = parseInt(input.value) - 1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto</button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto</button>
                         </form>
                     </div>
                 </div>
@@ -202,10 +328,26 @@
                         <p>Descripción del producto: Bewidog latas rico en res alimento húmedo para perros.</p>
                         <p>Precio: <span class="precio">$5.990</span></p>
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad9('cantidad9')">-</button>
+                                <input type="number" id="cantidad9" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad9('cantidad9')">+</button>
+                                <script>
+                                    function incrementarCantidad9(id) {
+                                        const input = document.getElementById(id);
+                                        input.value = parseInt(input.value) + 1;
+                                    }
+                                    function decrementarCantidad9(id) {
+                                        const input = document.getElementById(id);
+                                        if (parseInt(input.value) > 0) {
+                                            input.value = parseInt(input.value) - 1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto</button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto</button>
                         </form>
                     </div>
                 </div>
@@ -217,10 +359,26 @@
                         <p>Descripción del producto: Bewidog latas rico en aves alimento húmedo para perros.</p>
                         <p>Precio: <span class="precio">$6.990</span></p>
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad10('cantidad10')">-</button>
+                                <input type="number" id="cantidad10" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad10('cantidad10')">+</button>
+                                <script>
+                                    function incrementarCantidad10(id) {
+                                        const input = document.getElementById(id);
+                                        input.value = parseInt(input.value) + 1;
+                                    }
+                                    function decrementarCantidad10(id) {
+                                        const input = document.getElementById(id);
+                                        if (parseInt(input.value) > 0) {
+                                            input.value = parseInt(input.value) - 1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto</button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto</button>
                         </form>
                     </div>
                 </div>
@@ -232,10 +390,26 @@
                         <p>Descripción del producto: Galletas horneadas para perros adultos sabor a grill.</p>
                         <p>Precio: <span class="precio">$4.490</span></p>
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad11('cantidad11')">-</button>
+                                <input type="number" id="cantidad11" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad11('cantidad11')">+</button>
+                                <script>
+                                    function incrementarCantidad11(id) {
+                                        const input = document.getElementById(id);
+                                        input.value = parseInt(input.value) + 1;
+                                    }
+                                    function decrementarCantidad11(id) {
+                                        const input = document.getElementById(id);
+                                        if (parseInt(input.value) > 0) {
+                                            input.value = parseInt(input.value) - 1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto </button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto </button>
                         </form>
                     </div>
                 </div>
@@ -247,10 +421,26 @@
                         <p>Antiparasitario interno de amplio espectro.Contenido: 2 tabletas sabor a carne, cada uno para hasta 10 kg.</p>
                         <p>Precio: <span class="precio">$7.100</span></p>
                         <form>
-                            <input type="number" name="cantidad" min="0" placeholder="Cantidad">
+                            <div class="d-flex align-items-center">
+                                <button type="button" onclick="decrementarCantidad12('cantidad12')">-</button>
+                                <input type="number" id="cantidad12" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <button type="button" onclick="incrementarCantidad12('cantidad12')">+</button>
+                                <script>
+                                    function incrementarCantidad12(id) {
+                                        const input = document.getElementById(id);
+                                        input.value = parseInt(input.value) + 1;
+                                    }
+                                    function decrementarCantidad12(id) {
+                                        const input = document.getElementById(id);
+                                        if (parseInt(input.value) > 0) {
+                                            input.value = parseInt(input.value) - 1;
+                                        }
+                                    }
+                                </script>
+                            </div>
                             <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">modificar producto</button>
-                            <button type="submit" class="btn btn-success">eliminar producto</button>
+                            <button type="submit" class="btn btn-success">Modificar producto</button>
+                            <button type="submit" class="btn btn-success">Eliminar producto</button>
                         </form>
                     </div>
                 </div>
@@ -274,7 +464,6 @@
                             <div class="input-group mb-3">
                                 <input type="file" class="form-control" id="inputGroupFile01">
                               </div>
-    
                             <div class="mb-3">
                                 <a class="btn btn-success w-100 " href="#">Agregar</a>
                             </div>

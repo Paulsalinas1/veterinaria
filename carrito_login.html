@@ -138,6 +138,19 @@
                 }
             }
         </script>
+        <script>
+            function incrementarCantidad2(id) {
+                const input = document.getElementById(id);
+                input.value = parseInt(input.value) + 1;
+            }
+        
+            function decrementarCantidad2(id) {
+                const input = document.getElementById(id);
+                if (parseInt(input.value) > 0) {
+                    input.value = parseInt(input.value) - 1;
+                }
+            }
+        </script>
         <!-- contactos final -->
         <header class="cotainer-fluid bg-success text-center mt-5">
             <p class="text-light pt-3 fs-2"> Contactos: </p>
