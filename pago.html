@@ -62,8 +62,32 @@
 
                 <label for="cvv">CVV:</label>
                 <input type="number" id="cvv" name="cvv" placeholder="Ej: 501" min="0" required>
-                <div class="total">
-                    Total: $135.000
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="tipoTarjeta" id="visa" value="visa">
+                    <label class="form-check-label" for="visa">
+                        Visa
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="tipoTarjeta" id="mastercard" value="mastercard">
+                    <label class="form-check-label" for="mastercard">
+                        MasterCard
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="tipoTarjeta" id="mastercard" value="mastercard">
+                    <label class="form-check-label" for="mastercard">
+                        Paypal
+                    </label>
+                </div>
+                <div class="subtotal">
+                    Subtotal: $22.050
+                </div>
+                <div class="iva">
+                    IVA: $4190
+                </div>
+                <div class="total" style="text-align: left;">
+                    Total: $26.240
                 </div>
                 <div>
                     <a onclick="aletarE()" class="btn btn-success w-100 " href="compras.html">Comprar</a>
