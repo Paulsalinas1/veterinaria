@@ -31,3 +31,9 @@ body{
         justify-content: center !important;
     }
 }
+
+.table-resp{
+    display: list-item;
+    overflow-y: scroll;
+}
+
