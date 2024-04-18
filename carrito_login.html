@@ -42,7 +42,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="mi_cuenta.html">Mi Cuenta</a></li>
-                            <li><a class="dropdown-item" href="tienda.html">Cerrar cuenta</a></li>
+                                <li><a class="dropdown-item" href="tienda.html">Cerrar cuenta</a></li>
                             </ul>
                         </div>
                     </form>
@@ -50,7 +50,6 @@
             </div>
         </nav>
         <!--listado de productos añadidos al carro-->
-
         <div class="container">
             <h1>Carrito de Compras</h1>
             <!-- Producto 1 -->
@@ -67,19 +66,6 @@
                     </div>
                 </div>
             </div>
-            <script>
-                function incrementarCantidad(id) {
-                    const input = document.getElementById(id);
-                    input.value = parseInt(input.value) + 1;
-                }
-            
-                function decrementarCantidad(id) {
-                    const input = document.getElementById(id);
-                    if (input.value > 1) {
-                        input.value = parseInt(input.value) - 1;
-                    }
-                }
-            </script>
             <!-- Producto 2 -->
             <div class="producto">
                 <img src="img/comiaperropollo.png" alt="Producto 2">
@@ -94,19 +80,40 @@
                     </div>
                 </div>
             </div>
-            <script>
-                function incrementarCantidad2(id) {
-                    const input = document.getElementById(id);
-                    input.value = parseInt(input.value) + 1;
-                }
-            
-                function decrementarCantidad2(id) {
-                    const input = document.getElementById(id);
-                    if (input.value > 1) {
-                        input.value = parseInt(input.value) - 1;
-                    }
-                }
-            </script>
+            <label>Método de pago*</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tipoTarjeta" id="visa" value="visa">
+                <label class="form-check-label" for="visa">
+                    Visa
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tipoTarjeta" id="mastercard" value="mastercard">
+                <label class="form-check-label" for="mastercard">
+                    MasterCard
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tipoTarjeta" id="paypal" value="paypal">
+                <label class="form-check-label" for="paypal">
+                    Paypal
+                </label>
+            </div>
+            <div class="metodo-envio">
+                <label>Método de envío*</label>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="metodoEnvio" id="retiroTienda" value="retiroTienda">
+                    <label class="form-check-label" for="retiroTienda">
+                        Retiro en tienda
+                    </label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="metodoEnvio" id="envioDomicilio" value="envioDomicilio">
+                    <label class="form-check-label" for="envioDomicilio">
+                        Envío a domicilio
+                    </label>
+                </div>
+            </div>
             <div class="subtotal">
                 Subtotal: $135.000
             </div>
@@ -132,7 +139,7 @@
             }
         </script>
         <!-- contactos final -->
-        <header class="cotainer-fluid bg-success text-center">
+        <header class="cotainer-fluid bg-success text-center mt-5">
             <p class="text-light pt-3 fs-2"> Contactos: </p>
             <p class="text-light pt-1 fs-2"> vet.santamarta@gmail.com</p>
         </header>
