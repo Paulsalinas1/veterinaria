@@ -14,11 +14,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.productos-container {
-    max-width: 800px; /* Ajusta el ancho máximo según lo que desees */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-}
 h1 {
     text-align: center;
 }
