@@ -80,25 +80,25 @@
                 <div class="collapse multi-collapse" id="multiCollapseExample2">
                     <div class="card card-body mb-2">
                         <div class="col-md-12 mb-1 ">
-                            <div><label for="floatingInputValue">Nombre tienda</label></div>
+                            <div><label for="nombreTienda">Nombre tienda</label></div>
                             <form class="form-floating mb-1">
-                                <input type="email" class="form-control" id="floatingInputValue"
+                                <input type="text" class="form-control" id="nombreTienda"
                                     placeholder="Veterinaria Santa Marta" value="Veterinaria Santa Marta">
 
                             </form>
                         </div>
                         <div class="col-md-12 mb-1">
                             <form class="form-floating mb-1">
-                                <input type="email" class="form-control" id="floatingInputValue"
+                                <input type="email" class="form-control" id="contactoTienda"
                                     placeholder="vet.santamarta@gmail.com" value="vet.santamarta@gmail.com">
-                                <label for="floatingInputValue">Contactos</label>
+                                <label for="contactoTienda">Contactos</label>
                             </form>
                         </div>
                         <div class="col-md-12 mb-1">
                             <form class="form-floating mb-1">
-                                <input type="text" class="form-control" id="floatingInputValue"
+                                <input type="text" class="form-control" id="stockGeneral"
                                     placeholder="200 productos" value="200 productos">
-                                <label for="floatingInputValue">Stock general</label>
+                                <label for="stockGeneral">Stock general</label>
                             </form>
                         </div>
                     </div>
@@ -108,17 +108,17 @@
                 <div class="collapse multi-collapse" id="multiCollapseExample3">
                     <div class="card card-body mb-2">
                         <div class="col-md-12 mb-1 ">
-                            <div><label for="floatingInputValue">Costos tienda</label></div>
+                            <div><label for="costosTienda">Costos tienda</label></div>
                             <form class="form-floating mb-1">
-                                <input type="number" class="form-control" id="floatingInputValue"
-                                    placeholder="Veterinaria Santa Marta" value="500.000">
+                                <input type="number" class="form-control" id="costosTienda"
+                                    placeholder="Costos tienda" value="500000">
                             </form>
                         </div>
                         <div class="col-md-12 mb-1">
                             <form class="form-floating mb-1">
-                                <input type="number" class="form-control" id="floatingInputValue"
-                                    placeholder="vet.santamarta@gmail.com" value="750.000">
-                                <label for="floatingInputValue">Ingesos tienda</label>
+                                <input type="number" class="form-control" id="ingresosTienda"
+                                    placeholder="Ingresos tienda" value="750000">
+                                <label for="ingresosTienda">Ingresos tienda</label>
                             </form>
                         </div>
                     </div>
@@ -130,16 +130,16 @@
                     <div class="card card-body mb-2">
                         <div class="col-md-12 mb-1 col-sm-12">
                             <div>
-                                <h3 class="text-center ">Lista de compras resientes</h3>
+                                <h3 class="text-center ">Lista de compras recientes</h3>
                             </div>
                             <table class="table table-resp">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Producto</th>
-                                        <th scope="col">descripcion</th>
-                                        <th scope="col">precio</th>
-                                        <th scope="col">cantidad</th>
+                                        <th scope="col">Descripción</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
                                         <th scope="col">Total</th>
                                         <th scope="col">Fecha</th>
                                     </tr>
@@ -148,7 +148,7 @@
                                     <tr>
                                         <th scope="row">1</th>
                                         <td class="col-md-3">Royal Canin adulto Mini Adult alimento para perro</td>
-                                        <td class="col-md-3">Comida baja en calorias </td>
+                                        <td class="col-md-3">Comida baja en calorías </td>
                                         <td class="col-md-3">$50.000</td>
                                         <td class="col-md-3">1</td>
                                         <td class="col-md-3">$50.000</td>
@@ -159,16 +159,14 @@
                                         <td>Bravery Chicken Adult alimento para perro</td>
                                         <td>Alimento para perros de razas pequeñas.</td>
                                         <td>$42.500</td>
-
-
                                         <td class="col-md-1">2</td>
                                         <td class="col-md-2">$100.000</td>
                                         <td class="col-md-1">19/04/2024</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
-                                        <td>comida perro</td>
-                                        <td>comida para perros de rasa x</td>
+                                        <td>Comida perro</td>
+                                        <td>Comida para perros de raza x</td>
                                         <td>$60.000</td>
                                         <td>1</td>
                                         <td>$60.000</td>
@@ -190,6 +188,25 @@
             <p class="text-light pt-3 fs-2"> Contactos: </p>
             <p class="text-light pt-1 fs-2"> vet.santamarta@gmail.com</p>
         </header>
+
+        <script>
+            document.getElementById("costosTienda").addEventListener("keypress", function(event) {
+              // Verificar si la tecla presionada es la tecla "e" o "E"
+              if (event.key === "e" || event.key === "E") {
+                // Prevenir la acción por defecto de la tecla "e"
+                event.preventDefault();
+              }
+            });
+
+            document.getElementById("ingresosTienda").addEventListener("keypress", function(event) {
+              // Verificar si la tecla presionada es la tecla "e" o "E"
+              if (event.key === "e" || event.key === "E") {
+                // Prevenir la acción por defecto de la tecla "e"
+                event.preventDefault();
+              }
+            });
+        </script>
 </body>
+
 
 </html>
