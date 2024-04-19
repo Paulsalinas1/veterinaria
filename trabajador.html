@@ -110,13 +110,13 @@
                         <div class="col-md-12 mb-1 ">
                             <div><label for="costosTienda">Costos tienda</label></div>
                             <form class="form-floating mb-1">
-                                <input type="number" class="form-control" id="floatingInputValue"
+                                <input type="number" class="form-control" id="costosTienda"
                                     placeholder="Veterinaria Santa Marta" value="$500.000">
                             </form>
                         </div>
                         <div class="col-md-12 mb-1">
                             <form class="form-floating mb-1">
-                                <input type="number" class="form-control" id="floatingInputValue"
+                                <input type="number" class="form-control" id="costosTienda"
                                     placeholder="vet.santamarta@gmail.com" value="$750.000">
                                 <label for="floatingInputValue">Ingresos tienda</label>
                             </form>
@@ -190,22 +190,22 @@
         </header>
 
         <script>
-            document.getElementById("costosTienda").addEventListener("keypress", function(event) {
-              // Verificar si la tecla presionada es la tecla "e" o "E"
-              if (event.key === "e" || event.key === "E") {
-                // Prevenir la acción por defecto de la tecla "e"
-                event.preventDefault();
-              }
-            });
+    document.getElementById("costosTienda").addEventListener("keypress", function(event) {
+      // Verificar si la tecla presionada es la tecla "e" o "E"
+      if (event.key === "e" || event.key === "E") {
+        // Prevenir la acción por defecto de la tecla "e"
+        event.preventDefault();
+      }
+    });
 
-            document.getElementById("ingresosTienda").addEventListener("keypress", function(event) {
-              // Verificar si la tecla presionada es la tecla "e" o "E"
-              if (event.key === "e" || event.key === "E") {
-                // Prevenir la acción por defecto de la tecla "e"
-                event.preventDefault();
-              }
-            });
-        </script>
+    document.getElementById("ingresosTienda").addEventListener("keypress", function(event) {
+      // Verificar si la tecla presionada es la tecla "e" o "E"
+      if (event.key === "e" || event.key === "E") {
+        // Prevenir la acción por defecto de la tecla "e"
+        event.preventDefault();
+      }
+    });
+</script>
 </body>
 
 
