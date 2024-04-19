@@ -59,23 +59,49 @@
                     <p>Cantidad: </p>
                     <div class="d-flex align-items-center">
                         <button type="button" onclick="decrementarCantidad('cantidad1')">-</button>
-                        <input type="number" id="cantidad1" name="Cantidad" min="1" step="1" value="1" readonly>
+                        <input type="number" id="cantidad1" name="Cantidad" min="1" step="1" value="1" readonly style="width: 50px;">
                         <button type="button" onclick="incrementarCantidad('cantidad1')">+</button>
                     </div>
+                    <script>
+                        function incrementarCantidad(id) {
+                            const input = document.getElementById(id);
+                            input.value = parseInt(input.value) + 1;
+                        }
+                    
+                        function decrementarCantidad(id) {
+                            const input = document.getElementById(id);
+                            if (parseInt(input.value) > 1) {  // Cambio aquí, verificando que el valor sea mayor que 1
+                                input.value = parseInt(input.value) - 1;
+                            }
+                        }
+                    </script>
                 </div>
             </div>
             <!-- Producto 2 -->
             <div class="producto">
                 <img src="img/comiaperropollo.png" alt="Producto 2">
                 <div class="producto-info">
-                    <h3>Bravery Chicken Adult alimento para perro</h3>
+                    <h3>Bravery Chicken Adul alimento para perro</h3>
                     <p>Precio: <span class="precio">$85.000</span></p>
                     <p>Cantidad: </p>
                     <div class="d-flex align-items-center">
-                        <button type="button" onclick="decrementarCantidad2('cantidad2')">-</button>
-                        <input type="number" id="cantidad2" name="Cantidad" min="1" step="1" value="2" readonly>
+                        <button type="button" onclick="decrementarCantidad('cantidad2')">-</button>
+                        <input type="number" id="cantidad2" name="Cantidad" min="1" step="1" value="2" readonly style="width: 50px;">
                         <button type="button" onclick="incrementarCantidad2('cantidad2')">+</button>
                     </div>
+                    <script>
+                        function incrementarCantidad2(id) {
+                            const input = document.getElementById(id);
+                            input.value = parseInt(input.value) + 1;
+                        }
+                    
+                        function decrementarCantidad2(id) {
+                            const input = document.getElementById(id);
+                            if (parseInt(input.value) > 1) {  // Cambio aquí, verificando que el valor sea mayor que 1
+                                input.value = parseInt(input.value) - 1;
+                            }
+                        }
+                    </script>
                 </div>
             </div>
             <label>Método de pago*</label>
@@ -123,32 +149,6 @@
             </div>
             <a onclick="aletarE()" href="compras_login.html" class="boton">Comprar</a>
         </div>
-        <script>
-            function incrementarCantidad(id) {
-                const input = document.getElementById(id);
-                input.value = parseInt(input.value) + 1;
-            }
-        
-            function decrementarCantidad(id) {
-                const input = document.getElementById(id);
-                if (parseInt(input.value) > 0) {
-                    input.value = parseInt(input.value) - 1;
-                }
-            }
-        </script>
-        <script>
-            function incrementarCantidad2(id) {
-                const input = document.getElementById(id);
-                input.value = parseInt(input.value) + 1;
-            }
-        
-            function decrementarCantidad2(id) {
-                const input = document.getElementById(id);
-                if (parseInt(input.value) > 0) {
-                    input.value = parseInt(input.value) - 1;
-                }
-            }
-        </script>
         <!-- contactos final -->
         <header class="cotainer-fluid bg-success text-center mt-5">
             <p class="text-light pt-3 fs-2"> Contactos: </p>
