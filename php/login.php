@@ -13,14 +13,12 @@
         <title>Login</title>
     </head>
     <body class=" bg-primary d-flex justify-content-center align-items-center  vh-100 ">
-        
-        <?php
+    <?php
             $mysqli = new mysqli("localhost", "compra", "compra", "veterinaria", 3306);
             if ($mysqli->connect_errno) {
                 echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
                                         }
         ?>
-
         <div class="cotainer-fluid bg-white p-5 rounded-5 text-secudary " style="width: 25rem;" id="login">
 
             <div class=" d-flex justify-content-center">
@@ -31,20 +29,20 @@
 
             <div class="mb-3">
                 <div class="form-floating ">
-                    <input type="email" class="form-control" id="floatingPassword" placeholder="Email">
+                    <input type="email" class="form-control" id="floatingPassword" placeholder="Email" required>
                     <label for="floatingEmail">Correo</label>
                 </div>
             </div>
 
             <div class="mb-3">
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                     <label for="floatingPassword">Contraseña</label>
                 </div>
             </div>
 
             <div class="mb-3 text-center">
-                <a href="recordando.html">¿Se me olvidó la contraseña?</a>
+                <a href="recordando.html">¿Se te olvidó la contraseña?</a>
             </div>
 
             <div class="mb-3 text-center">
