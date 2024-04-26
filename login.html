@@ -10,6 +10,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="Css/cssmain.css">
         <link rel="icon" href="img/logo.png">
+        
+        <script src="js/login.js" ></script>
         <title>Login</title>
     </head>
 
@@ -21,6 +23,8 @@
             }
         </script>
 
+        
+
         <div class="cotainer-fluid bg-white p-5 rounded-5 text-secudary " style="width: 25rem;" id="login">
 
             <div class=" d-flex justify-content-center">
@@ -29,32 +33,41 @@
 
             <h2 class="text-center">Login</h2>
 
-            <div class="mb-3">
-                <div class="form-floating ">
-                    <input type="email" class="form-control" id="floatingPassword" placeholder="Email">
-                    <label for="floatingEmail">Correo</label>
+            
+                <div class="mb-3">
+                    <div class="form-floating ">
+                        
+                        <input type="email" id="idcorreo" placeholder="Email" class="form-control" onblur="validar()">
+                        <label for="idcorreo">Correo</label>
+                        <p id="mensaje20"></p>
+                       
+                    </div>
                 </div>
-            </div>
-
-            <div class="mb-3">
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Contraseña</label>
+    
+                <div class="mb-3">
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Contraseña</label>
+                    </div>
                 </div>
-            </div>
 
-            <div class="mb-3 text-center">
-                <a href="recordando.html">¿Se me olvidó la contraseña?</a>
-            </div>
+                <div class="mb-3 text-center">
+                    <a href="recordando.html">¿Se me olvidó la contraseña?</a>
+                </div>
+    
+                <div class="mb-3 text-center">
+                    <!-- reemplazar # por link de cuenta de trabajador-->
+                    <a href="trabajador.html">Cuenta de admin</a>
+                </div>
+    
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary w-100" onclick="validar()">Iniciar sesión</button>
+                </div>
 
-            <div class="mb-3 text-center">
-                <!-- reemplazar # por link de cuenta de trabajador-->
-                <a href="trabajador.html">Cuenta de admin</a>
-            </div>
+            
+            
 
-            <div class="mb-3">
-                <a class="btn btn-primary w-100 " href="index_login.html"> Iniciar sesión </a>
-            </div>
+            
 
             <div class="mb-3">
                 <a href="registro.html">Crear cuenta</a>
