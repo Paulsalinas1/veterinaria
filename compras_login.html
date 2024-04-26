@@ -69,8 +69,8 @@
                     <p>Cantidad: 1</p>
                     <!-- Botón "Seguimiento" -->
                     <input type="checkbox" id="seguimiento-toggle" style="display:none;">
-                    <label for="seguimiento-toggle" class="btn btn-success">Seguimiento</label>
-                    <table class="table" style="display:none;">
+                    <label for="seguimiento-toggle" class="btn btn-success" onclick="mostrarTabla()">Seguimiento</label>
+                    <table class="table" id="tabla-seguimiento" style="display:none;">
                         <tbody>
                             <tr>
                                 <td>En tienda</td>
@@ -86,6 +86,16 @@
                             </tr>
                         </tbody>
                     </table>
+                    <script>
+                        function mostrarTabla() {
+                            var tabla = document.getElementById("tabla-seguimiento");
+                            if (tabla.style.display === "none") {
+                                tabla.style.display = "table";
+                            } else {
+                                tabla.style.display = "none";
+                            }
+                        }
+                    </script>
                     <a class="btn btn-success" onclick="confirmarReembolso(event)">Reembolsar</a>
                 </div>
             </div>
@@ -97,6 +107,35 @@
                     <p>Descripción del producto: Alimento completo para perros de razas medianas y grandes.</p>
                     <p>Precio: <span class="precio">$85.000</span></p>
                     <p>Cantidad: 2</p>
+                    <!-- Botón "Seguimiento" -->
+                    <input type="checkbox" id="seguimiento-toggle" style="display:none;">
+                    <label for="seguimiento-toggle" class="btn btn-success" onclick="mostrarTabla2()">Seguimiento</label>
+                    <table class="table" id="tabla-seguimiento2" style="display:none;">
+                        <tbody>
+                            <tr>
+                                <td>En tienda</td>
+                            </tr>
+                            <tr>
+                                <td>En reparto</td>
+                            </tr>
+                            <tr>
+                                <td>Por llegar</td>
+                            </tr>
+                            <tr>
+                                <td>Recepcionado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <script>
+                        function mostrarTabla2() {
+                            var tabla = document.getElementById("tabla-seguimiento2");
+                            if (tabla.style.display === "none") {
+                                tabla.style.display = "table";
+                            } else {
+                                tabla.style.display = "none";
+                            }
+                        }
+                    </script>
                     <a href="#" class="btn btn-success" onclick="confirmarReembolso(event)">Reembolsar</a>
                 </div>
             </div>
