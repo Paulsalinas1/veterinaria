@@ -51,7 +51,7 @@
             </div>
 
             <div class="mb-3">
-                <a class="btn btn-primary w-100 " href="index_login.html"> Iniciar sesión </a>
+                <a class= "btn btn-primary w-100 " href="autenticacion.php"> Iniciar sesión </a>
             </div>
 
             <div class="mb-3">
