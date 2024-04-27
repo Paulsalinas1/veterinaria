@@ -5,8 +5,8 @@ session_start();
 //credenciales de acceso a la base datos
 
 $DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
+$DATABASE_USER = 'veterinaria';
+$DATABASE_PASS = 'veterinaria';
 $DATABASE_NAME = 'login-php';
 
 // conexion a la base de datos
