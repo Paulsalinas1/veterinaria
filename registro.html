@@ -13,19 +13,15 @@
     </head>
     <body class=" bg-primary d-flex justify-content-center align-items-center vh-100 ">
         <div class="cotainer-fluid bg-white p-4 pt-3 pb-3 rounded-5 text-secudary " style="width: 35rem;" id="login">
-
             <form class="row needs-validation" novalidate>
-
                 <div class="d-flex justify-content-center">
                     <img src="img/logo.png" style="height: 8rem; " alt="logo tienda">
                 </div>
-
                 <div class="text-center">
                     <h3>Ingrese sus datos</h3>
                 </div>
-
                 <div class="col-md-12 col-sm-6 mb-1 ">
-                    <label for="validationCustom01" class="form-label">Correo*</label>
+                    <label for="correo" class="form-label">Correo*</label>
                     <input type="email" class="form-control" id="correo" placeholder="Ej: juan.alcachofa@gmail.com">
                     <span id="mensajeErrorCorreo"></span>
                 </div>
@@ -55,29 +51,28 @@
                 <div class="collapse" id="datos_Usuario">
                     <div class="card card-body">
                         <div class="col-md-12 mb-1 col-sm-12">
-                            <label for="validationCustom01" class="form-label">Nombre*</label>
-                            <input type="text" class="form-control" id="validationCustom01" value="" required>
+                            <label for="nombre" class="form-label">Nombre*</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ej: Juan">
                             <span id="mensajeErrorNombre"></span>
                         </div>
 
                         <div class="col-md-12 mb-1 col-sm-12">
-                            <label for="validationCustom02" class="form-label">Apellido*</label>
-                            <input type="text" class="form-control" id="validationCustom02" value="" required>
+                            <label for="apellido" class="form-label">Apellido*</label>
+                            <input type="text" class="form-control" id="apellido" placeholder="Ej: Alcachofa">
                             <span id="mensajeErrorApellido"></span>
                         </div>
 
                         <div class="col-md-12 mb-1 col-sm-12">
-                            <label for="validationCustom03" class="form-label">Comuna</label>
-                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <label for="validation01" class="form-label">Comuna</label>
+                            <input type="text" class="form-control" id="validation01" required>
                         </div>
 
                         <div class="col-md-12 mb-1 col-sm-12">
-                            <label for="validationCustom03" class="form-label">Dirección</label>
-                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <label for="validation02" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="02" required>
                         </div>
                     </div>
                 </div>
-
                 <div class="collapse" id="metodo_Pago">
                     <div class="card card-body">
                         <div class="col-md-12 mb-1 col-sm-12">
@@ -100,25 +95,18 @@
                     <input type="checkbox">
                     <label for="text"> ¿Desea recibir promociones en el correo?</label>
                 </div>
-
                 <div class="mb-1">
                     <input type="checkbox" required>
                     <label for="text"> Aceptar términos y condiciones</label>
                 </div>
-                
                 <div>
-                    <a class="btn btn-primary w-100" href="login.html" onclick="return validadorDatos()">Crear cuenta</a>
+                    <a class="btn btn-primary w-100" href="index_login.html" onclick="return validadorDatos()">Crear cuenta</a>
                 </div>
                 <div class="mb-3">
                     <a href="index.html">Menú</a>
                 </div>
             </form>
         </div>
-        <script>
-            function aletarE() {
-                alert("Se creó su cuenta, Inicie sesión")
-            }
-        </script>
         <!-- Vinculación del archivo JavaScript -->
         <script src="js/validaciones_cuenta.js"></script>
     </body>

@@ -41,14 +41,17 @@ function validadorDatos(){
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si la contraseña está vacía
     }
-    var contraseña = document.getElementById("recuperarcontraseña").value;
+
+    var contraseña = document.getElementById("contraseña").value;
     var repetirContraseña = document.getElementById("repetirContraseña").value; // Obtener el valor del campo de repetir contraseña
     var mensajeError = document.getElementById("mensajeErrorRepetirContraseña");
+    document.getElementById("repetirContraseña").value = ""; // Borra el texto dentro del input
 
     if (repetirContraseña !== contraseña) {
         mensajeError.innerText = "Las contraseñas no coinciden.";
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si las contraseñas no coinciden
+        
     }
 
     var nombre = document.getElementById("nombre").value;
@@ -70,4 +73,8 @@ function validadorDatos(){
     }
 
     return true; // Permite el envío del formulario si el correo es válido
+}
+
+function aletarE() {
+    alert("Su nueva cuenta se creó exitosamente")
 }
