@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tienda Online</title>
-        <link rel="stylesheet" href="css/tienda.css">
+        <link rel="stylesheet" href="css/carrito.css">
         <link rel="icon" href="img/logo.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -82,7 +82,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad('cantidad1')">-</button>
-                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad('cantidad1')">+</button>
                             </div>
                             <script>
@@ -97,9 +97,11 @@
                                     }
                                 }
                             </script>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto</button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -113,7 +115,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad2('cantidad2')">-</button>
-                                <input type="number" id="cantidad2" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad2('cantidad2')">+</button>
                                 <script>
                                     function incrementarCantidad2(id) {
@@ -128,9 +130,11 @@
                                     }
                                 </script>
                             </div>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto</button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -144,7 +148,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad3('cantidad3')">-</button>
-                                <input type="number" id="cantidad3" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad3('cantidad3')">+</button>
                                 <script>
                                     function incrementarCantidad3(id) {
@@ -159,9 +163,11 @@
                                     }
                                 </script>
                             </div>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto</button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -175,7 +181,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad4('cantidad4')">-</button>
-                                <input type="number" id="cantidad4" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad4('cantidad4')">+</button>
                                 <script>
                                     function incrementarCantidad4(id) {
@@ -190,9 +196,11 @@
                                     }
                                 </script>
                             </div>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto</button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -206,7 +214,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad5('cantidad5')">-</button>
-                                <input type="number" id="cantidad5" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad5('cantidad5')">+</button>
                                 <script>
                                     function incrementarCantidad5(id) {
@@ -221,9 +229,11 @@
                                     }
                                 </script>
                             </div>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto</button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -237,7 +247,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad6('cantidad6')">-</button>
-                                <input type="number" id="cantidad6" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad6('cantidad6')">+</button>
                                 <script>
                                     function incrementarCantidad6(id) {
@@ -252,9 +262,11 @@
                                     }
                                 </script>
                             </div>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto</button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -268,7 +280,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad7('cantidad7')">-</button>
-                                <input type="number" id="cantidad7" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad4('cantidad7')">+</button>
                                 <script>
                                     function incrementarCantidad7(id) {
@@ -283,9 +295,11 @@
                                     }
                                 </script>
                             </div>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto</button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -299,7 +313,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad8('cantidad8')">-</button>
-                                <input type="number" id="cantidad8" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad8('cantidad8')">+</button>
                                 <script>
                                     function incrementarCantidad8(id) {
@@ -314,9 +328,11 @@
                                     }
                                 </script>
                             </div>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto</button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -330,7 +346,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad9('cantidad9')">-</button>
-                                <input type="number" id="cantidad9" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad9('cantidad9')">+</button>
                                 <script>
                                     function incrementarCantidad9(id) {
@@ -345,9 +361,11 @@
                                     }
                                 </script>
                             </div>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto</button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -361,7 +379,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad10('cantidad10')">-</button>
-                                <input type="number" id="cantidad10" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad10('cantidad10')">+</button>
                                 <script>
                                     function incrementarCantidad10(id) {
@@ -376,9 +394,11 @@
                                     }
                                 </script>
                             </div>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto</button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -392,7 +412,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad11('cantidad11')">-</button>
-                                <input type="number" id="cantidad11" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad11('cantidad11')">+</button>
                                 <script>
                                     function incrementarCantidad11(id) {
@@ -407,9 +427,11 @@
                                     }
                                 </script>
                             </div>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto </button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -423,7 +445,7 @@
                         <form>
                             <div class="d-flex align-items-center">
                                 <button type="button" onclick="decrementarCantidad12('cantidad12')">-</button>
-                                <input type="number" id="cantidad12" name="Cantidad" min="0" step="1" value="0" readonly>
+                                <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                                 <button type="button" onclick="incrementarCantidad12('cantidad12')">+</button>
                                 <script>
                                     function incrementarCantidad12(id) {
@@ -438,9 +460,11 @@
                                     }
                                 </script>
                             </div>
-                            <button type="submit" class="btn btn-success">Reponer stock</button>
-                            <button type="submit" class="btn btn-success">Modificar producto</button>
-                            <button type="submit" class="btn btn-success">Eliminar producto</button>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                                <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -454,11 +478,11 @@
                         <p> Ingrese datos del producto </p>
                         <div class="card card-body">
                             <div class="col-md-12 mb-1">
-                                <label for="validationCustom01" class="form-label">Nombre</label>
+                                <label for="validationCustom01" class="form-label">Nombre producto</label>
                                 <input type="text" class="form-control" id="validationCustom01" value="" required>
                             </div>
                             <div class="col-md-12 col-sm-12 mb-2 ">
-                                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                                <label for="exampleFormControlTextarea1" class="form-label">Descripción producto</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                             <div class="input-group mb-3">
@@ -475,9 +499,22 @@
            
         </div>
          <!-- Agrega más productos aquí con la misma estructura -->
-         <header class="cotainer-fluid bg-success text-center">
-            <p class="text-light pt-3 fs-2"> Contactos: </p>
-            <p class="text-light pt-1 fs-2"> vet.santamarta@gmail.com</p>
+         
+        <!-- contactos final -->
+        <header class="container-fluid bg-success text-center py-4">
+            <div class="row">
+                <!-- Columna izquierda para "Contactos" -->
+                <div class="col-md-6">
+                    <p class="text-light pt-3 fs-4"> Contactos: </p>
+                    <p class="text-light pt-1 fs-4"> vet.santamarta@gmail.com</p>
+                </div>
+                <!-- Columna derecha para "Dirección" -->
+                <div class="col-md-6">
+                    <p class="text-light pt-3 fs-4"> Dirección: </p>
+                    <p class="text-light pt-1 fs-4"> Calle Manuel Bayón Sector Santa Marta</p>
+                    <p class="text-light pt-1 fs-4">Talcahuano</p>
+                </div>
+            </div>
         </header>
     </body>
 </html>

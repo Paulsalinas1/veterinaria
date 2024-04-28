@@ -14,8 +14,8 @@
         <script src="js/login.js" ></script>
         <title>Login</title>
     </head>
-
     <body class=" bg-primary d-flex justify-content-center align-items-center  vh-100 ">
+<<<<<<< HEAD
         <button class="btn btn-light text-dark position-absolute top-0 start-0 m-3" onclick="redirectToIndex()">Menú</button>
         <script>
             function redirectToIndex() {
@@ -25,6 +25,8 @@
 
         
 
+=======
+>>>>>>> main
         <div class="cotainer-fluid bg-white p-5 rounded-5 text-secudary " style="width: 25rem;" id="login">
 
             <div class=" d-flex justify-content-center">
@@ -33,6 +35,7 @@
 
             <h2 class="text-center">Login</h2>
 
+<<<<<<< HEAD
             
                 <div class="mb-3">
                     <div class="form-floating ">
@@ -49,8 +52,25 @@
                         <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Contraseña</label>
                     </div>
+=======
+            <div class="mb-3">
+                <div class="form-floating ">
+                    <input type="email" class="form-control" id="correoCreado">
+                    <label for="floatingEmail">Correo</label>
+                    <span id="mensajeErrorCorreoCreado"></span>
                 </div>
 
+            </div>
+
+            <div class="mb-3">
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="contraseñaCreada">
+                    <label for="floatingPassword">Contraseña</label>
+                    <span id="mensajeErrorContraseñaCreada"></span>
+>>>>>>> main
+                </div>
+
+<<<<<<< HEAD
                 <div class="mb-3 text-center">
                     <a href="recordando.html">¿Se me olvidó la contraseña?</a>
                 </div>
@@ -63,15 +83,31 @@
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary w-100" onclick="validar()">Iniciar sesión</button>
                 </div>
+=======
+            <div class="mb-3 text-center">
+                <a href="recordando.html">¿Se te olvidó la contraseña?</a>
+            </div>
+>>>>>>> main
 
             
             
 
+<<<<<<< HEAD
             
+=======
+            <div class="mb-3">
+                <a class="btn btn-primary w-100 " href="index_login.html" onclick="return validarUsuarioCreado()"> Iniciar sesión </a>
+            </div>
+>>>>>>> main
 
             <div class="mb-3">
                 <a href="registro.html">Crear cuenta</a>
             </div>
+            <div class="mb-3">
+                <a href="index.html">Menú</a>
+            </div>
         </div>
+        <!-- Vinculación del archivo js -->
+        <script src="js/validaciones_cuenta.js"></script>
     </body>
 </html>

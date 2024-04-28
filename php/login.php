@@ -13,6 +13,12 @@
         <title>Login</title>
     </head>
     <body class=" bg-primary d-flex justify-content-center align-items-center  vh-100 ">
+    <?php
+            $mysqli = new mysqli("localhost", "compra", "compra", "veterinaria", 3306);
+            if ($mysqli->connect_errno) {
+                echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+                                        }
+        ?>
         <div class="cotainer-fluid bg-white p-5 rounded-5 text-secudary " style="width: 25rem;" id="login">
 
             <div class=" d-flex justify-content-center">
@@ -23,18 +29,15 @@
 
             <div class="mb-3">
                 <div class="form-floating ">
-                    <input type="email" class="form-control" id="correoCreado">
+                    <input type="email" class="form-control" id="floatingPassword" placeholder="Email" required>
                     <label for="floatingEmail">Correo</label>
-                    <span id="mensajeErrorCorreoCreado"></span>
                 </div>
-
             </div>
 
             <div class="mb-3">
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="contraseñaCreada">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
                     <label for="floatingPassword">Contraseña</label>
-                    <span id="mensajeErrorContraseñaCreada"></span>
                 </div>
             </div>
 
@@ -48,7 +51,7 @@
             </div>
 
             <div class="mb-3">
-                <a class="btn btn-primary w-100 " href="index_login.html" onclick="return validarUsuarioCreado()"> Iniciar sesión </a>
+                <a class= "btn btn-primary w-100 " href="autenticacion.php"> Iniciar sesión </a>
             </div>
 
             <div class="mb-3">
@@ -58,7 +61,5 @@
                 <a href="index.html">Menú</a>
             </div>
         </div>
-        <!-- Vinculación del archivo js -->
-        <script src="js/validaciones_cuenta.js"></script>
     </body>
 </html>
