@@ -13,7 +13,8 @@
     </head>
     <body class=" bg-primary d-flex justify-content-center align-items-center vh-100 ">
         <div class="cotainer-fluid bg-white p-4 pt-3 pb-3 rounded-5 text-secudary " style="width: 35rem;" id="login">
-            <form class="row needs-validation" novalidate>
+
+            <form class="row needs-validation" method="get" action="login.html" novalidate>
                 <div class="d-flex justify-content-center">
                     <img src="img/logo.png" style="height: 8rem; " alt="logo tienda">
                 </div>
@@ -22,19 +23,19 @@
                 </div>
                 <div class="col-md-12 col-sm-6 mb-1 ">
                     <label for="correo" class="form-label">Correo*</label>
-                    <input type="email" class="form-control" id="correo" placeholder="Ej: juan.alcachofa@gmail.com">
-                    <span id="mensajeErrorCorreo"></span>
+                    <input type="email" class="form-control" id="correo" name="correo" placeholder="Ej: juan.alcachofa@gmail.com" onblur="validarCorreoCrear()" required>
+                    <span id="mensajeErrorCorreoCrear"></span>
                 </div>
 
                 <div class="col-md-6 col-sm-6 mb-1 ">
                     <label for="validationCustom01" class="form-label">Contraseña*</label>
-                    <input type="password" class="form-control" id="contraseña">
+                    <input type="password" class="form-control" id="contraseña" name="contraseña" onblur="contra_1()" required>
                     <span id="mensajeErrorContraseña"></span>
                 </div>
 
                 <div class="col-md-6 col-sm-6 mb-1 ">
                     <label for="validationCustom01" class="form-label">Repetir contraseña*</label>
-                    <input type="password" class="form-control" id="repetirContraseña">
+                    <input type="password" class="form-control" id="repetirContraseña" name="repetirContraseña" onblur="contra_2()" required>
                     <span id="mensajeErrorRepetirContraseña"></span>
                 </div>
 
@@ -52,62 +53,67 @@
                     <div class="card card-body">
                         <div class="col-md-12 mb-1 col-sm-12">
                             <label for="nombre" class="form-label">Nombre*</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Ej: Juan">
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: Juan" onblur="nombre_v()" required>
                             <span id="mensajeErrorNombre"></span>
                         </div>
 
                         <div class="col-md-12 mb-1 col-sm-12">
                             <label for="apellido" class="form-label">Apellido*</label>
-                            <input type="text" class="form-control" id="apellido" placeholder="Ej: Alcachofa">
+                            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ej: Alcachofa" onblur="apellido_v()" required>
                             <span id="mensajeErrorApellido"></span>
                         </div>
 
                         <div class="col-md-12 mb-1 col-sm-12">
-                            <label for="validation01" class="form-label">Comuna</label>
-                            <input type="text" class="form-control" id="validation01" required>
+                            <label for="Comuna" class="form-label">Comuna</label>
+                            <input type="text" class="form-control" id="Comuna" name="Comuna">
                         </div>
 
                         <div class="col-md-12 mb-1 col-sm-12">
-                            <label for="validation02" class="form-label">Dirección</label>
-                            <input type="text" class="form-control" id="02" required>
+                            <label for="Dirección" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="Dirección" name="Dirección">
                         </div>
                     </div>
                 </div>
                 <div class="collapse" id="metodo_Pago">
                     <div class="card card-body">
                         <div class="col-md-12 mb-1 col-sm-12">
-                            <label for="validationCustom05" class="form-label">Targeta de crédito</label>
-                            <input type="number" class="form-control" id="validationCustom05" required>
+                            <label for="targeta" class="form-label">Targeta de crédito*</label>
+                            <input type="text" class="form-control" pattern="[0-9]{16}"  minlength="16" maxlength="16" id="targeta" name="targeta" onblur="tageta_v()" onkeypress="return soloNumeros(event)" required>
+                            <span id="mensajeErrortargeta"></span>
                         </div>
 
                         <div class="col-md-12 mb-1 col-sm-12">
-                            <label for="validationCustom05" class="form-label">Fecha de vencimiento</label>
-                            <input type="text" class="form-control" id="validationCustom05" required>
+                            <label for="fecha" class="form-label">Fecha de vencimiento*</label>
+                            <input type="text" pattern="(0[1-9]|1[0-2])\/\d{2}" maxlength="5" placeholder="mm/yy" class="form-control" id="fecha" name="fecha" onblur="vencimiento_v()" required >
+                            <span id="mensajeErrorfecha"></span>
                         </div>
 
                         <div class="col-md-12 mb-1 col-sm-12">
-                            <label for="validationCustom05" class="form-label">Código de seguridad</label>
-                            <input class="form-control" id="validationCustom05" required>
+                            <label for="cs" class="form-label">Código de seguridad*</label>
+                            <input class="form-control" id="cs" name="cs" pattern="[0-9]{3}" minlength="3" maxlength="3" onkeypress="return soloNumeros(event)" onblur="codigo_v()" required>
+                            <span id="mensajeErrorcs"></span>
                         </div>
                     </div>
                 </div>
                 <div class="mb-1">
-                    <input type="checkbox">
-                    <label for="text"> ¿Desea recibir promociones en el correo?</label>
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" >
+                    <label class="form-check-label" for="text"> ¿Desea recibir promociones en el correo?</label>
                 </div>
                 <div class="mb-1">
-                    <input type="checkbox" required>
-                    <label for="text"> Aceptar términos y condiciones</label>
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck"  required>
+                    <label class="form-check-label" for="text"> Aceptar términos y condiciones</label>
+                    <span id="mensajeErrorcheck"></span>
+
                 </div>
                 <div>
-                    <a class="btn btn-primary w-100" href="tienda_login.html" onclick="return validadorDatos()">Crear cuenta</a>
+                    <button type="submit" class="btn btn-primary w-100" onclick="">Crear cuenta</button>
                 </div>
                 <div class="mb-3">
                     <a href="index.html">Menú</a>
                 </div>
             </form>
         </div>
-        <!-- Vinculación del archivo JavaScript -->
+        <!-- Vinculación del archivo js -->
         <script src="js/validaciones_cuenta.js"></script>
     </body>
 </html>
