@@ -168,19 +168,21 @@ function validarCorreoCrear(){
 
 
 function contra_1(){
-
     var contraseña = document.getElementById("contraseña").value;
     var mensajeError = document.getElementById("mensajeErrorContraseña");
 
-    if(contraseña === "") {
+    if (contraseña === "") {
         mensajeError.innerText = "Por favor, ingrese una contraseña";
         mensajeError.style.color = "red";
         // Evita que se envíe el formulario si la contraseña está vacía
-    }else{
-        mensajeError.innerText = "contraseña ingresada ✅";
+    } else if (contraseña.length < 6) {
+        mensajeError.innerText = "La contraseña debe tener al menos 6 caracteres";
+        mensajeError.style.color = "red";
+        // Evita que se envíe el formulario si la contraseña tiene menos de 6 caracteres
+    } else {
+        mensajeError.innerText = "Contraseña ingresada ✅";
         mensajeError.style.color = "green";
     }
-
 }
 
 function contra_2(){
