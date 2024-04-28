@@ -9,7 +9,7 @@ function validarCorreo() {
     }
 
     if (!correo.includes("@")) {
-        mensajeError.innerText = "Ingrese un correo válido sacowea.";
+        mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si el correo no contiene "@"
     }
@@ -72,9 +72,37 @@ function validadorDatos(){
         return false; // Evita que se envíe el formulario si el apellido está vacío
     }
 
-    return true; // Permite el envío del formulario si el correo es válido
+    return true; // Permite el envío del formulario si todos los datos son válidos
 }
 
 function aletarE() {
     alert("Su nueva cuenta se creó exitosamente")
+}
+
+function validarUsuarioCreado(){
+    var correo = document.getElementById("correoCreado").value;
+    var mensajeError = document.getElementById("mensajeErrorCorreoCreado");
+
+    if (correo === "") {
+        mensajeError.innerText = "Por favor, ingrese su correo.";
+        mensajeError.style.color = "red";
+        return false; // Evita que se envíe el formulario si el correo está vacío
+    }
+
+    if (!correo.includes("@")) {
+        mensajeError.innerText = "Ingrese un correo válido.";
+        mensajeError.style.color = "red";
+        return false; // Evita que se envíe el formulario si el correo no contiene "@"
+    }
+
+    var contraseñacreada = document.getElementById("contraseñaCreada").value;
+    var mensajeError = document.getElementById("mensajeErrorContraseñaCreada");
+
+    if (contraseñacreada === "") {
+        mensajeError.innerText = "Ingrese su contraseña.";
+        mensajeError.style.color = "red";
+        return false; // Evita que se envíe el formulario si la contraseña es incorrecta
+    }
+
+    return true; // Permite el envío del formulario si el correo es válido
 }
