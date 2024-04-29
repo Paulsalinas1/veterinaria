@@ -138,7 +138,7 @@ function validarContraseñaUsuario(){
         mensajeError.style.color = "red";
          // Evita que se envíe el formulario si la contraseña es incorrecta
     }else {
-        mensajeError.innerText = "contraseña correcta ✅";
+        mensajeError.innerText = "Contraseña correcta ✅";
         mensajeError.style.color = "green";  
     }
 }
@@ -198,7 +198,7 @@ function contra_2(){
         mensajeError.style.color = "red";
          
     }else{
-        mensajeError.innerText = "contraseña ingresada ✅";
+        mensajeError.innerText = "Contraseñas iguales ✅";
         mensajeError.style.color = "green";
     }
 }
@@ -212,7 +212,7 @@ function nombre_v(){
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si el nombre está vacío
     }else{
-        mensajeError.innerText = "nombre correcto ✅";
+        mensajeError.innerText = "Nombre correcto ✅";
         mensajeError.style.color = "green";
     }
 }
@@ -226,7 +226,7 @@ function apellido_v(){
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si el apellido está vacío
     }else{
-        mensajeError.innerText = "apellido correcto ✅";
+        mensajeError.innerText = "Apellido correcto ✅";
         mensajeError.style.color = "green";
     }
 }
@@ -287,10 +287,10 @@ function tageta_v(){
          mensajeError.innerText = "Por favor, no ingrese letras";
          mensajeError.style.color = "red";
     }else if (numeroTarjeta.length !== 16){
-         mensajeError.innerText = "Por favor, ingrese una targeta valida ";
+         mensajeError.innerText = "Por favor, ingrese una targeta válida ";
          mensajeError.style.color = "red";
     }else  {
-     mensajeError.innerText = "targeta valida ✅";
+     mensajeError.innerText = "Targeta válida ✅";
      mensajeError.style.color = "green";
     }      
  }
@@ -333,11 +333,11 @@ function codigo_v(){
         mensajeError.style.color = "red";
 
     }else if(cs.length!==3){
-        mensajeError.innerText = "Por favor, ingrese una codigo de seguridad valido";
+        mensajeError.innerText = "Por favor, ingrese una codigo de seguridad válido";
         mensajeError.style.color = "red";
 
     }else{
-        mensajeError.innerText = "codigo de seguridad valido ✅";
+        mensajeError.innerText = "Código de seguridad válido ✅";
         mensajeError.style.color = "green";
     }
 }
