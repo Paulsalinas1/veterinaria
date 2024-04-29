@@ -192,11 +192,9 @@ function contra_2(){
     if (contraseña === "") {
         mensajeError.innerText = "Por favor, ingrese una contraseña";
         mensajeError.style.color = "red";
-        
     }else if (repetirContraseña !== contraseña){
         mensajeError.innerText = "Las contraseñas no coinciden.";
         mensajeError.style.color = "red";
-         
     }else{
         mensajeError.innerText = "Contraseñas iguales ✅";
         mensajeError.style.color = "green";
@@ -313,7 +311,7 @@ function tageta_v(){
         mensajeError.innerText = "Por favor, ingrese una fecha";
         mensajeError.style.color = "red";
     }else if (añoActual > añoIngresado || (añoActual === añoIngresado && mesActual > mesIngresado)){
-        mensajeError.innerText = "La fecha no puede ser menor que la fecha actual del sistema.";
+        mensajeError.innerText = "Su tarjeta ya expiró, pruebe con otra.";
         mensajeError.style.color = "red";
     } else if (fechaIngresada.length !== 7){
          mensajeError.innerText = "Por favor, ingrese una fecha válida";
@@ -331,11 +329,9 @@ function codigo_v(){
     if(cs==="") {
         mensajeError.innerText = "Por favor, ingrese una codigo de seguridad ";
         mensajeError.style.color = "red";
-
     }else if(cs.length!==3){
         mensajeError.innerText = "Por favor, ingrese una codigo de seguridad válido";
         mensajeError.style.color = "red";
-
     }else{
         mensajeError.innerText = "Código de seguridad válido ✅";
         mensajeError.style.color = "green";
