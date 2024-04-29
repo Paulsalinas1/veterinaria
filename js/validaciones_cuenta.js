@@ -166,7 +166,6 @@ function validarCorreoCrear(){
     }
 } 
 
-
 function contra_1(){
     var contraseña = document.getElementById("contraseña").value;
     var mensajeError = document.getElementById("mensajeErrorContraseña");
