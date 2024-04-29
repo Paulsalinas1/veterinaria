@@ -1,11 +1,9 @@
 <html lang="en">
     <head>
+        <!--Encabezado de links-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Latest compiled and minified CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Latest compiled JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="Css/cssmain.css">
         <link rel="icon" href="img/logo.png">
@@ -23,18 +21,18 @@
                     <input type="email" class="form-control" id="floatingPassword" placeholder="email">
                     <label for="floatingPassword">Correo</label>
                 </div>
-                <!-- Elemento span para mostrar el mensaje de error -->
+                <!--Un span para mostrar el mensaje de error-->
                 <span id="mensajeErrorCorreo"></span>
             </div>
             <div class="mb-3">
-                <!-- Llamada a la función validarCorreo() en el evento onclick -->
+                <!--Se llama la función validarCorreo en el evento onclick-->
                 <a class="btn btn-primary w-100" href="login.html" onclick="return validarCorreo()"> Enviar correo </a>
             </div>
             <div class="mb-3">
                 <h6>¿No tiene cuenta? <a href="registro.html">Crear cuenta</a> </h6>
             </div>
         </div>
-        <!-- Vinculación del archivo JavaScript -->
+        <!--Vinculación del archivo JavaScript-->
         <script src="js/validaciones_cuenta.js"></script>
     </body>
 </html>
