@@ -87,9 +87,9 @@
                             <span id="mensajeErrortargeta"></span>
                         </div>
                         <!--Ingreso de la fecha de vencimiento de la tarjeta-->
-                        <div class="col-md-12 mb-1 col-sm-12">
+                        <div class="col-md-12 mb-1 col-sm-12">  
                             <label for="fecha" class="form-label">Fecha de vencimiento*</label>
-                            <input type="text" pattern="(0[1-9]|1[0-2])\/\d{2}" maxlength="7" placeholder="mes/año" class="form-control" id="fecha" name="fecha" onblur="vencimiento_v()" required >
+                            <input type="text" pattern="(0[1-9]|1[0-2])\/\d{4}" maxlength="7" placeholder="mes/año" class="form-control" id="fecha" name="fecha" onblur="vencimiento_v()" required >
                             <span id="mensajeErrorfecha"></span>
                         </div>
                         <!--Ingreso del código de seguridad de la tarjeta-->
@@ -114,7 +114,7 @@
                 </div>
                 <!--Botón de crear cuenta-->
                 <div>
-                    <button type="submit" class="btn btn-success w-100" onclick="">Crear cuenta</button>
+                    <button type="submit" class="btn btn-success w-100" onblur="validarDatos()">Crear cuenta</button>
                 </div>
                 <div class="mb-3">
                     <a href="index.html">Menú</a>
