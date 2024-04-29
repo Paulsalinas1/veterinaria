@@ -166,7 +166,6 @@ function validarCorreoCrear(){
     }
 } 
 
-
 function contra_1(){
     var contraseña = document.getElementById("contraseña").value;
     var mensajeError = document.getElementById("mensajeErrorContraseña");
@@ -191,7 +190,7 @@ function contra_2(){
     var mensajeError = document.getElementById("mensajeErrorRepetirContraseña");
     
     if (contraseña === "") {
-        mensajeError.innerText = "Por favor, repita su contraseña";
+        mensajeError.innerText = "Por favor, ingrese una contraseña";
         mensajeError.style.color = "red";
         
     }else if (repetirContraseña !== contraseña){
@@ -288,7 +287,7 @@ function tageta_v(){
          mensajeError.innerText = "Por favor, no ingrese letras";
          mensajeError.style.color = "red";
     }else if (numeroTarjeta.length !== 16){
-         mensajeError.innerText = "Por favor, ingrese una targeta valida ";
+         mensajeError.innerText = "Por favor, ingrese una targeta válida ";
          mensajeError.style.color = "red";
     }else  {
      mensajeError.innerText = "Targeta válida ✅";
@@ -305,18 +304,18 @@ function tageta_v(){
     var mesActual = fechaActual.getMonth() + 1; // Se suma 1 porque los meses van de 0 a 11
     var añoActual = fechaActual.getFullYear();
 
-    // Obtiene el mes y el año de la fecha ingresada por el usuario
+     // Obtiene el mes y el año de la fecha ingresada por el usuario
     var partesFecha = fechaIngresada.split('/');
-    var mesIngresado = parseInt(partesFecha[1], 10);
+    var mesIngresado = parseInt(partesFecha[0], 10);
     var añoIngresado = parseInt(partesFecha[1], 10);
 
     if (fechaIngresada === ""){
         mensajeError.innerText = "Por favor, ingrese una fecha";
         mensajeError.style.color = "red";
-    } else if (mesIngresado < mesActual || (mesIngresado === mesActual && añoIngresado < añoActual)) {
+    }else if (añoActual > añoIngresado || (añoActual === añoIngresado && mesActual > mesIngresado)){
         mensajeError.innerText = "La fecha no puede ser menor que la fecha actual del sistema.";
         mensajeError.style.color = "red";
-    } else if (fechaIngresada.length !== 5){
+    } else if (fechaIngresada.length !== 7){
          mensajeError.innerText = "Por favor, ingrese una fecha válida";
          mensajeError.style.color = "red";
     } else {
@@ -330,15 +329,15 @@ function codigo_v(){
     var mensajeError = document.getElementById("mensajeErrorcs");
 
     if(cs==="") {
-        mensajeError.innerText = "Por favor, ingrese una código de seguridad ";
+        mensajeError.innerText = "Por favor, ingrese una codigo de seguridad ";
         mensajeError.style.color = "red";
 
     }else if(cs.length!==3){
-        mensajeError.innerText = "Por favor, ingrese una código de seguridad válido";
+        mensajeError.innerText = "Por favor, ingrese una codigo de seguridad válido";
         mensajeError.style.color = "red";
 
     }else{
-        mensajeError.innerText = "codigo de seguridad válido ✅";
+        mensajeError.innerText = "Código de seguridad válido ✅";
         mensajeError.style.color = "green";
     }
 }
