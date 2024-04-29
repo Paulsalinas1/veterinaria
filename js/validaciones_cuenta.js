@@ -186,7 +186,6 @@ function contra_1(){
 }
 
 function contra_2(){
-
     var contraseña = document.getElementById("contraseña").value;
     var repetirContraseña = document.getElementById("repetirContraseña").value; // Obtener el valor del campo de repetir contraseña
     var mensajeError = document.getElementById("mensajeErrorRepetirContraseña");
@@ -279,7 +278,6 @@ function tageta_v() {
     }
 }*/
 function tageta_v(){
-   
     var numeroTarjeta = document.getElementById("targeta").value;
     var mensajeError = document.getElementById("mensajeErrortargeta");  
     
@@ -295,28 +293,36 @@ function tageta_v(){
     }else  {
      mensajeError.innerText = "targeta valida ✅";
      mensajeError.style.color = "green";
-    } 
-         
+    }      
  }
 
-function vencimiento_v(){
-    var numeroTarjeta = document.getElementById("fecha").value;
+ function vencimiento_v(){
+    var fechaIngresada = document.getElementById("fecha").value;
     var mensajeError = document.getElementById("mensajeErrorfecha");
+    
+    // Obtiene el mes y el año actuales del sistema
+    var fechaActual = new Date();
+    var mesActual = fechaActual.getMonth() + 1; // Se suma 1 porque los meses van de 0 a 11
+    var añoActual = fechaActual.getFullYear();
 
-    if (numeroTarjeta===""){
-        mensajeError.innerText = "Por favor, ingrese una fecha ";
+    // Obtiene el mes y el año de la fecha ingresada por el usuario
+    var partesFecha = fechaIngresada.split('/');
+    var mesIngresado = parseInt(partesFecha[1], 10);
+    var añoIngresado = parseInt(partesFecha[1], 10);
+
+    if (fechaIngresada === ""){
+        mensajeError.innerText = "Por favor, ingrese una fecha";
         mensajeError.style.color = "red";
-    }else if (numeroTarjeta.length !== 5){
-         mensajeError.innerText = "Por favor, ingrese una fecha valida ";
+    } else if (mesIngresado < mesActual || (mesIngresado === mesActual && añoIngresado < añoActual)) {
+        mensajeError.innerText = "La fecha no puede ser menor que la fecha actual del sistema.";
+        mensajeError.style.color = "red";
+    } else if (fechaIngresada.length !== 5){
+         mensajeError.innerText = "Por favor, ingrese una fecha válida";
          mensajeError.style.color = "red";
-    }else if(numeroTarjeta.length !== 5){
-        mensajeError.innerText = "esta targeta esta caducada";
-        mensajeError.style.color = "red";
-    } else{
-        mensajeError.innerText = "fecha valida ✅";
+    } else {
+        mensajeError.innerText = "Fecha válida ✅";
         mensajeError.style.color = "green";
     }
-
 }
 
 function codigo_v(){
@@ -335,8 +341,6 @@ function codigo_v(){
         mensajeError.innerText = "codigo de seguridad valido ✅";
         mensajeError.style.color = "green";
     }
-
-    
 }
 
 
