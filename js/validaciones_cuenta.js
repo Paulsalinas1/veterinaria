@@ -191,7 +191,7 @@ function contra_2(){
     var mensajeError = document.getElementById("mensajeErrorRepetirContraseña");
     
     if (contraseña === "") {
-        mensajeError.innerText = "Por favor, ingrese una contraseña";
+        mensajeError.innerText = "Por favor, repita su contraseña";
         mensajeError.style.color = "red";
         
     }else if (repetirContraseña !== contraseña){
