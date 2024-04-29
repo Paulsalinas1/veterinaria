@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    <!--Encabezado de links-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Carrito de Compras</title>
@@ -9,9 +10,11 @@
         <link rel="icon" href="img/logo.png">
     </head>
     <body>
+        <!--El título-->
         <header class="cotainer-fluid bg-success d-flex justify-content-center">
             <p class="text-light pt-3 fs-2"> Veterinaria Santa Marta</p>
         </header>
+        <!--Cápsula de productos en el carrito-->
         <nav class="navbar navbar-expand-sm bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand"><samp class="fw-bold ml-3"><img src="img/logo.png" width="90"></samp></a>
@@ -20,6 +23,7 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!--Selectores del menú-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -44,6 +48,7 @@
                 </div>
             </div>
         </nav>
+        <!--Productos seleccionados-->
         <div class="container">
             <h1>Carrito de Compras</h1>
             <div class="producto">
@@ -72,6 +77,7 @@
                     </div>
                 </div>
             </div>
+            <!--Selección método de pago-->
             <label>Método de pago*</label>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="tipoTarjeta" id="visa" value="visa">
@@ -85,6 +91,7 @@
                 <input class="form-check-input" type="radio" name="tipoTarjeta" id="paypal" value="paypal">
                 <label class="form-check-label" for="paypal">Paypal</label>
             </div>
+            <!--Selección método de envío-->
             <div class="metodo-envio">
                 <label>Método de envío*</label>
                 <div class="form-check-inline">
@@ -107,7 +114,8 @@
             </div>
             <a onclick="comprar()" class="boton">Comprar</a>
         </div>
-        <footer class="container-fluid bg-success text-center py-4">
+        <!--Contactos-->
+        <header class="container-fluid bg-success text-center py-4">
             <div class="row">
                 <div class="col-md-6">
                     <p class="text-light pt-3 fs-4"> Contactos: </p>
@@ -119,7 +127,7 @@
                     <p class="text-light pt-1 fs-4">Talcahuano</p>
                 </div>
             </div>
-        </footer>
+        </header>
         <script src="js/carrito_login.js"></script>
     </body>
 </html>

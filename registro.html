@@ -10,7 +10,6 @@
         <link rel="icon" href="img/logo.png">
         <title>Crear_cuenta</title>
     </head>
-    <!--Cápsula contenedora de datos-->
     <body class=" bg-primary d-flex justify-content-center align-items-center vh-100 ">
         <div class="cotainer-fluid bg-white p-4 pt-3 pb-3 rounded-5 text-secudary " style="width: 35rem;" id="login">
             <form class="row needs-validation" method="get" action="login.html" novalidate>
@@ -40,11 +39,10 @@
                 </div>
                 <!--Despligue de datos para usuario-->
                 <p class="d-inline-flex gap-1">
-                    <a class="btn btn-primary col-md-6 col-sm-6 mb-1" data-bs-toggle="collapse" href="#datos_Usuario"
+                    <a class="btn btn-success col-md-6 col-sm-6 mb-1" data-bs-toggle="collapse" href="#datos_Usuario"
                         role="button" aria-expanded="false" aria-controls="collapseExample">
                         Datos usuario
                     </a>
-                    <!--Despligue de datos para método de pago-->
                     <button class="btn btn-primary col-md-6 col-sm-6 mb-1" type="button" data-bs-toggle="collapse"
                         data-bs-target="#metodo_Pago" aria-expanded="false" aria-controls="collapseExample">
                         Métodos de pago
@@ -88,9 +86,8 @@
                         </div>
                         <!--Ingreso de la fecha de vencimiento de la tarjeta-->
                         <div class="col-md-12 mb-1 col-sm-12">
-                            <label for="fecha" class="form-label">Fecha de vencimiento*</label>
-                            <input type="text" pattern="(0[1-9]|1[0-2])\/\d{2}" maxlength="7" placeholder="mm/yyyy" class="form-control" id="fecha" name="fecha" onblur="vencimiento_v()" required >
-                            <span id="mensajeErrorfecha"></span>
+                            <label for="validationCustom05" class="form-label">Fecha de vencimiento</label>
+                            <input type="text" class="form-control" id="validationCustom05" required>
                         </div>
                         <!--Ingreso del código de seguridad de la tarjeta-->
                         <div class="col-md-12 mb-1 col-sm-12">
@@ -114,7 +111,7 @@
                 </div>
                 <!--Botón de crear cuenta-->
                 <div>
-                    <button type="submit" class="btn btn-primary w-100" onclick="">Crear cuenta</button>
+                    <a class="btn btn-primary w-100" href="index_login.html" onclick="return validadorDatos()">Crear cuenta</a>
                 </div>
                 <div class="mb-3">
                     <a href="index.html">Menú</a>
