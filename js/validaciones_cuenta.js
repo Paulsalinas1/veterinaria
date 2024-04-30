@@ -167,7 +167,7 @@ function tageta_v(){
     return true;
  }
 
- function vencimiento_v(){
+function vencimiento_v(){
     var fechaIngresada = document.getElementById("fecha").value;
     var mensajeError = document.getElementById("mensajeErrorfecha");
     
