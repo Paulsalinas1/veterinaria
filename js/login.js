@@ -15,3 +15,13 @@ function validar() {
         document.getElementById("mensaje20").innerHTML = "Correo electrónico válido ✅";
     }
 }
+
+//Función para mostrar contraseña de usuarios
+function togglePassword() {
+    var input = document.getElementById("contraseñaCreada");
+    if (input.type === "password") {
+        input.type = "text";
+    } else {
+        input.type = "password";
+    }
+}
