@@ -1,4 +1,3 @@
-
 //Función para recuperar contraseña
 function validarCorreo() {
     var correo = document.getElementById("floatingPassword").value;
