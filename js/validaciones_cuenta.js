@@ -1,4 +1,3 @@
-
 //Función para recuperar contraseña
 function validarCorreo() {
     var correo = document.getElementById("floatingPassword").value;
@@ -168,7 +167,7 @@ function tageta_v(){
     return true;
  }
 
- function vencimiento_v(){
+function vencimiento_v(){
     var fechaIngresada = document.getElementById("fecha").value;
     var mensajeError = document.getElementById("mensajeErrorfecha");
     
@@ -262,6 +261,26 @@ function codigo_v(){
         }
         return true;
     }
+
+//Función para mostrar contraseña de usuarios
+function togglePassword1() {
+    var input = document.getElementById("contraseña");
+    if (input.type === "password") {
+        input.type = "text";
+    } else {
+        input.type = "password";
+    }
+}
+
+//Función para mostrar contraseña repetida de usuarios
+function togglePassword2() {
+    var input = document.getElementById("repetirContraseña");
+    if (input.type === "password") {
+        input.type = "text";
+    } else {
+        input.type = "password";
+    }
+}
 
 
 /*
