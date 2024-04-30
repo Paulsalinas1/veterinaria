@@ -25,7 +25,7 @@
                 <h2 class="text-center">Login</h2>
                 <div class="mb-3">
                     <!--Ingreso de correo-->
-                    <div class="form-floating ">
+                    <div class="imput-group form-floating ">
                         <input type="email" class="form-control" id="correoCreado" name="correoCreado"
                             onblur="validarCorreosuario()" required>
                         <label for="floatingEmail">Correo</label>
@@ -37,11 +37,10 @@
                     <div class="input-group form-floating">
                         <input type="password" class="form-control" id="contraseñaCreada" name="contraseñaCreada"
                             onblur="validarContraseñaUsuario()" required>
-                        <label for="floatingpassword">contraseña</label>
+                        <label for="floatingpassword">Contraseña</label>
                         <button class="btn btn-outline-secondary" type="button" onclick="togglePassword()">
                             <i id="show-hide" class="fa-solid fa-eye-slash"></i>
                         </button>
-                        
                     </div>
                     <span id="mensajeErrorContraseñaCreada"></span>
                 </div>
