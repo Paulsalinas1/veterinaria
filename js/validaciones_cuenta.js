@@ -262,6 +262,26 @@ function codigo_v(){
         return true;
     }
 
+//Función para mostrar contraseña de usuarios
+function togglePassword1() {
+    var input = document.getElementById("contraseña");
+    if (input.type === "password") {
+        input.type = "text";
+    } else {
+        input.type = "password";
+    }
+}
+
+//Función para mostrar contraseña repetida de usuarios
+function togglePassword2() {
+    var input = document.getElementById("repetirContraseña");
+    if (input.type === "password") {
+        input.type = "text";
+    } else {
+        input.type = "password";
+    }
+}
+
 
 /*
 function validarTarjetaCredito(numeroTarjeta) {
