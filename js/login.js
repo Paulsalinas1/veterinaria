@@ -50,11 +50,16 @@ function validarContraseñaUsuario(){
     if (contraseñacreada === "") {
         mensajeError.innerText = "Ingrese su contraseña.";
         mensajeError.style.color = "red";
-    
+        return false;// Evita que se envíe el formulario si la contraseña está vacía
+    } else if (contraseña.length <= 6) {
+        mensajeError.innerText = "La contraseña debe tener al menos 6 caracteres";
+        mensajeError.style.color = "red";
+        return false;// Evita que se envíe el formulario si la contraseña tiene menos de 6 caracteres
     }else {
         mensajeError.innerText = "Contraseña correcta ✅";
         mensajeError.style.color = "green";  
     }
+    return true;
 }
 
 function validarInicioS2(){
