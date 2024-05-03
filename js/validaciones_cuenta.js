@@ -9,12 +9,11 @@ function validarCorreo() {
         return false; // Evita que se envíe el formulario si el correo está vacío
     }
 
-    if (!correo.includes("@")) {
+    else if (!correo.includes("@gmail.com") && !correo.includes("@hotmail.com")) {
         mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
-        return false; // Evita que se envíe el formulario si el correo no contiene "@"
+        return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail"
     }
-
     return true; // Permite el envío del formulario si el correo es válido
 }
 
@@ -65,10 +64,10 @@ function validarCorreoCrear(){
         mensajeError.innerText = "Por favor, ingrese su correo.";
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si el correo está vacío
-    }else if (!correo.includes("@")) {
+    } else if (!correo.includes("@gmail.com") && !correo.includes("@hotmail.com")) {
         mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
-        return false; // Evita que se envíe el formulario si el correo no contiene "@"
+        return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail"
     }else {
         mensajeError.innerText = "Correo electrónico válido ✅";
         mensajeError.style.color = "green";  
