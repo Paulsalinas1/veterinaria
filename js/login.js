@@ -29,20 +29,36 @@ function togglePassword() {
 function validarCorreosuario(){
     var correo = document.getElementById("correoCreado").value;
     var mensajeError = document.getElementById("mensajeErrorCorreoCreado");
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
     if (correo === "") {
         mensajeError.innerText = "Por favor, ingrese su correo.";
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si el correo está vacío
-    }else if (!emailRegex.test(correo)) {
+    }else if (correo.includes("@trabajador.com")) {
+        mensajeError.innerText = "Correo electrónico de trabajador válido ✅";
+        mensajeError.style.color = "green";
+        
+        return true; // Envía el formulario si el correo contiene "@trabajador.com"
+    }else if (!correo.includes("@gmail.com") && !correo.includes("@hotmail.com")) {
         mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
-        return false; // Evita que se envíe el formulario si el correo no contiene "@"
+        return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail"
     }else {
         mensajeError.innerText = "Correo electrónico válido ✅";
         mensajeError.style.color = "green";  
     }
-} 
+    return true;
+}
+
+function entrarTrabajador(){
+    var correo = document.getElementById("correoCreado").value;
+
+    if (correo.includes("@trabajador.com")) {
+        window.location.href = "index_trabajador.html";
+    }else{window.location.href = "index_login.html";}
+    
+}
+
 function validarContraseñaUsuario(){
     var contraseñacreada = document.getElementById("contraseñaCreada").value;
     var mensajeError = document.getElementById("mensajeErrorContraseñaCreada");
@@ -59,7 +75,7 @@ function validarContraseñaUsuario(){
         mensajeError.innerText = "Contraseña correcta ✅";
         mensajeError.style.color = "green";  
     }
-    return true;
+    return true;// Envía los datos ingresados si son correctos
 }
 
 function validarInicioS2(){
