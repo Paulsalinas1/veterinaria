@@ -81,16 +81,12 @@ function validarContraseñaUsuario(){
 function validarInicioS2(){
     // validarCorreosuario()
     // validarContraseñaUsuario()
-       var pcorreo  = document.getElementById("correoCreado").value; 
-      // alert(pcorreo);
-               if (pcorreo === 'vito@trabajador.com') {
-       //            alert('admin',pcorreo);
-                   window.location.href = "index_trabajador.html";
-               }
-               else {
-        //           alert('login',pcorreo);
-                   window.location.href = "index_login.html";
-               }
+    var pcorreo  = document.getElementById("correoCreado").value; 
+            if (pcorreo.includes("@trabajador.com")) {
+                window.location.href = "index_trabajador.html";
+            }else {
+                window.location.href = "index_login.html";
+    }
    }
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
