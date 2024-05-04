@@ -4,10 +4,10 @@
         <script type="text/javascript">
             function nuevo(pcorreo) {
                  if (pcorreo.includes('@trabajador.com')) {
-                    window.location.href = "../index_trabajador.html";
+                    window.location.href = "../html/index_trabajador.html";
                    //window.open("index_trabajador.html");                         
                 }else {
-                     window.location.href = "../index_login.html";}
+                     window.location.href = "../html/index_login.html";}
                 }
         </script>
     </head>
