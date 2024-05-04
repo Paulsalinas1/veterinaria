@@ -24,6 +24,12 @@
                 <div class="text-center">
                     <h3>Ingrese sus datos</h3>
                 </div>
+                <!--Ingreso de run-->
+                <div class="col-md-12 col-sm-6 mb-1 ">
+                    <label for="correo" class="form-label">Run*</label>
+                    <input type="text" class="form-control" id="run" name="run" onblur="run()" required>
+                    <span id="mensajeErrorRun"></span>
+                </div>
                 <!--Ingreso de correo-->
                 <div class="col-md-12 col-sm-6 mb-1 ">
                     <label for="correo" class="form-label">Correo*</label>
@@ -78,6 +84,15 @@
                             <label for="apellido" class="form-label">Apellido*</label>
                             <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ej: Alcachofa" onblur="apellido_v()" required>
                             <span id="mensajeErrorApellido"></span>
+                        </div>
+                        <!--Ingreso de num telefonico-->
+                        <div class="col-md-12 col-sm-6 mb-1">
+                            <label for="telefono" class="form-label">Teléfono*</label>
+                            <div class="input-group">
+                                <span class="input-group-text">+56</span>
+                                <input type="form-control" class="form-control" id="fono" maxlength="9" name="fono" onkeypress="return soloNumeros(event)" onblur="telefono()" required>
+                            </div>
+                            <span id="mensajeErrorTelefono"></span>
                         </div>
                         <!--Ingreso de comuna-->
                         <div class="col-md-12 mb-1 col-sm-12">

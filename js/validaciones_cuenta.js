@@ -144,6 +144,25 @@ function apellido_v(){
     return true;
 }
 
+function telefono(){
+    var telefono = document.getElementById("fono").value;
+    var mensajeError = document.getElementById("mensajeErrorTelefono");
+
+    if(telefono==="") {
+        mensajeError.innerText = "Por favor, ingrese su número telefónico";
+        mensajeError.style.color = "red";
+        return false;
+    }else if(telefono.length!==9){
+        mensajeError.innerText = "Por favor, ingrese un número válido";
+        mensajeError.style.color = "red";
+        return false;
+    }else{
+        mensajeError.innerText = "Número válido ✅";
+        mensajeError.style.color = "green";
+    }
+    return true;
+}
+
 function tageta_v(){
     var numeroTarjeta = document.getElementById("targeta").value;
     var mensajeError = document.getElementById("mensajeErrortargeta");  
@@ -205,11 +224,11 @@ function codigo_v(){
     var mensajeError = document.getElementById("mensajeErrorcs");
 
     if(cs==="") {
-        mensajeError.innerText = "Por favor, ingrese una codigo de seguridad ";
+        mensajeError.innerText = "Por favor, ingrese una código de seguridad ";
         mensajeError.style.color = "red";
         return false;
     }else if(cs.length!==3){
-        mensajeError.innerText = "Por favor, ingrese una codigo de seguridad válido";
+        mensajeError.innerText = "Por favor, ingrese una código de seguridad válido";
         mensajeError.style.color = "red";
         return false;
     }else{
@@ -329,34 +348,5 @@ function tageta_v() {
 }
 function aletarE() {
     alert("Su nueva cuenta se creó exitosamente")
-}
-
-
-function validarInicioS(){
-    var correo = document.getElementById("correoCreado").value;
-    var mensajeError = document.getElementById("mensajeErrorCorreoCreado");
-
-    if (correo === "") {
-        mensajeError.innerText = "Por favor, ingrese su correo.";
-        mensajeError.style.color = "red";
-        // Evita que se envíe el formulario si el correo está vacío
-    }
-
-    if (!correo.includes("@")) {
-        mensajeError.innerText = "Ingrese un correo válido.";
-        mensajeError.style.color = "red";
-        // Evita que se envíe el formulario si el correo no contiene "@"
-    }
-
-    var contraseñacreada = document.getElementById("contraseñaCreada").value;
-    var mensajeError = document.getElementById("mensajeErrorContraseñaCreada");
-
-    if (contraseñacreada === "") {
-        mensajeError.innerText = "Ingrese su contraseña.";
-        mensajeError.style.color = "red";
-        // Evita que se envíe el formulario si la contraseña es incorrecta
-    }
-
-    // Permite el envío del formulario si el correo es válido
 }
 */
