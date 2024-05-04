@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!--Encabezado de links-->
+    <!--Encabezado de links-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <title>Carrito de Compras</title>
-        <link rel="stylesheet" href="css/carrito.css">
-        <link rel="icon" href="img/logo.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/carrito.css">
+        <link rel="icon" href="../img/logo.png">
     </head>
     <body>
+        <!--El título-->
         <header class="cotainer-fluid bg-success d-flex justify-content-center">
             <p class="text-light pt-3 fs-2"> Veterinaria Santa Marta</p>
         </header>
-        <!--barra de menu-->
+        <!--Cápsula de productos en el carrito-->
         <nav class="navbar navbar-expand-sm bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand"><samp class="fw-bold ml-3"><img src="img/logo.png" width="90"></samp></a>
+                <a class="navbar-brand"><samp class="fw-bold ml-3"><img src="../img/logo.png" width="90"></samp></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!--Selectores del menú-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="index_login.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="tienda.html">Tienda</a>
@@ -36,108 +37,86 @@
                         <div class="dropdown">
                             <a class="btn btn-success dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Iniciar sesión
+                                Mi Cuenta
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="login_tienda.html">Iniciar sesión</a></li>
-                                <li><a class="dropdown-item" href="registro_tienda.html">Crear cuenta</a></li>
+                                <li><a class="dropdown-item" href="mi_cuenta.html">Mi Cuenta</a></li>
+                                <li><a class="dropdown-item" href="tienda.html">Cerrar cuenta</a></li>
                             </ul>
                         </div>
                     </form>
-
                 </div>
             </div>
         </nav>
-        <!--listado de productos añadidos al carro-->
+        <!--Productos seleccionados-->
         <div class="container">
             <h1>Carrito de Compras</h1>
-            <!-- Producto 1 -->
             <div class="producto">
-                <img src="img/comiagato.png" alt="Producto 1">
+                <img src="../img/comiaperro.png" alt="Producto 1">
                 <div class="producto-info">
-                    <h4>Purina gato</h4>
-                    <p>Precio: <span class="precio">$14.950</span></p>
+                    <h4>Royal Canin adulto Mini Adult alimento para perro</h4>
+                    <p>Precio: <span class="precio">$50.000</span></p>
                     <p>Cantidad: </p>
                     <div class="d-flex align-items-center">
                         <button type="button" onclick="decrementarCantidad1('cantidad1')">-</button>
-                        <input type="number" id="cantidad1" name="Cantidad" min="1" step="1" value="5" readonly style="width: 50px;">
+                        <input type="number" id="cantidad1" name="Cantidad" min="1" step="1" value="1" readonly style="width: 50px;">
                         <button type="button" onclick="incrementarCantidad1('cantidad1')">+</button>
                     </div>
                 </div>
             </div>
-            <script>
-                function incrementarCantidad1(id) {
-                    const input = document.getElementById(id);
-                    input.value = parseInt(input.value) + 1;
-                }
-            
-                function decrementarCantidad1(id) {
-                    const input = document.getElementById(id);
-                    if (input.value > 1) {
-                        input.value = parseInt(input.value) - 1;
-                    }
-                }
-            </script>
-            <!-- Producto 2 -->
             <div class="producto">
-                <img src="img/pulgas.png" alt="Producto 2">
+                <img src="../img/comiaperropollo.png" alt="Producto 2">
                 <div class="producto-info">
-                    <h4>Drontal plus perro</h4>
-                    <p>Precio: <span class="precio">$7.100</span></p>
+                    <h4>Bravery Chicken Adul alimento para perro</h4>
+                    <p>Precio: <span class="precio">$85.000</span></p>
                     <p>Cantidad: </p>
                     <div class="d-flex align-items-center">
                         <button type="button" onclick="decrementarCantidad2('cantidad2')">-</button>
-                        <input type="number" id="cantidad2" name="Cantidad" min="1" step="1" value="1" readonly style="width: 50px;">
+                        <input type="number" id="cantidad2" name="Cantidad" min="1" step="1" value="2" readonly style="width: 50px;">
                         <button type="button" onclick="incrementarCantidad2('cantidad2')">+</button>
                     </div>
                 </div>
             </div>
-            <script>
-                function incrementarCantidad2(id) {
-                    const input = document.getElementById(id);
-                    input.value = parseInt(input.value) + 1;
-                }
-            
-                function decrementarCantidad2(id) {
-                    const input = document.getElementById(id);
-                    if (input.value > 1) {
-                        input.value = parseInt(input.value) - 1;
-                    }
-                }
-            </script>
+            <!--Selección método de pago-->
+            <label>Método de pago*</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tipoTarjeta" id="visa" value="visa">
+                <label class="form-check-label" for="visa">Débito</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="tipoTarjeta" id="mastercard" value="mastercard">
+                <label class="form-check-label" for="mastercard">Crédito</label>
+            </div>
+            <!--Selección método de envío-->
+            <div class="metodo-envio">
+                <label>Método de envío*</label>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="metodoEnvio" id="retiroTienda" value="retiroTienda" required>
+                    <label class="form-check-label" for="retiroTienda">Retiro en tienda</label>
+                </div>
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="metodoEnvio" id="envioDomicilio" value="envioDomicilio">
+                    <label class="form-check-label" for="envioDomicilio">Envío a domicilio</label>
+                </div>
+            </div>
             <div class="subtotal">
-                Subtotal: $22.050
+                Subtotal: $135.000
             </div>
             <div class="iva">
-                IVA: $4190
+                IVA: $25650
             </div>
             <div class="total" style="text-align: left;">
-                Total: $26.240
+                Total: $160.650
             </div>
-            <a href="pago.html" class="boton">Comprar</a>
+            <a onclick="comprar()" class="boton">Comprar</a>
         </div>
-        <script>
-            function incrementarCantidad(id) {
-                const input = document.getElementById(id);
-                input.value = parseInt(input.value) + 1;
-            }
-        
-            function decrementarCantidad(id) {
-                const input = document.getElementById(id);
-                if (parseInt(input.value) > 0) {
-                    input.value = parseInt(input.value) - 1;
-                }
-            }
-        </script>
-        <!-- contactos final -->
+        <!--Contactos-->
         <header class="container-fluid bg-success text-center py-4">
             <div class="row">
-                <!-- Columna izquierda para "Contactos" -->
                 <div class="col-md-6">
                     <p class="text-light pt-3 fs-4"> Contactos: </p>
                     <p class="text-light pt-1 fs-4"> vet.santamarta@gmail.com</p>
                 </div>
-                <!-- Columna derecha para "Dirección" -->
                 <div class="col-md-6">
                     <p class="text-light pt-3 fs-4"> Dirección: </p>
                     <p class="text-light pt-1 fs-4"> Calle Manuel Bayón Sector Santa Marta</p>
@@ -145,5 +124,6 @@
                 </div>
             </div>
         </header>
+        <script src="js/carrito_login.js"></script>
     </body>
 </html>

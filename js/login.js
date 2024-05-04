@@ -39,7 +39,7 @@ function validarCorreosuario(){
         mensajeError.style.color = "green";
         
         return true; // Envía el formulario si el correo contiene "@trabajador.com"
-    }else if (!correo.includes("@gmail.com") && !correo.includes("@hotmail.com")) {
+    }else if (!correo.includes("@") && !correo.includes(".")) {
         mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail"
@@ -79,9 +79,15 @@ function validarContraseñaUsuario(){
 }
 
 function validarInicioS2(){
-    validarCorreosuario()
-    validarContraseñaUsuario()
-}
+    // validarCorreosuario()
+    // validarContraseñaUsuario()
+    var pcorreo  = document.getElementById("correoCreado").value; 
+            if (pcorreo.includes("@trabajador.com")) {
+                window.location.href = "index_trabajador.html";
+            }else {
+                window.location.href = "index_login.html";
+    }
+   }
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {

@@ -10,22 +10,22 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
             integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="Css/cssmain.css">
-        <link rel="icon" href="img/logo.png">
+        <link rel="stylesheet" href="../css/cssmain.css">
+        <link rel="icon" href="../img/logo.png">
         <title>Login</title>
     </head>
     <!--Fondo y cápsula de datos-->
     <body class=" bg-success d-flex justify-content-center align-items-center  vh-100 ">
         <div class="cotainer-fluid bg-white p-5 rounded-5 text-secudary " style="width: 25rem;" id="login">
-            <form class="row needs-validation" method="get" action="index_login.html" novalidate>
+            <form class="row needs-validation" method="get" action="../php/poto.php" novalidate>
                 <div class=" d-flex justify-content-center">
-                    <img src="img/logo.png" style="height: 8rem; " alt="logo tienda">
+                    <img src="../img/logo.png" style="height: 8rem; " alt="logo tienda">
                 </div>
                 <!--Cápssula de login-->
                 <h2 class="text-center">Login</h2>
                 <div class="mb-3">
                     <!--Ingreso de correo-->
-                    <div class="form-floating ">
+                    <div class="imput-group form-floating ">
                         <input type="email" class="form-control" id="correoCreado" name="correoCreado"
                             onblur="validarCorreosuario()" required>
                         <label for="floatingEmail">Correo</label>
@@ -48,9 +48,6 @@
                 <div class="mb-3 text-center">
                     <a href="recordando.html">¿Se te olvidó la contraseña?</a>
                 </div>
-                <div class="mb-3 text-center">
-                    <a href="trabajador.html">Cuenta de admin</a>
-                </div>
                 <!--Botón para ejecutar sesión-->
                 <div class="mb-3">
                     <button type="submit" class="btn btn-success w-100 " onclick="validarInicioS2()"> Iniciar sesión </button>
@@ -65,6 +62,6 @@
             </form>
         </div>
         <!-- Vinculación del archivo js -->
-        <script src="js/login.js"></script>
+        <script src="../js/login.js"></script>
     </body>
 </html>
