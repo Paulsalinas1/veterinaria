@@ -354,7 +354,28 @@ function Rut_a() {
 }
 
 
-
+function formatRut() {
+    let rutInput = document.getElementById("Rut");
+    let rut = rutInput.value.replace(/\D/g, ''); // Elimina cualquier caracter que no sea un dígito
+    rut = rut.replace(/^0+/, ''); // Elimina ceros a la izquierda
+    
+    let formattedRut = '';
+    let rutLength = rut.length;
+    
+    if (rutLength > 1) {
+        for (let i = 0; i < rutLength - 1; i++) {
+            formattedRut += rut.charAt(i);
+            if (i === rutLength - 2) {
+                formattedRut += '-';
+            }
+        }
+        formattedRut += rut.charAt(rutLength - 1);
+    } else {
+        formattedRut = rut;
+    }
+    
+    rutInput.value = formattedRut;
+}
 
 
 /*
