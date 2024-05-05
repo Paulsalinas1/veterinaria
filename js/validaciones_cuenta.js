@@ -327,10 +327,7 @@ function validaRut() {
         mensajeError.innerText = "Por favor, ingrese un rut valido ";
         mensajeError.style.color = "red";
         return false;
-    }
-
-    
-        
+    }     
 }
 function dv(T) {
     var M = 0, S = 1;
@@ -338,9 +335,6 @@ function dv(T) {
         S = (S + T % 10 * (9 - M++ % 6)) % 11;
     return S ? S - 1 : 'k';
 }
-
-
-
 
 function Rut_a() {
     var rut = document.getElementById("Rut").value;
