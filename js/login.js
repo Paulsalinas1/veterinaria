@@ -21,13 +21,18 @@ function validarCorreosuario(){
         mensajeError.style.color = "green";
         
         return true; // Envía el formulario si el correo contiene "@trabajador.com"
-    }else if (!correo.includes("@gmail.com") && !correo.includes("@hotmail.com")) {
+    }else if (correo.includes("@gmail.com") || correo.includes("@hotmail.com")) {
+        mensajeError.innerText = "Correo electrónico válido ✅";
+        mensajeError.style.color = "green"; 
+        return false; // correo valido
+    }else if (correo.includes("@gmail.cl") || correo.includes("@hotmail.cl")) {
+        mensajeError.innerText = "Correo electrónico válido ✅";
+        mensajeError.style.color = "green"; 
+        return false; // correo valido
+    }else {
         mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
-        return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail"
-    }else {
-        mensajeError.innerText = "Correo electrónico válido ✅";
-        mensajeError.style.color = "green";  
+        return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail .com o .cl" 
     }
     return true;
 }
