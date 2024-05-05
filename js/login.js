@@ -21,7 +21,7 @@ function validarCorreosuario(){
         mensajeError.style.color = "green";
         
         return true; // Envía el formulario si el correo contiene "@trabajador.com"
-    }else if (!correo.includes("@") && !correo.includes(".")) {
+    }else if (!correo.includes("@gmail.com") && !correo.includes("@hotmail.com")) {
         mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail"
