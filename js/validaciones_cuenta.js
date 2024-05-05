@@ -320,13 +320,12 @@ function validaRut() {
             mensajeError.innerText = "Rut válido ✅";
             mensajeError.style.color = "green";
             return true;
-        }
-        
-    }else {
-        mensajeError.innerText = "Por favor, ingrese un rut valido ";
-        mensajeError.style.color = "red";
-        return false;
-    }     
+        }else {
+            mensajeError.innerText = "Por favor, ingrese un rut valido ";
+            mensajeError.style.color = "red";
+            return false;
+        }    
+    } 
 }
 function dv(T) {
     var M = 0, S = 1;
