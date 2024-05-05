@@ -338,7 +338,7 @@ function dv(T) {
 
 function formatRut() {
     let rutInput = document.getElementById("Rut");
-    let rut = rutInput.value.replace(/\D/g, ''); // Elimina cualquier caracter que no sea un dígito
+    let rut = rutInput.value.replace(/[^\dkK]/g, ''); // Elimina cualquier caracter que no sea un dígito o 'k' (mayúscula o minúscula)
     rut = rut.replace(/^0+/, ''); // Elimina ceros a la izquierda
     
     let formattedRut = '';
