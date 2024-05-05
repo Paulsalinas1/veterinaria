@@ -305,7 +305,7 @@ function validaRut() {
     var mensajeError = document.getElementById("mensajeErrorRut");
 
     if (rutCompleto === "") {
-        mensajeError.innerText = "Por favor, ingrese un rut ";
+        mensajeError.innerText = "Por favor, ingrese su run ";
         mensajeError.style.color = "red";
         return false;
     }else if (/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto)){
@@ -321,7 +321,7 @@ function validaRut() {
             mensajeError.style.color = "green";
             return true;
         }else {
-            mensajeError.innerText = "Por favor, ingrese un rut valido ";
+            mensajeError.innerText = "Por favor, ingrese un run válido ";
             mensajeError.style.color = "red";
             return false;
         }    
