@@ -17,7 +17,7 @@ function validarCorreo() {
 
     return true; // Permite el envío del formulario si el correo es válido
 }
-
+//--------------------------------------------------------------------------------------------
 function validarCorreosuario(){
     var correo = document.getElementById("correoCreado").value;
     var mensajeError = document.getElementById("mensajeErrorCorreoCreado");
