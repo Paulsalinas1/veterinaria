@@ -317,7 +317,7 @@ function validaRut() {
         }
         
         if (dv(rut) == digv){
-            mensajeError.innerText = "Rut válido ✅";
+            mensajeError.innerText = "Run válido ✅";
             mensajeError.style.color = "green";
             return true;
         }else {
