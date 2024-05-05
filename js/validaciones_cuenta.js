@@ -354,6 +354,9 @@ function Rut_a() {
 }
 
 
+
+
+
 /*
 function validarTarjetaCredito(numeroTarjeta) {
     // Eliminar espacios en blanco
