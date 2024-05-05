@@ -308,8 +308,7 @@ function validaRut() {
         mensajeError.innerText = "Por favor, ingrese un rut ";
         mensajeError.style.color = "red";
         return false;
-    }
-    if (/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto)){
+    }else if (/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto)){
         var tmp = rutCompleto.split('-');
         var digv = tmp[1];
         var rut = tmp[0];
@@ -320,7 +319,7 @@ function validaRut() {
         if (dv(rut) == digv){
             mensajeError.innerText = "Rut válido ✅";
             mensajeError.style.color = "green";
-            return false;
+            return true;
         }
         
     }else {
@@ -336,22 +335,6 @@ function dv(T) {
     return S ? S - 1 : 'k';
 }
 
-function Rut_a() {
-    var rut = document.getElementById("Rut").value;
-    var mensajeError = document.getElementById("mensajeErrorRut");
-
-    if (rut === "") {
-        mensajeError.innerText = "Por favor, ingrese un rut ";
-        mensajeError.style.color = "red";
-    } else if (validaRut(rut)) {
-        mensajeError.innerText = "Por favor, ingrese un rut válido";
-        mensajeError.style.color = "red";
-    } else {
-        mensajeError.innerText = "Rut válido ✅";
-        mensajeError.style.color = "green";
-    }
-
-}
 
 
 function formatRut() {
