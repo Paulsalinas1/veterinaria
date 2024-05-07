@@ -19,6 +19,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     // Manejar el evento click del botón de inicio de sesión
+    
+    $("#contraseñaCreada").attr("minlength","6");
     $("#btn_inicio_c").click(function () {
         if (validarCorreosuario()) {
             if (validarContraseñaUsuario()) {
@@ -41,5 +43,6 @@ $(document).ready(function () {
             }
         }
     });
+    
 });
 
