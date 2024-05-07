@@ -19,22 +19,21 @@ function validarCorreosuario(){
     }else if (correo.includes("@trabajador.com")) {
         mensajeError.innerText = "Correo electrónico de trabajador válido ✅";
         mensajeError.style.color = "green";
-        
         return true; // Envía el formulario si el correo contiene "@trabajador.com"
     }else if (correo.includes("@gmail.com") || correo.includes("@hotmail.com")) {
         mensajeError.innerText = "Correo electrónico válido ✅";
         mensajeError.style.color = "green"; 
-        return false; // correo valido
+        return true; // correo valido
     }else if (correo.includes("@gmail.cl") || correo.includes("@hotmail.cl")) {
         mensajeError.innerText = "Correo electrónico válido ✅";
         mensajeError.style.color = "green"; 
-        return false; // correo valido
+        return true; // correo valido
     }else {
         mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail .com o .cl" 
     }
-    return true;
+   
 }
 
 function entrarTrabajador(){
@@ -61,8 +60,9 @@ function validarContraseñaUsuario(){
     }else {
         mensajeError.innerText = "Contraseña correcta ✅";
         mensajeError.style.color = "green";  
+        return true;// Envía los datos ingresados si son correctos
     }
-    return true;// Envía los datos ingresados si son correctos
+    
 }
 
 function validarInicioS2(){
@@ -114,3 +114,9 @@ function validarInicioS2(){
     }
 }
 */
+
+
+
+
+            
+  
