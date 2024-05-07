@@ -13,6 +13,7 @@
     <script src="../js/reco.js"></script>
     <script src="../js/reco_jq.js"></script>
     <title>cuenta_perdida</title>
+    
 </head>
 
 <body class=" bg-primary d-flex justify-content-center align-items-center  vh-100 ">
@@ -23,7 +24,7 @@
         <h4 class="text-center">¿Se olvidó de su contraseña?</h4>
         <h6 class="text-center">No se preocupe, solo ingrese su correo</h6>
 
-        <form class="needs-validation" method="get" action="../html/login.html" novalidate>
+        <form class="row needs-validation" method="get" action="../html/login.html" novalidate>
             <div class="mb-3">
                 <div class="form-floating">
                     <input type="email" class="form-control" id="email2" name="email2" placeholder="email" required>
@@ -34,7 +35,7 @@
             </div>
             <div class="mb-3">
                 <!--Se llama la función validarCorreo en el evento onclick-->
-                <button type="submit" class="btn btn-primary w-100" id="btn_co"> Enviar correo </button>
+                <button class="btn btn-primary w-100" id="btn_co" type="submit"> Enviar correo </button>
             </div>
         </form>
 
@@ -42,7 +43,6 @@
             <h6>¿No tiene cuenta? <a href="registro.html">Crear cuenta</a> </h6>
         </div>
     </div>
-
 </body>
 
 </html>
