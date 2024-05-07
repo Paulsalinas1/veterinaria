@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $("#email2").blur(function () {
         validarCorreo();
     });
