@@ -66,14 +66,14 @@ function validarContraseñaUsuario(){
 }
 
 function validarInicioS2(){
-    // validarCorreosuario()
-    // validarContraseñaUsuario()
-    var pcorreo  = document.getElementById("correoCreado").value; 
+    validarCorreosuario()
+    validarContraseñaUsuario()
+    /*var pcorreo  = document.getElementById("correoCreado").value; 
             if (pcorreo.includes("@trabajador.com")) {
                 window.location.href = "index_trabajador.html";
             }else {
                 window.location.href = "index_login.html";
-    }
+    }*/
    }
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
