@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="../Css/cssmain.css">
         <link rel="icon" href="../img/logo.png">
         <title>Crear_cuenta</title>
+        <script src="/js/jquery-3.7.1.min.js"></script>
+        <script src="/js/reg_jq.js"></script>
     </head>
     <!--Cápsula contenedora de datos-->
     <body class=" bg-success d-flex justify-content-center align-items-center vh-100 ">
@@ -27,7 +29,7 @@
                     <!--Ingreso de run-->
                     <div class="col-md-12 mb-1 col-sm-12">
                         <label for="Rut" class="form-label">Run*</label>
-                        <input type="text" class="form-control" id="Rut" name="Rut" placeholder="Ej: 11111111-1"  oninput="formatRut()" onblur="validaRut()" required>
+                        <input type="text" class="form-control" id="Rut" name="Rut" placeholder="Ej: 11111111-1"  required>
                         <span id="mensajeErrorRut"></span>
                     </div>
                 <!--Ingreso de correo-->

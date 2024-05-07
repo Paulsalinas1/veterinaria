@@ -4,57 +4,29 @@ function validarCorreo() {
     var mensajeError = document.getElementById("mensajeErrorCorreo");
 
     if (correo === "") {
-        mensajeError.innerText = "Por favor, ingrese un correo.";
-        mensajeError.style.color = "red";
-        return false; // Evita que se envíe el formulario si el correo está vacío
-    }
-
-    else if (!correo.includes("@gmail.com") && !correo.includes("@hotmail.com")) {
-        mensajeError.innerText = "Ingrese un correo válido.";
-        mensajeError.style.color = "red";
-        return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail"
-    }
-    return true; // Permite el envío del formulario si el correo es válido
-}
-//--------------------------------------------------------------------------------------------
-function validarCorreosuario() {
-    var correo = document.getElementById("correoCreado").value;
-    var mensajeError = document.getElementById("mensajeErrorCorreoCreado");
-
-    if (correo === "") {
         mensajeError.innerText = "Por favor, ingrese su correo.";
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si el correo está vacío
-    } else if (!correo.includes("@")) {
+    }else if (correo.includes("@trabajador.com")) {
+        mensajeError.innerText = "Correo electrónico de trabajador válido ✅";
+        mensajeError.style.color = "green";
+        return true; // Envía el formulario si el correo contiene "@trabajador.com"
+    }else if (correo.includes("@gmail.com") || correo.includes("@hotmail.com")) {
+        mensajeError.innerText = "Correo electrónico válido ✅";
+        mensajeError.style.color = "green"; 
+        return true; // correo valido
+    }else if (correo.includes("@gmail.cl") || correo.includes("@hotmail.cl")) {
+        mensajeError.innerText = "Correo electrónico válido ✅";
+        mensajeError.style.color = "green"; 
+        return true; // correo valido
+    }else {
         mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
-        return false; // Evita que se envíe el formulario si el correo no contiene "@"
-    } else {
-        mensajeError.innerText = "Correo electrónico válido ✅";
-        mensajeError.style.color = "green";
+        return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail .com o .cl" 
     }
-    return true;
 }
+//--------------------------------------------------------------------------------------------
 
-function validarContraseñaUsuario() {
-    var contraseñacreada = document.getElementById("contraseñaCreada").value;
-    var mensajeError = document.getElementById("mensajeErrorContraseñaCreada");
-
-    if (contraseñacreada === "") {
-        mensajeError.innerText = "Ingrese su contraseña.";
-        mensajeError.style.color = "red";
-        return false; // Evita que se envíe el formulario si la contraseña es incorrecta
-    } else {
-        mensajeError.innerText = "Contraseña correcta ✅";
-        mensajeError.style.color = "green";
-    }
-    return true;
-}
-
-function validarInicioS2() {
-    validarCorreosuario()
-    validarContraseñaUsuario()
-}
 
 function validarCorreoCrear() {
     var correo = document.getElementById("correo").value;
@@ -64,15 +36,23 @@ function validarCorreoCrear() {
         mensajeError.innerText = "Por favor, ingrese su correo.";
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario si el correo está vacío
-    } else if (!correo.includes("@gmail.com") && !correo.includes("@hotmail.com")) {
+    }else if (correo.includes("@trabajador.com")) {
+        mensajeError.innerText = "Correo electrónico de trabajador válido ✅";
+        mensajeError.style.color = "green";
+        return true; // Envía el formulario si el correo contiene "@trabajador.com"
+    }else if (correo.includes("@gmail.com") || correo.includes("@hotmail.com")) {
+        mensajeError.innerText = "Correo electrónico válido ✅";
+        mensajeError.style.color = "green"; 
+        return true; // correo valido
+    }else if (correo.includes("@gmail.cl") || correo.includes("@hotmail.cl")) {
+        mensajeError.innerText = "Correo electrónico válido ✅";
+        mensajeError.style.color = "green"; 
+        return true; // correo valido
+    }else {
         mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
-        return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail"
-    } else {
-        mensajeError.innerText = "Correo electrónico válido ✅";
-        mensajeError.style.color = "green";
+        return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail .com o .cl" 
     }
-    return true;
 }
 
 function contra_1() {
@@ -90,8 +70,9 @@ function contra_1() {
     } else {
         mensajeError.innerText = "Contraseña ingresada ✅";
         mensajeError.style.color = "green";
+        return true;
     }
-    return true;
+    
 }
 
 function contra_2() {
@@ -110,8 +91,9 @@ function contra_2() {
     } else {
         mensajeError.innerText = "Contraseñas iguales ✅";
         mensajeError.style.color = "green";
+        return true;
     }
-    return true;
+    
 }
 
 function nombre_v() {
@@ -125,6 +107,7 @@ function nombre_v() {
     } else {
         mensajeError.innerText = "Nombre correcto ✅";
         mensajeError.style.color = "green";
+        return true;
     }
 }
 
@@ -139,8 +122,9 @@ function apellido_v() {
     } else {
         mensajeError.innerText = "Apellido correcto ✅";
         mensajeError.style.color = "green";
+        return true;
     }
-    return true;
+    
 }
 
 function telefono() {
@@ -158,8 +142,9 @@ function telefono() {
     } else {
         mensajeError.innerText = "Número válido ✅";
         mensajeError.style.color = "green";
+        return true;
     }
-    return true;
+    
 }
 
 function tageta_v() {
@@ -181,8 +166,9 @@ function tageta_v() {
     } else {
         mensajeError.innerText = "Targeta válida ✅";
         mensajeError.style.color = "green";
+        return true;
     }
-    return true;
+    
 }
 
 function vencimiento_v() {
@@ -214,8 +200,9 @@ function vencimiento_v() {
     } else {
         mensajeError.innerText = "Fecha válida ✅";
         mensajeError.style.color = "green";
+        return true;
     }
-    return true;
+    
 }
 
 function codigo_v() {
@@ -233,8 +220,9 @@ function codigo_v() {
     } else {
         mensajeError.innerText = "Código de seguridad válido ✅";
         mensajeError.style.color = "green";
+        return true;
     }
-    return true;
+    
 }
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -334,8 +322,6 @@ function dv(T) {
     return S ? S - 1 : 'k';
 }
 
-
-
 function formatRut() {
     let rutInput = document.getElementById("Rut");
     let rut = rutInput.value.replace(/[^\dkK]/g, ''); // Elimina cualquier caracter que no sea un dígito o 'k' (mayúscula o minúscula)
@@ -359,52 +345,15 @@ function formatRut() {
     rutInput.value = formattedRut;
 }
 
-
-/*
-function validarTarjetaCredito(numeroTarjeta) {
-    // Eliminar espacios en blanco
-    numeroTarjeta = numeroTarjeta.replace(/\s/g, '');
-    
-    // La tarjeta debe contener solo números
-    if (!/^[0-9]+$/.test(numeroTarjeta)) {
-        return false;
-    }
-    
-    // La tarjeta debe tener entre 13 y 19 dígitos
-    if (numeroTarjeta.length < 13 || numeroTarjeta.length > 19) {
-        return false;
-    }
-    
-    // Algoritmo de Luhn para validar la tarjeta de crédito
-    let suma = 0;
-    let alternar = false;
-    for (let i = numeroTarjeta.length - 1; i >= 0; i--) {
-        let digito = parseInt(numeroTarjeta.charAt(i), 10);
-        if (alternar) {
-            digito *= 2;
-            if (digito > 9) {
-                digito -= 9;
-            }
-        }
-        suma += digito;
-        alternar = !alternar;
-    }
-    return suma % 10 === 0;
+function validarDatos(){
+    validaRut();
+    validarCorreoCrear();
+    contra_1();
+    contra_2();
+    nombre_v();
+    apellido_v();
+    telefono();
+    tageta_v();
+    vencimiento_v();
+    codigo_v();
 }
-
-function tageta_v() {
-    var inputTarjeta = document.getElementById("targeta");
-    var mensajeError = document.getElementById("mensajeErrortargeta");
-    
-    if (!validarTarjetaCredito(inputTarjeta.value)) {
-        mensajeError.textContent = "Por favor ingrese un número de tarjeta de crédito válido.";
-        inputTarjeta.classList.add("is-invalid");
-    } else {
-        mensajeError.textContent = "";
-        inputTarjeta.classList.remove("is-invalid");
-    }
-}
-function aletarE() {
-    alert("Su nueva cuenta se creó exitosamente")
-}
-*/
