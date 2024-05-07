@@ -84,7 +84,11 @@ function contra_2() {
         mensajeError.innerText = "Por favor, ingrese una contraseña";
         mensajeError.style.color = "red";
         return false;
-    } else if (repetirContraseña !== contraseña) {
+    } else if (contraseña.length < 6) {
+        mensajeError.innerText = "La contraseña debe tener al menos 6 caracteres";
+        mensajeError.style.color = "red";
+        return false;// Evita que se envíe el formulario si la contraseña tiene menos de 6 caracteres
+    }else if (repetirContraseña !== contraseña) {
         mensajeError.innerText = "Las contraseñas no coinciden.";
         mensajeError.style.color = "red";
         return false;

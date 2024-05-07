@@ -35,15 +35,15 @@
                 <!--Ingreso de correo-->
                 <div class="col-md-12 col-sm-6 mb-1 ">
                     <label for="correo" class="form-label">Correo*</label>
-                    <input type="email" class="form-control" id="correo" name="correo" placeholder="Ej: juan.alcachofa@gmail.com" onblur="validarCorreoCrear()" required>
+                    <input type="email" class="form-control" id="correo" name="correo" placeholder="Ej: juan.alcachofa@gmail.com"  required>
                     <span id="mensajeErrorCorreoCrear"></span>
                 </div>
                 <!--Ingreso de contraseña-->
                 <div class="col-md-6 col-sm-6 mb-1">
-                    <label for="validationCustom01" class="form-label">Contraseña*</label>
+                    <label for="validationCustom01" class="form-label" >Contraseña*</label>
                     <div class="input-group">
-                        <input type="password" class="form-control" id="contraseña" name="contraseña" onblur="contra_1()" required>
-                        <button class="btn btn-outline-secondary" type="button" onclick="togglePassword1()">
+                        <input type="password" class="form-control" id="contraseña"  name="contraseña"  required>
+                        <button class="btn btn-outline-secondary" type="button" id="ojo">
                             <i id="show-hide" class="fa-solid fa-eye-slash"></i>
                         </button>
                     </div>
@@ -53,8 +53,8 @@
                 <div class="col-md-6 col-sm-6 mb-1 ">
                     <label for="validationCustom01" class="form-label">Repetir contraseña*</label>
                     <div class="input-group">
-                        <input type="password" class="form-control" id="repetirContraseña" name="repetirContraseña" onblur="contra_2()" required>
-                        <button class="btn btn-outline-secondary" type="button" onclick="togglePassword2()">
+                        <input type="password" class="form-control" id="repetirContraseña" name="repetirContraseña" required>
+                        <button class="btn btn-outline-secondary" type="button" id="ojo2">
                             <i id="show-hide" class="fa-solid fa-eye-slash"></i>
                         </button>
                     </div>
@@ -78,13 +78,13 @@
                         <!--Ingreso de nombre-->
                         <div class="col-md-12 mb-1 col-sm-12">
                             <label for="nombre" class="form-label">Nombre*</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: Juan" onblur="nombre_v()" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: Juan" required>
                             <span id="mensajeErrorNombre"></span>
                         </div>
                         <!--Ingreso de apellido-->
                         <div class="col-md-12 mb-1 col-sm-12">
                             <label for="apellido" class="form-label">Apellido*</label>
-                            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ej: Alcachofa" onblur="apellido_v()" required>
+                            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ej: Alcachofa" required>
                             <span id="mensajeErrorApellido"></span>
                         </div>
                         <!--Ingreso de num telefonico-->
@@ -92,7 +92,7 @@
                             <label for="telefono" class="form-label">Teléfono*</label>
                             <div class="input-group">
                                 <span class="input-group-text">+56</span>
-                                <input type="form-control" class="form-control" id="fono" maxlength="9" name="fono" onkeypress="return soloNumeros(event)" onblur="telefono()" required>
+                                <input type="form-control" class="form-control" id="fono" name="fono" required>
                             </div>
                             <span id="mensajeErrorTelefono"></span>
                         </div>
@@ -114,19 +114,19 @@
                         <!--Ingreso de tarjeta de crédito-->
                         <div class="col-md-12 mb-1 col-sm-12">
                             <label for="targeta" class="form-label">Targeta de crédito*</label>
-                            <input type="text" class="form-control" pattern="[0-9]{16}"  minlength="16" maxlength="16" id="targeta" name="targeta" onblur="tageta_v()" onkeypress="return soloNumeros(event)" required>
+                            <input type="text" class="form-control" id="targeta" name="targeta" required>
                             <span id="mensajeErrortargeta"></span>
                         </div>
                         <!--Ingreso de la fecha de vencimiento de la tarjeta-->
                         <div class="col-md-12 mb-1 col-sm-12">  
                             <label for="fecha" class="form-label">Fecha de vencimiento*</label>
-                            <input type="text" pattern="(0[1-9]|1[0-2])\/\d{4}" maxlength="7" placeholder="mes/año" class="form-control" id="fecha" name="fecha" onblur="vencimiento_v()" required >
+                            <input type="text" placeholder="mes/año" class="form-control" id="fecha" name="fecha"  required >
                             <span id="mensajeErrorfecha"></span>
                         </div>
                         <!--Ingreso del código de seguridad de la tarjeta-->
                         <div class="col-md-12 mb-1 col-sm-12">
                             <label for="cs" class="form-label">Código de seguridad*</label>
-                            <input class="form-control" id="cs" name="cs" pattern="[0-9]{3}" minlength="3" maxlength="3" onkeypress="return soloNumeros(event)" onblur="codigo_v()" required>
+                            <input class="form-control" id="cs" name="cs" required>
                             <span id="mensajeErrorcs"></span>
                         </div>
                     </div>
