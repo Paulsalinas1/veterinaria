@@ -8,6 +8,10 @@ $(document).ready(function () {
         validarContraseñaUsuario();
     });
 
+    $("#ojo").click(function () {
+        togglePassword();
+    });
+
     $("#btn_inicio_c").click(function () {
         validarInicioS2();
     });
@@ -19,8 +23,7 @@ $(document).ready(function () {
         if (validarCorreosuario()) {
             if (validarContraseñaUsuario()) {
                 var correo = $("#correoCreado").val();
-                var contraseña = $("#contraseñaCreada").val();
-
+                
                 // Realizar alguna validación de los datos si es necesario
                 // Verificar el correo y asignar el action al formulario según sea necesario
                 if (correo.includes("@gmail.com") ) {
