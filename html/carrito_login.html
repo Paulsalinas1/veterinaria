@@ -52,6 +52,7 @@
         </nav>
         <!--Productos seleccionados-->
         <div class="container">
+            <form class="row needs-validation" method="get" action="compras_login.html" novalidate>
             <h1>Carrito de Compras</h1>
             <div class="producto">
                 <img src="../img/comiaperro.png" alt="Producto 1">
@@ -80,25 +81,31 @@
                 </div>
             </div>
             <!--Selección método de pago-->
-            <label>Método de pago*</label>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="tipoTarjeta" id="visa" value="visa">
-                <label class="form-check-label" for="visa">Débito</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="tipoTarjeta" id="mastercard" value="mastercard">
-                <label class="form-check-label" for="mastercard">Crédito</label>
+            <div class="metodo-pago">
+                <label>Método de pago*</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipoTarjeta" id="debito" value="visa" onblur="validarMetodoPago()" required>
+                    <label class="form-check-label" for="visa">Débito</label>
+                    <span id="mensajeErrorMetodoPago"></span>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipoTarjeta" id="credito" value="mastercard "onblur="validarMetodoPago()" required>
+                    <label class="form-check-label" for="masterecard">Crédito</label>
+                    <span id="mensajeErrorMetodoPago"></span>
+                </div>
             </div>
             <!--Selección método de envío-->
             <div class="metodo-envio">
                 <label>Método de envío*</label>
-                <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="metodoEnvio" id="retiroTienda" value="retiroTienda" required>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="metodoEnvio" id="retiroTienda" value="retiroTienda" onblur="validarMetodoEnvio()" required>
                     <label class="form-check-label" for="retiroTienda">Retiro en tienda</label>
+                    <span id="mensajeErrorMetodoEnvio"></span>
                 </div>
-                <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="metodoEnvio" id="envioDomicilio" value="envioDomicilio">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="metodoEnvio" id="envioDomicilio" value="envioDomicilio" onblur="validarMetodoEnvio()" required>
                     <label class="form-check-label" for="envioDomicilio">Envío a domicilio</label>
+                    <span id="mensajeErrorMetodoEnvio"></span>
                 </div>
             </div>
             <div class="subtotal">
@@ -110,7 +117,8 @@
             <div class="total" style="text-align: left;">
                 Total: $160.650
             </div>
-            <a onclick="comprar()" class="boton">Comprar</a>
+            <button type="submit" class="btn btn-success w-100" onblur="validarCompra()">Comprar</button>
+        </form>
         </div>
         <!--Contactos-->
         <header class="container-fluid bg-success text-center py-4">

@@ -1,29 +1,36 @@
-function comprar() {
-    // Verificar si el wea seleccionó un método de pago
-    const metodosPago = document.getElementsByName('tipoTarjeta');
-    let pagoSeleccionado = false;
-    for (let i = 0; i < metodosPago.length; i++) {
-        if (metodosPago[i].checked) {
-            pagoSeleccionado = true;
-            break;
-        }
-    }
-    // Verificar si el wear seleccionó un método de envío
-    const metodoEnvio = document.getElementsByName('metodoEnvio');
-    let envioSeleccionado = false;
-    for (let i = 0; i < metodoEnvio.length; i++) {
-        if (metodoEnvio[i].checked) {
-            envioSeleccionado = true;
-            break;
-        }
-    }
-    // Mostrar la alerta por si el wear no elige
-    if (!pagoSeleccionado || !envioSeleccionado) {
-        alert('Por favor, seleccione un método de pago y un método de envío.');
+function validarMetodoPago(){
+    var mensajeError = document.getElementById("mensajeErrorMetodoPago");
+    var visaChecked = document.getElementById("debito").checked;
+    var mastercardChecked = document.getElementById("credito").checked;
+
+    if (!visaChecked && !mastercardChecked) {
+        mensajeError.innerText = "Debes seleccionar un método de pago.";
+        mensajeError.style.color = "red";
+        return false; // Evita que se envíe el formulario si no se ha seleccionado un método de pago
     } else {
-        alert('Compra realizada con éxito.');
-        window.location.href = 'compras_login.html';
+        mensajeError.innerText = ""; // Borra el mensaje de error si se ha seleccionado un método de pago
+        return true; // Permite el envío del formulario si se ha seleccionado un método de pago
     }
+}
+
+function validarMetodoEnvio(){
+    var mensajeError = document.getElementById("mensajeErrorMetodoEnvio");
+    var retiroTiendaChecked = document.getElementById("retiroTienda").checked;
+    var envioDomicilioChecked = document.getElementById("envioDomicilio").checked;
+
+    if (!retiroTiendaChecked && !envioDomicilioChecked) {
+        mensajeError.innerText = "Debe seleccionar una opción para recibir el producto.";
+        mensajeError.style.color = "red";
+        return false; // Evita que se envíe el formulario si no se ha seleccionado un método de envío
+    } else {
+        mensajeError.innerText = ""; // Borra el mensaje de error si se ha seleccionado un método de envío
+        return true; // Permite el envío del formulario si se ha seleccionado un método de envío
+    }
+}
+
+function validarCompra(){
+    validarMetodoPago();
+    validarMetodoEnvio();
 }
 
 
