@@ -165,11 +165,11 @@ function vencimiento_v() {
         mensajeError.innerText = "Por favor, ingrese una fecha";
         mensajeError.style.color = "red";
         return false;
-    } else if (añoActual > añoIngresado || (añoActual === añoIngresado && mesActual > mesIngresado)) {
+    } else if (añoActual < añoIngresado || (añoActual === añoIngresado && mesActual > mesIngresado)) {
         mensajeError.innerText = "Su tarjeta ya expiró, pruebe con otra.";
         mensajeError.style.color = "red";
         return false;
-    } else if (fechaIngresada.length !== 7) {
+    } else if (fechaIngresada.length !== 5) {
         mensajeError.innerText = "Por favor, ingrese una fecha válida";
         mensajeError.style.color = "red";
         return false;
