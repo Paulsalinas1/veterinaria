@@ -53,7 +53,7 @@
         </nav>
         <!--Productos seleccionados-->
         <div class="container">
-            <form id="carritoForm" class="row needs-validation" method="get" action="compras_login.html" novalidate>
+            <form id="carritoForm" class="row needs-validation" method="get "action="compras_login.html" novalidate>
                 <h1>Carrito de Compras</h1>
                 <div class="producto">
                     <img src="../img/comiaperro.png" alt="Producto 1">
@@ -85,7 +85,7 @@
                 </div>
                 <!-- Otros campos de formulario -->
                 <!-- Selección método de pago -->
-                <div class="metodo-pago">
+                <div>
                     <label>Método de pago*</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="tipoTarjeta" id="debito" required>
@@ -95,10 +95,10 @@
                         <input class="form-check-input" type="radio" name="tipoTarjeta" id="credito" required>
                         <label class="form-check-label" for="credito">Crédito</label>
                     </div>
-                    <div class="mensaje-error" id="mensajeErrorMetodoPago"></div>
+                    <div id="mensajeErrorMetodoPago"></div>
                 </div>
                 <!-- Selección método de envío -->
-                <div class="metodo-envio">
+                <div>
                     <label>Método de envío*</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="metodoEnvio" id="retiroTienda" required>
@@ -108,7 +108,7 @@
                         <input class="form-check-input" type="radio" name="metodoEnvio" id="envioDomicilio" required>
                         <label class="form-check-label" for="envioDomicilio">Envío a domicilio</label>
                     </div>
-                    <div class="mensaje-error" id="mensajeErrorMetodoEnvio"></div>
+                    <div id="mensajeErrorMetodoEnvio"></div>
                 </div>
                 <!-- Mensaje de error general -->
                 <div class="error-general" id="mensajeErrorGeneral" style="color: red;"></div>
