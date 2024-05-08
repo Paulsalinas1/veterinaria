@@ -36,6 +36,10 @@ $(document).ready(function () {
                     $("#ini_f_c").attr("action", "../html/trabajador.html"); // Redirigir al usuario 2 a la página 2
                 }else if (correo.includes("@gmail.cl") ) {
                     $("#ini_f_c").attr("action", "../html/index_login.html"); // Redirigir al usuario 1 a la página 1
+                }else if (correo.includes("@hotmail.cl") ) {
+                    $("#ini_f_c").attr("action", "../html/index_login.html"); // Redirigir al usuario 1 a la página 1
+                }else if (correo.includes("@hotmail.com") ) {
+                    $("#ini_f_c").attr("action", "../html/index_login.html"); // Redirigir al usuario 1 a la página 1
                 }else {
                     alert("Correo o contraseña incorrectos");
                     return false; // Evitar enviar el formulario si las credenciales son incorrectas

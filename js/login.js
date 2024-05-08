@@ -36,15 +36,6 @@ function validarCorreosuario(){
    
 }
 
-function entrarTrabajador(){
-    var correo = document.getElementById("correoCreado").value;
-
-    if (correo.includes("@trabajador.com")) {
-        window.location.href = "index_trabajador.html";
-    }else{window.location.href = "index_login.html";}
-    
-}
-
 function validarContraseñaUsuario(){
     var contraseñacreada = document.getElementById("contraseñaCreada").value;
     var mensajeError = document.getElementById("mensajeErrorContraseñaCreada");
@@ -89,11 +80,3 @@ function validarInicioS2(){
       }, false)
     })
   })()
-
-
-
-
-
-
-            
-  
