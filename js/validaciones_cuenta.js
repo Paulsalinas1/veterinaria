@@ -333,3 +333,9 @@ function validarDatos(){
     vencimiento_v();
     codigo_v();
 }
+$(".Desplegable-Registro").click(function (e) { 
+    const idBoton = $(this).attr("id");
+    const ultimoCaracter = idBoton.charAt(idBoton.length - 1);
+    const spanId = "icono" + ultimoCaracter;
+    $("#" + spanId).toggleClass("bi-chevron-down bi-chevron-up")
+});
