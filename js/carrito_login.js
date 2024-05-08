@@ -28,11 +28,15 @@ function validarMetodoEnvio(){
     }
 }
 
-function validarCompra(){
-    validarMetodoPago();
-    validarMetodoEnvio();
-}
+function validarCompra() {
+    var metodoPagoValido = validarMetodoPago();
+    var metodoEnvioValido = validarMetodoEnvio();
 
+    if (!metodoPagoValido || !metodoEnvioValido) {
+        // Si alguna de las validaciones falla, detener el envío del formulario
+        return false;
+    }
+}
 
 function incrementarCantidad1(id) {
     const input = document.getElementById(id);
