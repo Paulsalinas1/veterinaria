@@ -25,7 +25,6 @@ $(document).ready(function () {
         if (validarCorreosuario()) {
             if (validarContraseñaUsuario()) {
                 var correo = $("#correoCreado").val();
-                
                 // Realizar alguna validación de los datos si es necesario
                 // Verificar el correo y asignar el action al formulario según sea necesario
                 if (correo.includes("@gmail.com") ) {
@@ -47,6 +46,5 @@ $(document).ready(function () {
             }
         }
     });
-    
 });
 
