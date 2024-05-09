@@ -13,6 +13,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="../icon" href="img/logo.png">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/jquery-3.7.1.min.js"></script>
+        <script src="../js/adm_tienda_jq.js"></script>
+        
     </head>
     <body>
         <!--El título-->
@@ -104,7 +107,7 @@
                         </script>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
-                            <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                            <a type="submit" class="btn btn-success btn-block mb-2" data-bs-toggle="offcanvas" href="#offcanvasExample2">Modificar producto</a>
                             <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
                         </div>
                     </form>
@@ -137,7 +140,7 @@
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
-                            <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                            <a type="submit" class="btn btn-success btn-block mb-2" data-bs-toggle="offcanvas" href="#offcanvasExample2">Modificar producto</a>
                             <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
                         </div>
                     </form>
@@ -170,7 +173,7 @@
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
-                            <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                            <a type="submit" class="btn btn-success btn-block mb-2" data-bs-toggle="offcanvas" href="#offcanvasExample2">Modificar producto</a>
                             <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
                         </div>
                     </form>
@@ -203,7 +206,7 @@
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
-                            <button type="submit" class="btn btn-success btn-block mb-2">Modificar producto</button>
+                            <a type="submit" class="btn btn-success btn-block mb-2" data-bs-toggle="offcanvas" href="#offcanvasExample2">Modificar producto</a>
                             <button type="submit" class="btn btn-success btn-block mb-2">Eliminar producto</button>
                         </div>
                     </form>
@@ -479,26 +482,71 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <div>
-                    <p> Ingrese datos del producto </p>
-                    <div class="card card-body">
-                        <div class="col-md-12 mb-1">
-                            <label for="validationCustom01" class="form-label">Nombre producto</label>
-                            <input type="text" class="form-control" id="validationCustom01" value="" required>
-                        </div>
-                        <div class="col-md-12 col-sm-12 mb-2 ">
-                            <label for="exampleFormControlTextarea1" class="form-label">Descripción producto</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="file" class="form-control" id="inputGroupFile01">
+                    <form class="row needs-validation" action="../html/tienda_trabajador.html" method="get" novalidate>
+                        <div>
+                            <p> Ingrese datos del producto </p>
+                            <div class="card card-body">
+                                <div class="col-md-12 mb-1">
+                                    <label for="validationCustom01" class="form-label">Nombre producto</label>
+                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                 </div>
+                                <div class="col-md-12 col-sm-12 mb-2 ">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Descripción producto</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 mb-2 ">
+                                    <label for="valorp_1" class="form-label">precio producto</label>
+                                    <input type="text" class="form-control" id="valorp_1"  required>
+                                </div>
+    
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control" id="inputGroupFile01" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <button type="submit" class="btn btn-success w-100 " >Agregar</button>
+                                </div>
                             </div>
-                        <div class="mb-3">
-                            <a class="btn btn-success w-100 " href="#">Agregar</a>
                         </div>
-                    </div>
-                    </div>
-                    
+                    </form>
+                </div>
+            </div>
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExample2Label">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExample2Label">Modificar productos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form action="">
+                        <div>
+                            <p> modifique los datos del producto </p>
+                            <div class="card card-body">
+                                <div class="col-md-12 mb-1">
+                                    <label for="validationCustom01" class="form-label">Nombre producto</label>
+                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                 </div>
+                                <div class="col-md-12 col-sm-12 mb-2 ">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Descripción producto</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+    
+                                <div class="col-md-12 col-sm-12 mb-2 ">
+                                    <label for="valorp_2" class="form-label">precio producto</label>
+                                    <input type="text" class="form-control" id="valorp_2"  required>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control" id="inputGroupFile01">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <button type="submit" class="btn btn-success w-100 " >Agregar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -526,5 +574,6 @@
                 </div>
             </div>
         </header>
+        <script src="../js/adm_tienda.js"></script>
     </body>
 </html>
