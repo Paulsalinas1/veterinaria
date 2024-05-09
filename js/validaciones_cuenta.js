@@ -185,23 +185,28 @@ function vencimiento_v() {
     var mesActual = fechaActual.getMonth() + 1; // Se suma 1 porque los meses van de 0 a 11
     var añoActual = fechaActual.getFullYear().toString().slice(-2);
 
-    alert(añoActual);
     // Obtiene el mes y el año de la fecha ingresada por el usuario
     var partesFecha = fechaIngresada.split('/');
     var mesIngresado = parseInt(partesFecha[0], 10);
     var añoIngresado = parseInt(partesFecha[1], 10);
 
+    // Expresión regular para verificar si el mes está en el rango de 01 a 12
+    var regex = /^(0[1-9]|1[0-2])$/;
+
     if (fechaIngresada === "") {
         mensajeError.innerText = "Por favor, ingrese una fecha";
         mensajeError.style.color = "red";
         return false;
-    }//else if (añoActual >= añoIngresado || (añoActual === añoIngresado && mesActual > mesIngresado)){
-       else if (añoIngresado < añoActual || (añoIngresado <= añoActual && mesIngresado < mesActual)) {
-        mensajeError.innerText = "Su tarjeta ya expiró, pruebe con otra."+añoActual;
+    } else if (añoIngresado < añoActual || (añoIngresado <= añoActual && mesIngresado < mesActual)) {
+        mensajeError.innerText = "Su tarjeta ya expiró, pruebe con otra." + añoActual;
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario
+    } else if (!regex.test(partesFecha[0])) {
+        mensajeError.innerText = "Por favor, ingrese un mes válido (01-12)";
+        mensajeError.style.color = "red";
+        return false;
     } else if (fechaIngresada.length !== 5) {
-        mensajeError.innerText = "Por favor, ingrese una fecha válida";
+        mensajeError.innerText = "Por favor, ingrese una fecha válida (MM/YY)";
         mensajeError.style.color = "red";
         return false;
     } else {
