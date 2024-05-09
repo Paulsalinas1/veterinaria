@@ -197,19 +197,19 @@ function vencimiento_v() {
         mensajeError.innerText = "Por favor, ingrese una fecha";
         mensajeError.style.color = "red";
         return false;
-    } else if (añoIngresado < añoActual || (añoIngresado <= añoActual && mesIngresado < mesActual)) {
-        mensajeError.innerText = "Su tarjeta ya expiró, pruebe con otra.";
-        mensajeError.style.color = "red";
-        return false; // Evita que se envíe el formulario
-    } else if (!regex.test(partesFecha[0])) {
-        mensajeError.innerText = "Por favor, ingrese un mes válido (01-12)";
-        mensajeError.style.color = "red";
-        return false;
     } else if (fechaIngresada.length !== 5) {
         mensajeError.innerText = "Por favor, ingrese una fecha válida (mes/año)";
         mensajeError.style.color = "red";
         return false;
-    } else {
+    } else if (!regex.test(partesFecha[0])) {
+        mensajeError.innerText = "Por favor, ingrese un mes válido (01-12)";
+        mensajeError.style.color = "red";
+        return false;
+    } else if (añoIngresado < añoActual || (añoIngresado = añoActual && mesIngresado < mesActual)) {
+        mensajeError.innerText = "Su tarjeta ya expiró, pruebe con otra.";
+        mensajeError.style.color = "red";
+        return false; // Evita que se envíe el formulario
+    }  else {
         mensajeError.innerText = "Fecha válida ✅";
         mensajeError.style.color = "green";
         return true;
