@@ -63,7 +63,6 @@ $(document).ready(function () {
     $("#targeta").attr("minlength","16");
     $("#targeta").attr("maxlength","16");
     $("#targeta").attr("onkeypress","return soloNumeros(event)");
-    $("#fecha").attr("pattern","(0[1-9]|1[0-2])\/\d{2}");
     $("#fecha").attr("maxlength","5");
     $("#fecha").attr("minlength","5");
     $("#cs").attr("pattern","[0-9]{3}");
