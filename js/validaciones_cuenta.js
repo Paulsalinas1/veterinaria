@@ -46,9 +46,9 @@ function contra_1() {
     }
 }
 
-function mostrarOcultarContraseña() {
+function verContraseña() {
     var contraseñaInput = document.getElementById("contraseña");
-    var ojoIcono = document.getElementById("show-hide");
+    var ojoIcono = document.getElementById("show-hide1");
 
     if (contraseñaInput.type === "password") {
         contraseñaInput.type = "text";
@@ -57,7 +57,22 @@ function mostrarOcultarContraseña() {
     } else {
         contraseñaInput.type = "password";
         ojoIcono.classList.remove("bi-eye");
-        ojoIcono.classList.add("bi-eye-slash");
+        ojoIcono.classList.add("fa-eye-slash");
+    }
+}
+
+function verOtraContraseña() {
+    var contraseñaInput = document.getElementById("repetirContraseña");
+    var ojoIcono = document.getElementById("show-hide2");
+
+    if (contraseñaInput.type === "password") {
+        contraseñaInput.type = "text";
+        ojoIcono.classList.remove("bi-eye-slash");
+        ojoIcono.classList.add("bi-eye");
+    } else {
+        contraseñaInput.type = "password";
+        ojoIcono.classList.remove("bi-eye");
+        ojoIcono.classList.add("fa-eye-slash");
     }
 }
 

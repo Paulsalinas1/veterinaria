@@ -35,16 +35,16 @@
                 <!--Ingreso de correo-->
                 <div class="col-md-12 col-sm-6 mb-1 ">
                     <label for="correo" class="form-label">Correo*</label>
-                    <input type="email" class="form-control" id="correo" name="correo" placeholder="Ej: juan.alcachofa@gmail.com" required>
+                    <input type="email" class="form-control" id="correo" name="correo" placeholder="Ej: juan.alcachofa@gmail.com"  required>
                     <span id="mensajeErrorCorreoCrear"></span>
                 </div>
                 <!--Ingreso de contraseña-->
                 <div class="col-md-6 col-sm-6 mb-1">
-                    <label for="validationCustom01" class="form-label">Contraseña*</label>
+                    <label for="validationCustom01" class="form-label" >Contraseña*</label>
                     <div class="input-group">
                         <input type="password" class="form-control" id="contraseña" name="contraseña" required>
-                        <button class="btn btn-outline-secondary" type="button" id="ojo" onclick="mostrarOcultarContraseña()">
-                            <i id="show-hide" class="fa solid fa-eye-slash"></i>
+                        <button class="btn btn-outline-secondary" type="button" id="contraseña" onclick="verContraseña()">
+                            <i id="show-hide1" class="fa-solid fa-eye-slash"></i>
                         </button>
                     </div>
                     <span id="mensajeErrorContraseña"></span>
@@ -54,18 +54,18 @@
                     <label for="validationCustom01" class="form-label">Repetir contraseña*</label>
                     <div class="input-group">
                         <input type="password" class="form-control" id="repetirContraseña" name="repetirContraseña" required>
-                        <button class="btn btn-outline-secondary" type="button" id="ojo2">
-                            <i id="show-hide" class="fa-solid fa-eye-slash"></i>
+                        <button class="btn btn-outline-secondary" type="button" id="repetirContraseña" onclick="verOtraContraseña()">
+                            <i id="show-hide2" class="fa-solid fa-eye-slash"></i>
                         </button>
                     </div>
                     <span id="mensajeErrorRepetirContraseña"></span>
                 </div>
                 <!--Despligue de datos para usuario-->
                 <p class="d-inline-flex gap-1">
-                    <a class="btn btn-success col-md-6 col-sm-6 mb-1 Desplegable-Registro" id="btnDesp1" data-bs-toggle="collapse" href="#datos_Usuario"
+                    <button class="btn btn-success col-md-6 col-sm-6 mb-1 Desplegable-Registro" id="btnDesp1" data-bs-toggle="collapse" href="#datos_Usuario"
                         role="button" aria-expanded="false" aria-controls="collapseExample">
                         Datos usuario <i id="icono1" class="bi bi-chevron-down"></i>
-                    </a>
+                </button>
                     <!--Despligue de datos para método de pago-->
                     <button class="btn btn-success col-md-6 col-sm-6 mb-1 Desplegable-Registro" id="btnDesp2" type="button" data-bs-toggle="collapse"
                         data-bs-target="#metodo_Pago" aria-expanded="false" aria-controls="collapseExample">
@@ -151,7 +151,7 @@
                     <a href="index.html">Menú</a>
                 </div>
                 <div class="mb-3">
-                    <a href="login_tienda.html">Inicio sesión</a>
+                    <a href="login.html">Inicio sesión</a>
                 </div>
             </form>
         </div>
