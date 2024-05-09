@@ -44,7 +44,21 @@ function contra_1() {
         mensajeError.style.color = "green";
         return true;
     }
-    
+}
+
+function mostrarOcultarContraseña() {
+    var contraseñaInput = document.getElementById("contraseña");
+    var ojoIcono = document.getElementById("show-hide");
+
+    if (contraseñaInput.type === "password") {
+        contraseñaInput.type = "text";
+        ojoIcono.classList.remove("bi-eye-slash");
+        ojoIcono.classList.add("bi-eye");
+    } else {
+        contraseñaInput.type = "password";
+        ojoIcono.classList.remove("bi-eye");
+        ojoIcono.classList.add("bi-eye-slash");
+    }
 }
 
 function contra_2() {
