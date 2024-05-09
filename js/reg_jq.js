@@ -12,7 +12,7 @@ $(document).ready(function () {
     });
     
     $("#ojo").click(function () {
-        togglePassword1();
+        verContraseña();
     });
 
     $("#repetirContraseña").blur(function () {
@@ -20,7 +20,7 @@ $(document).ready(function () {
     });
 
     $("#ojo2").click(function () {
-        togglePassword2();
+        verOtraContraseña();
     });
 
     $("#nombre").blur(function () {
