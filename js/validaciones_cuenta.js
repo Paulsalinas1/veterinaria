@@ -205,7 +205,7 @@ function vencimiento_v() {
         mensajeError.innerText = "Por favor, ingrese un mes válido (01-12)";
         mensajeError.style.color = "red";
         return false;
-    } else if (añoIngresado < añoActual || (añoIngresado = añoActual && mesIngresado < mesActual)) {
+    } else if (añoIngresado < añoActual || (añoIngresado === añoActual && mesIngresado < mesActual)) {
         mensajeError.innerText = "Su tarjeta ya expiró, pruebe con otra.";
         mensajeError.style.color = "red";
         return false; // Evita que se envíe el formulario
@@ -367,33 +367,32 @@ function validarDatos(){
     tageta_v();
     vencimiento_v();
     codigo_v();
+    validar_desp1();
+    validar_desp2();
+}
+
+function validar_desp1(){
 
     // Verificar si hay algún campo vacío
-    var camposIncompletos = document.querySelectorAll("input:invalid");
-    if (camposIncompletos.length > 0) {
-        // Al menos un campo está incompleto, cambiar el color de los botones a rojo
+    if (!nombre_v()||!apellido_v()||!telefono()){
         document.getElementById("btnDesp1").classList.add("btn-danger");
-        document.getElementById("btnDesp2").classList.add("btn-danger");
-    } else {
-        // Todos los campos están completos, cambiar el color de los botones a verde
+    }else{
         document.getElementById("btnDesp1").classList.remove("btn-danger");
-        document.getElementById("btnDesp2").classList.remove("btn-danger");
         document.getElementById("btnDesp1").classList.add("btn-success");
+    }
+}
+
+function validar_desp2(){
+    // Verificar si hay algún campo vacío
+    if (!tageta_v()||!vencimiento_v()||!codigo_v()){
+        document.getElementById("btnDesp2").classList.add("btn-danger");
+    }else{
+        document.getElementById("btnDesp2").classList.remove("btn-danger");
         document.getElementById("btnDesp2").classList.add("btn-success");
     }
 }
 
-function pintarVerdeU() {
-    // Cambiar el color del botón "Agregar datos usuario" a verde
-    document.getElementById("btnDesp1").classList.remove("btn-danger");
-    document.getElementById("btnDesp1").classList.add("btn-success");
-}
 
-function pintarVerdeM() {
-    // Cambiar el color del botón "Agregar métodos de pago" a verde
-    document.getElementById("btnDesp2").classList.remove("btn-danger");
-    document.getElementById("btnDesp2").classList.add("btn-success");
-}
 
 $(".Desplegable-Registro").click(function (e) { 
     const idBoton = $(this).attr("id");
