@@ -68,5 +68,7 @@ $(document).ready(function () {
     $("#cs").attr("pattern","[0-9]{3}");
     $("#cs").attr("minlength","3");
     $("#cs").attr("maxlength","3");
+    $("#btnDesp1").attr("onclick","validar_desp1()");
+    $("#btnDesp2").attr("onclick","validar_desp2()");
     $("#cs").attr("onkeypress","return soloNumeros(event)");
 });
