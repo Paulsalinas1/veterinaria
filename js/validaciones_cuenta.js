@@ -183,8 +183,9 @@ function vencimiento_v() {
     // Obtiene el mes y el año actuales del sistema
     var fechaActual = new Date();
     var mesActual = fechaActual.getMonth() + 1; // Se suma 1 porque los meses van de 0 a 11
-    var añoActual = fechaActual.getFullYear();
+    var añoActual = fechaActual.getFullYear().toString().slice(-2);
 
+    alert(añoActual);
     // Obtiene el mes y el año de la fecha ingresada por el usuario
     var partesFecha = fechaIngresada.split('/');
     var mesIngresado = parseInt(partesFecha[0], 10);
@@ -194,10 +195,11 @@ function vencimiento_v() {
         mensajeError.innerText = "Por favor, ingrese una fecha";
         mensajeError.style.color = "red";
         return false;
-    } else if (añoActual < añoIngresado || (añoActual === añoIngresado && mesActual > mesIngresado)) {
-        mensajeError.innerText = "Su tarjeta ya expiró, pruebe con otra.";
+    }//else if (añoActual >= añoIngresado || (añoActual === añoIngresado && mesActual > mesIngresado)){
+       else if (añoIngresado < añoActual || (añoIngresado <= añoActual && mesIngresado < mesActual)) {
+        mensajeError.innerText = "Su tarjeta ya expiró, pruebe con otra."+añoActual;
         mensajeError.style.color = "red";
-        return false;
+        return false; // Evita que se envíe el formulario
     } else if (fechaIngresada.length !== 5) {
         mensajeError.innerText = "Por favor, ingrese una fecha válida";
         mensajeError.style.color = "red";
@@ -207,7 +209,6 @@ function vencimiento_v() {
         mensajeError.style.color = "green";
         return true;
     }
-    
 }
 
 function codigo_v() {
