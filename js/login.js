@@ -1,10 +1,16 @@
 //Función para mostrar contraseña de usuarios
-function togglePassword() {
-    var input = document.getElementById("contraseñaCreada");
-    if (input.type === "password") {
-        input.type = "text";
+function verContraseña() {
+    var contraseñaInput = document.getElementById("contraseñaCreada");
+    var ojoIcono = document.getElementById("show-hide1");
+
+    if (contraseñaInput.type === "password") {
+        contraseñaInput.type = "text";
+        ojoIcono.classList.remove("bi-eye-slash");
+        ojoIcono.classList.add("bi-eye");
     } else {
-        input.type = "password";
+        contraseñaInput.type = "password";
+        ojoIcono.classList.remove("bi-eye");
+        ojoIcono.classList.add("fa-eye-slash");
     }
 }
 
@@ -54,20 +60,7 @@ function validarContraseñaUsuario(){
         return true;// Envía los datos ingresados si son correctos
     }
 }
-function verContraseña() {
-    var contraseñaInput = document.getElementById("contraseñaCreada");
-    var ojoIcono = document.getElementById("show-hide1");
 
-    if (contraseñaInput.type === "password") {
-        contraseñaInput.type = "text";
-        ojoIcono.classList.remove("bi-eye-slash");
-        ojoIcono.classList.add("bi-eye");
-    } else {
-        contraseñaInput.type = "password";
-        ojoIcono.classList.remove("bi-eye");
-        ojoIcono.classList.add("fa-eye-slash");
-    }
-}
 
 function validarInicioS2(){
     validarCorreosuario();
