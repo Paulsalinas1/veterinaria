@@ -10,6 +10,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="../css/cssmain.css">
         <link rel="icon" href="../img/logo.png">
+        <script src="../js/jquery-3.7.1.min.js"></script>
+        
         <title>Mi_cuenta</title>
     </head>
     <body>
@@ -71,19 +73,20 @@
                         <div class="card card-body">
                             <form class="row needs-validation" action="" method="get" novalidate>
                                 <div class="col-md-12">
-                                    <label for="validationCustom01" class="form-label">run</label>
-                                    <input type="text" class="form-control" id="validationCustom01" value="19836213-1" disabled >
+                                    <label for="vale_run" class="form-label">run</label>
+                                    <input type="text" class="form-control" id="vale_run" value="19836213-1" disabled >
                                 </div>
                                 <div class="col-md-12">
-                                    <label for="validationCustom01" class="form-label">Correo</label>
-                                    <input type="text" class="form-control" id="validationCustom01" value="cliente@gmail.com" disabled>
+                                    <label for="vale_correo" class="form-label">Correo</label>
+                                    <input type="text" class="form-control" id="vale_correo" value="cliente@gmail.com" disabled>
                                 </div>
                                 <div class="col-md-12 col-sm-12 ">
-                                    <label for="validationCustom01" class="form-label">Contraseña</label>
-                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                    <label for="vali_contra" class="form-label">Contraseña*</label>
+                                    <input type="text" class="form-control" id="vali_contra" value="" required>
+                                    <span id="mensajeErrorvali_contra"></span>
                                 </div>
                                 <div class="mb-3">
-                                    <button type="submit" class="btn btn-primary w-100 "> Modificar</button>
+                                    <button type="submit" class="btn btn-primary w-100 " id="btn_vali1"> Modificar</button>
                                 </div>
                             </form>
                         </div>
@@ -94,23 +97,27 @@
                         <div class="card card-body">
                             <form class="row needs-validation" action="" method="get" novalidate>
                                 <div class="col-md-12 mb-1 col-sm-12">
-                                    <label for="validationCustom01" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                    <label for="vali_nombre" class="form-label">Nombre*</label>
+                                    <input type="text" class="form-control" id="vali_nombre" value="" required>
+                                    <span id="mensajeErrorvali_nombre"></span>
                                 </div>
                                 <div class="col-md-12 mb-1 col-sm-12">
-                                    <label for="validationCustom02" class="form-label">Apellido</label>
-                                    <input type="text" class="form-control" id="validationCustom02" value="" required>
+                                    <label for="vali_ape" class="form-label">Apellido*</label>
+                                    <input type="text" class="form-control" id="vali_ape" value="" required>
+                                    <span id="mensajeErrorvali_ape"></span> 
                                 </div>
                                 <div class="col-md-12 mb-1 col-sm-12">
-                                    <label for="validationCustom03" class="form-label">Comuna</label>
-                                    <input type="text" class="form-control" id="validationCustom03" required>
+                                    <label for="vali_comu" class="form-label">Comuna</label>
+                                    <input type="text" class="form-control" id="vali_comu" >
+                                    
                                 </div>
                                 <div class="col-md-12 mb-1 col-sm-12">
                                     <label for="validationCustom03" class="form-label">Dirección</label>
-                                    <input type="text" class="form-control" id="validationCustom03" required>
+                                    <input type="text" class="form-control" id="validationCustom03">
+                                    
                                 </div>
                                 <div class="mb-3">
-                                    <button type="submit" class="btn btn-primary w-100 "> Modificar</button>
+                                    <button type="submit" class="btn btn-primary w-100 " id="btn_vali2"> Modificar</button>
                                 </div>
                             </form>
                         </div>
@@ -121,23 +128,32 @@
                         <div class="card card-body">
                             <form class="row needs-validation" action="" method="get" novalidate>
                                 <div class="col-md-12 mb-1 col-sm-12">
-                                    <label for="validationCustom05" class="form-label">Targeta de crédito</label>
-                                    <input type="number" class="form-control" id="validationCustom05" required>
+                                    <label for="vali_targe" class="form-label">Targeta de crédito*</label>
+                                    <input type="text" class="form-control" id="vali_targe" required>
+                                    <span id="mensajeErrorvali_targe"></span> 
                                 </div>
                                 <div class="col-md-12 mb-1 col-sm-12">
-                                    <label for="validationCustom04" class="form-label">Fecha de vencimiento</label>
-                                    <input type="text" class="form-control" id="validationCustom04" required>
+                                    <label for="vali_fv" class="form-label">Fecha de vencimiento*</label>
+                                    <input type="text" class="form-control" id="vali_fv" required>
+                                    <span id="mensajeErrorvali_fv"></span> 
                                 </div>
                                 <div class="col-md-12 mb-1 col-sm-12">
-                                    <label for="validationCustom05" class="form-label">Código de seguridad</label>
-                                    <input class="form-control" id="validationCustom05" required>
+                                    <label for="vali_cs" class="form-label">Código de seguridad*</label>
+                                    <input class="form-control" id="vali_cs" required>
+                                    <span id="mensajeErrorvali_cs"></span> 
                                 </div>
                                 <div class="col-md-12 mb-1 col-sm-12">
-                                    <label for="validationCustom06" class="form-label">Teléfono</label>
-                                    <input type="text" class="form-control" id="validationCustom06" required>
+                                    <label for="vali_fono" class="form-label">Teléfono*</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">+56</span>
+                                        <input type="text" class="form-control" id="vali_fono" required>
+                                    </div>
+                                    <span id="mensajeErrorvali_fono"></span> 
+                                    
+                                    
                                 </div>
                                 <div class="mb-3">
-                                    <button type="submit" class="btn btn-primary w-100 "> Modificar</button>
+                                    <button type="submit" class="btn btn-primary w-100 " id="btn_vali3"> Modificar</button>
                                 </div>
                             </form>
                         </div>
@@ -253,6 +269,7 @@
                 </div>
             </header>
         </div>
-        <script src="../js/usuario_adm_js.js"></script>  
+         <script src="../js/user_cuenta.js"></script>
+         <script src="../js/user_cuenta_jq.js"></script>
     </body>
 </html>
