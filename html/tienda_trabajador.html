@@ -93,18 +93,7 @@
                             <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
                             <button type="button" onclick="incrementarCantidad('cantidad1')">+</button>
                         </div>
-                        <script>
-                            function incrementarCantidad(id) {
-                                const input = document.getElementById(id);
-                                input.value = parseInt(input.value) + 1;
-                            }
-                            function decrementarCantidad(id) {
-                                const input = document.getElementById(id);
-                                if (parseInt(input.value) > 0) {
-                                    input.value = parseInt(input.value) - 1;
-                                }
-                            }
-                        </script>
+                        
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
                             <a type="submit" class="btn btn-success btn-block mb-2" data-bs-toggle="offcanvas" href="#offcanvasExample2">Modificar producto</a>
@@ -122,21 +111,10 @@
                     <p>Precio: <span class="precio">$42.500</span></p>
                     <form>
                         <div class="d-flex align-items-center">
-                            <button type="button" onclick="decrementarCantidad2('cantidad2')">-</button>
-                            <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
-                            <button type="button" onclick="incrementarCantidad2('cantidad2')">+</button>
-                            <script>
-                                function incrementarCantidad2(id) {
-                                    const input = document.getElementById(id);
-                                    input.value = parseInt(input.value) + 1;
-                                }
-                                function decrementarCantidad2(id) {
-                                    const input = document.getElementById(id);
-                                    if (parseInt(input.value) > 0) {
-                                        input.value = parseInt(input.value) - 1;
-                                    }
-                                }
-                            </script>
+                            <button type="button" onclick="decrementarCantidad('cantidad2')">-</button>
+                            <input type="number" id="cantidad2" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
+                            <button type="button" onclick="incrementarCantidad('cantidad2')">+</button>
+                            
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
@@ -155,21 +133,10 @@
                     <p>Precio: <span class="precio">$2.990</span></p>
                     <form>
                         <div class="d-flex align-items-center">
-                            <button type="button" onclick="decrementarCantidad3('cantidad3')">-</button>
-                            <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
-                            <button type="button" onclick="incrementarCantidad3('cantidad3')">+</button>
-                            <script>
-                                function incrementarCantidad3(id) {
-                                    const input = document.getElementById(id);
-                                    input.value = parseInt(input.value) + 1;
-                                }
-                                function decrementarCantidad3(id) {
-                                    const input = document.getElementById(id);
-                                    if (parseInt(input.value) > 0) {
-                                        input.value = parseInt(input.value) - 1;
-                                    }
-                                }
-                            </script>
+                            <button type="button" onclick="decrementarCantidad('cantidad3')">-</button>
+                            <input type="number" id="cantidad3" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
+                            <button type="button" onclick="incrementarCantidad('cantidad3')">+</button>
+                            
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
@@ -188,21 +155,10 @@
                     <p>Precio: <span class="precio">$4.990</span></p>
                     <form>
                         <div class="d-flex align-items-center">
-                            <button type="button" onclick="decrementarCantidad4('cantidad4')">-</button>
-                            <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
-                            <button type="button" onclick="incrementarCantidad4('cantidad4')">+</button>
-                            <script>
-                                function incrementarCantidad4(id) {
-                                    const input = document.getElementById(id);
-                                    input.value = parseInt(input.value) + 1;
-                                }
-                                function decrementarCantidad4(id) {
-                                    const input = document.getElementById(id);
-                                    if (parseInt(input.value) > 0) {
-                                        input.value = parseInt(input.value) - 1;
-                                    }
-                                }
-                            </script>
+                            <button type="button" onclick="decrementarCantidad('cantidad4')">-</button>
+                            <input type="number" id="cantidad4" name="Cantidad4" min="0" step="1" value="0" readonly style="width: 50px;">
+                            <button type="button" onclick="incrementarCantidad('cantidad4')">+</button>
+                            
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
@@ -221,21 +177,10 @@
                     <p>Precio: <span class="precio">$8.990</span></p>
                     <form>
                         <div class="d-flex align-items-center">
-                            <button type="button" onclick="decrementarCantidad5('cantidad5')">-</button>
-                            <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
-                            <button type="button" onclick="incrementarCantidad5('cantidad5')">+</button>
-                            <script>
-                                function incrementarCantidad5(id) {
-                                    const input = document.getElementById(id);
-                                    input.value = parseInt(input.value) + 1;
-                                }
-                                function decrementarCantidad5(id) {
-                                    const input = document.getElementById(id);
-                                    if (parseInt(input.value) > 0) {
-                                        input.value = parseInt(input.value) - 1;
-                                    }
-                                }
-                            </script>
+                            <button type="button" onclick="decrementarCantidad('cantidad5')">-</button>
+                            <input type="number" id="cantidad5" name="Cantidad5" min="0" step="1" value="0" readonly style="width: 50px;">
+                            <button type="button" onclick="incrementarCantidad('cantidad5')">+</button>
+                            
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
@@ -254,21 +199,10 @@
                     <p>Precio: <span class="precio">$4.990</span></p>
                     <form>
                         <div class="d-flex align-items-center">
-                            <button type="button" onclick="decrementarCantidad6('cantidad6')">-</button>
-                            <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
-                            <button type="button" onclick="incrementarCantidad6('cantidad6')">+</button>
-                            <script>
-                                function incrementarCantidad6(id) {
-                                    const input = document.getElementById(id);
-                                    input.value = parseInt(input.value) + 1;
-                                }
-                                function decrementarCantidad6(id) {
-                                    const input = document.getElementById(id);
-                                    if (parseInt(input.value) > 0) {
-                                        input.value = parseInt(input.value) - 1;
-                                    }
-                                }
-                            </script>
+                            <button type="button" onclick="decrementarCantidad('cantidad6')">-</button>
+                            <input type="number" id="cantidad6" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
+                            <button type="button" onclick="incrementarCantidad('cantidad6')">+</button>
+                            
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
@@ -287,21 +221,10 @@
                     <p>Precio: <span class="precio">$7.990</span></p>
                     <form>
                         <div class="d-flex align-items-center">
-                            <button type="button" onclick="decrementarCantidad7('cantidad7')">-</button>
-                            <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
-                            <button type="button" onclick="incrementarCantidad4('cantidad7')">+</button>
-                            <script>
-                                function incrementarCantidad7(id) {
-                                    const input = document.getElementById(id);
-                                    input.value = parseInt(input.value) + 1;
-                                }
-                                function decrementarCantidad7(id) {
-                                    const input = document.getElementById(id);
-                                    if (parseInt(input.value) > 0) {
-                                        input.value = parseInt(input.value) - 1;
-                                    }
-                                }
-                            </script>
+                            <button type="button" onclick="decrementarCantidad('cantidad7')">-</button>
+                            <input type="number" id="cantidad7" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
+                            <button type="button" onclick="incrementarCantidad('cantidad7')">+</button>
+                            
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
@@ -320,21 +243,10 @@
                     <p>Precio: <span class="precio">$6.990</span></p>
                     <form>
                         <div class="d-flex align-items-center">
-                            <button type="button" onclick="decrementarCantidad8('cantidad8')">-</button>
-                            <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
-                            <button type="button" onclick="incrementarCantidad8('cantidad8')">+</button>
-                            <script>
-                                function incrementarCantidad8(id) {
-                                    const input = document.getElementById(id);
-                                    input.value = parseInt(input.value) + 1;
-                                }
-                                function decrementarCantidad8(id) {
-                                    const input = document.getElementById(id);
-                                    if (parseInt(input.value) > 0) {
-                                        input.value = parseInt(input.value) - 1;
-                                    }
-                                }
-                            </script>
+                            <button type="button" onclick="decrementarCantidad('cantidad8')">-</button>
+                            <input type="number" id="cantidad8" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
+                            <button type="button" onclick="incrementarCantidad('cantidad8')">+</button>
+                            
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
@@ -353,21 +265,10 @@
                     <p>Precio: <span class="precio">$5.990</span></p>
                     <form>
                         <div class="d-flex align-items-center">
-                            <button type="button" onclick="decrementarCantidad9('cantidad9')">-</button>
-                            <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
-                            <button type="button" onclick="incrementarCantidad9('cantidad9')">+</button>
-                            <script>
-                                function incrementarCantidad9(id) {
-                                    const input = document.getElementById(id);
-                                    input.value = parseInt(input.value) + 1;
-                                }
-                                function decrementarCantidad9(id) {
-                                    const input = document.getElementById(id);
-                                    if (parseInt(input.value) > 0) {
-                                        input.value = parseInt(input.value) - 1;
-                                    }
-                                }
-                            </script>
+                            <button type="button" onclick="decrementarCantidad('cantidad9')">-</button>
+                            <input type="number" id="cantidad9" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
+                            <button type="button" onclick="incrementarCantidad('cantidad9')">+</button>
+                            
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
@@ -386,21 +287,10 @@
                     <p>Precio: <span class="precio">$6.990</span></p>
                     <form>
                         <div class="d-flex align-items-center">
-                            <button type="button" onclick="decrementarCantidad10('cantidad10')">-</button>
-                            <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
-                            <button type="button" onclick="incrementarCantidad10('cantidad10')">+</button>
-                            <script>
-                                function incrementarCantidad10(id) {
-                                    const input = document.getElementById(id);
-                                    input.value = parseInt(input.value) + 1;
-                                }
-                                function decrementarCantidad10(id) {
-                                    const input = document.getElementById(id);
-                                    if (parseInt(input.value) > 0) {
-                                        input.value = parseInt(input.value) - 1;
-                                    }
-                                }
-                            </script>
+                            <button type="button" onclick="decrementarCantidad('cantidad10')">-</button>
+                            <input type="number" id="cantidad10" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
+                            <button type="button" onclick="incrementarCantidad('cantidad10')">+</button>
+                            
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
@@ -419,21 +309,10 @@
                     <p>Precio: <span class="precio">$4.490</span></p>
                     <form>
                         <div class="d-flex align-items-center">
-                            <button type="button" onclick="decrementarCantidad11('cantidad11')">-</button>
-                            <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
-                            <button type="button" onclick="incrementarCantidad11('cantidad11')">+</button>
-                            <script>
-                                function incrementarCantidad11(id) {
-                                    const input = document.getElementById(id);
-                                    input.value = parseInt(input.value) + 1;
-                                }
-                                function decrementarCantidad11(id) {
-                                    const input = document.getElementById(id);
-                                    if (parseInt(input.value) > 0) {
-                                        input.value = parseInt(input.value) - 1;
-                                    }
-                                }
-                            </script>
+                            <button type="button" onclick="decrementarCantidad('cantidad11')">-</button>
+                            <input type="number" id="cantidad11" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
+                            <button type="button" onclick="incrementarCantidad('cantidad11')">+</button>
+                            
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
@@ -452,21 +331,10 @@
                     <p>Precio: <span class="precio">$7.100</span></p>
                     <form>
                         <div class="d-flex align-items-center">
-                            <button type="button" onclick="decrementarCantidad12('cantidad12')">-</button>
-                            <input type="number" id="cantidad1" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
-                            <button type="button" onclick="incrementarCantidad12('cantidad12')">+</button>
-                            <script>
-                                function incrementarCantidad12(id) {
-                                    const input = document.getElementById(id);
-                                    input.value = parseInt(input.value) + 1;
-                                }
-                                function decrementarCantidad12(id) {
-                                    const input = document.getElementById(id);
-                                    if (parseInt(input.value) > 0) {
-                                        input.value = parseInt(input.value) - 1;
-                                    }
-                                }
-                            </script>
+                            <button type="button" onclick="decrementarCantidad('cantidad12')">-</button>
+                            <input type="number" id="cantidad12" name="Cantidad" min="0" step="1" value="0" readonly style="width: 50px;">
+                            <button type="button" onclick="incrementarCantidad('cantidad12')">+</button>
+                            
                         </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-success btn-block mb-2">Reponer stock</button>
