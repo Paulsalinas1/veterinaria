@@ -139,20 +139,24 @@ function apellido_v() {
 }
 
 function telefono() {
+    var fono2 = document.getElementById("fono");
     var telefono = document.getElementById("fono").value;
     var mensajeError = document.getElementById("mensajeErrorTelefono");
 
     if (telefono === "") {
         mensajeError.innerText = "Por favor, ingrese su número telefónico";
         mensajeError.style.color = "red";
+        fono2.setCustomValidity("telefono no valido");
         return false;
     } else if (telefono.length !== 9) {
         mensajeError.innerText = "Por favor, ingrese un número válido";
         mensajeError.style.color = "red";
+        fono2.setCustomValidity("telefono no valido");
         return false;
     } else {
         mensajeError.innerText = "Número válido ✅";
         mensajeError.style.color = "green";
+        fono2.setCustomValidity("");
         return true;
     }
     
@@ -389,8 +393,6 @@ function validar_desp2(){
         document.getElementById("btnDesp2").classList.add("btn-success");
     }
 }
-
-
 
 $(".Desplegable-Registro").click(function (e) { 
     const idBoton = $(this).attr("id");
