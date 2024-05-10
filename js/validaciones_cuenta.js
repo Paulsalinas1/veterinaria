@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------------------
 
 function validarCorreoCrear() {
-    var coreoinp = document.getElementById("correoCreado");
+    var coreoinp = document.getElementById("correo");
     var correo = document.getElementById("correo").value;
     var mensajeError = document.getElementById("mensajeErrorCorreoCrear");
 
