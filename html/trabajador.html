@@ -59,7 +59,7 @@
             </div>
         </nav>
         <!--Formulario de información e historial de compras efectuadas por usuarios-->
-        <form class="row needs-validation" novalidate>
+        <div novalidate>
             <div class="text-center">
                 <h1>Administrador</h1>
             </div>
@@ -78,25 +78,26 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="collapse multi-collapse" id="multiCollapseExample2">
                         <div class="card card-body mb-2">
+                            <div>
+                                <h3 class="text-center ">Datos tienda</h3>
+                            </div>
                             <div class="col-md-12 mb-1 ">
-                                <div><label for="nombreTienda">Nombre tienda</label></div>
                                 <form class="form-floating mb-1">
-                                    <input type="text" class="form-control" id="nombreTienda"
-                                        placeholder="Veterinaria Santa Marta" value="Veterinaria Santa Marta">
-
+                                    <input type="text" class="form-control" id="nombreTienda" placeholder="Veterinaria Santa Marta" value="Veterinaria Santa Marta" disabled>
+                                    <label for="nombreTienda">Nombre tienda</label>
                                 </form>
                             </div>
                             <div class="col-md-12 mb-1">
                                 <form class="form-floating mb-1">
                                     <input type="email" class="form-control" id="contactoTienda"
-                                        placeholder="vet.santamarta@gmail.com" value="vet.santamarta@gmail.com">
+                                        placeholder="vet.santamarta@gmail.com" value="vet.santamarta@gmail.com" disabled>
                                     <label for="contactoTienda">Contactos</label>
                                 </form>
                             </div>
                             <div class="col-md-12 mb-1">
                                 <form class="form-floating mb-1">
                                     <input type="text" class="form-control" id="stockGeneral"
-                                        placeholder="200 productos" value="200 productos">
+                                        placeholder="200 productos" value="200 productos" disabled>
                                     <label for="stockGeneral">Stock general</label>
                                 </form>
                             </div>
@@ -106,17 +107,21 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="collapse multi-collapse" id="multiCollapseExample3">
                         <div class="card card-body mb-2">
+                            <div>
+                                <h3 class="text-center ">registro de finanzas </h3>
+                            </div>
                             <div class="col-md-12 mb-1 ">
-                                <div><label for="costosTienda">Costos tienda</label></div>
+                                
                                 <form class="form-floating mb-1">
-                                    <input type="number" class="form-control" id="costosTienda"
-                                        placeholder="Veterinaria Santa Marta" value="$500.000">
+                                    <input type="text" class="form-control" id="costosTienda"
+                                        placeholder="$500.000" value="$500.000" disabled>
+                                    <label for="costosTienda">Costos tienda</label>
                                 </form>
                             </div>
                             <div class="col-md-12 mb-1">
                                 <form class="form-floating mb-1">
-                                    <input type="number" class="form-control" id="costosTienda"
-                                        placeholder="vet.santamarta@gmail.com" value="$750.000">
+                                    <input type="text" class="form-control" id="costosTienda"
+                                        placeholder="$750.000" value="$750.000" disabled>
                                     <label for="floatingInputValue">Ingresos tienda</label>
                                 </form>
                             </div>
@@ -131,42 +136,45 @@
                                 <div>
                                     <h3 class="text-center ">Lista de compras </h3>
                                 </div>
-                                <table class="table table-resp">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Nombre</th>
-                                            <th scope="col">Producto</th>
-                                            <th scope="col">Estado</th>
-                                            <th scope="col">Revición</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td class="col-md-3">Juan aaa</td>
-                                            <td class="col-md-3">Royal Canin adulto Mini Adult </td>
-                                            <td class="col-md-3">En almacén</td>
-                                            <td class="col-md-3"><a class="btn btn-primary" href="Revicion_estado.html">Revición</a></td>
-                                            
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>marta uwu</td>
-                                            <td>Bravery Chicken Adult </td>
-                                            <td>En carretera</td>
-                                            <td><a class="btn btn-primary" href="Revicion_estado.html">Revición</a></td>
-                                            
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>teri a</td>
-                                            <td>Comida perro</td>
-                                            <td>Completado</td>
-                                            <td><a class="btn btn-primary" href="Revicion_estado.html">Revición</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Producto</th>
+                                                <th scope="col">Estado</th>
+                                                <th scope="col">Revición</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td class="col-md-3">Juan aaa</td>
+                                                <td class="col-md-3">Royal Canin adulto Mini Adult </td>
+                                                <td class="col-md-3">En almacén</td>
+                                                <td class="col-md-3"><a class="btn btn-primary" href="Revicion_estado.html">Revición</a></td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>marta uwu</td>
+                                                <td>Bravery Chicken Adult </td>
+                                                <td>En carretera</td>
+                                                <td><a class="btn btn-primary" href="Revicion_estado.html">Revición</a></td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>teri a</td>
+                                                <td>Comida perro</td>
+                                                <td>Completado</td>
+                                                <td><a class="btn btn-primary" href="Revicion_estado.html">Revición</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
