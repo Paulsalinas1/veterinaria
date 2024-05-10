@@ -8,8 +8,8 @@ $(document).ready(function () {
         validarContraseñaUsuario();
     });
 
-    $("#ojo").click(function () {
-        togglePassword();
+    $("#ojo_login").click(function () {
+        verContraseña();
     });
 
     $("#btn_inicio_c").click(function () {
