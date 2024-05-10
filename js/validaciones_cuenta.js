@@ -298,6 +298,7 @@ function togglePassword2() {
         input.type = "password";
     }
 }
+
 // Valida el rut con su cadena completa "XXXXXXXX-X"
 function validaRut() {
     var rutCompleto = document.getElementById("Rut").value;
