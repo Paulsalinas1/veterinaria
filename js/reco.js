@@ -1,6 +1,6 @@
 //Función para recuperar contraseña
 function validarCorreo() {
-    var coreoinp = document.getElementById("correoCreado");
+    var coreoinp = document.getElementById("email2");
     var correo = document.getElementById("email2").value;
     var mensajeError = document.getElementById("mensajeErrorCorreo");
 
