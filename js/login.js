@@ -15,28 +15,34 @@ function verContraseña() {
 }
 
 function validarCorreosuario(){
+    var coreoinp = document.getElementById("correoCreado");
     var correo = document.getElementById("correoCreado").value;
     var mensajeError = document.getElementById("mensajeErrorCorreoCreado");
     
     if (correo === "") {
         mensajeError.innerText = "Por favor, ingrese su correo.";
         mensajeError.style.color = "red";
+        coreoinp.setCustomValidity("no valido");
         return false; // Evita que se envíe el formulario si el correo está vacío
     }else if (correo.includes("@trabajador.com")) {
         mensajeError.innerText = "Correo electrónico de trabajador válido ✅";
         mensajeError.style.color = "green";
+        coreoinp.setCustomValidity("");
         return true; // Envía el formulario si el correo contiene "@trabajador.com"
     }else if (correo.includes("@gmail.com") || correo.includes("@hotmail.com")) {
         mensajeError.innerText = "Correo electrónico válido ✅";
         mensajeError.style.color = "green"; 
+        coreoinp.setCustomValidity("");
         return true; // correo valido
     }else if (correo.includes("@gmail.cl") || correo.includes("@hotmail.cl")) {
         mensajeError.innerText = "Correo electrónico válido ✅";
         mensajeError.style.color = "green"; 
+        coreoinp.setCustomValidity("");
         return true; // correo valido
     }else {
         mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
+        coreoinp.setCustomValidity("no válido");
         return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail .com o .cl" 
     }
    
