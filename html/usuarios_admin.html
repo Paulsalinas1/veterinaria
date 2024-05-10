@@ -60,7 +60,7 @@
         </div>
       </div>
     </nav>
-    <form class="row needs-validation">
+    <form class="row ">
       <p class="d-inline-flex gap-1 justify-content-center">
         <!--Lista de usuarios existentes y bloqueados-->
         <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample5"
@@ -141,7 +141,7 @@
                       <td class="col-md-3">XD</td>
                       <td class="col-md-3">laxup1@gmail.com</td>
                       <td class="col-md-2"> <a class="btn btn-success" data-bs-toggle="offcanvas"
-                          href="#offcanvasExample2" role="button" aria-controls="offcanvasExample">
+                          href="#offcanvasExample2" role="button" aria-controls="offcanvasExample2">
                           Desbloquear
                         </a></td>
                     </tr>
@@ -151,7 +151,7 @@
                       <td>Thornton</td>
                       <td>teri3@gmail.com</td>
                       <td class="col-md-2"> <a class="btn btn-success" data-bs-toggle="offcanvas"
-                          href="#offcanvasExample2" role="button" aria-controls="offcanvasExample">
+                          href="#offcanvasExample2" role="button" aria-controls="offcanvasExample2">
                           Desbloquear
                         </a></td>
                     </tr>
@@ -162,6 +162,7 @@
           </div>
         </div>
       </div>
+    </form>
       <!--Función para bloquear usuario-->
       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
@@ -169,30 +170,30 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <div>
+          <form class="row needs-validation" action="../html/usuarios_admin.html" method="get" novalidate>  
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Decripción del motivo del bloqueo</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <label for="exampleFormControlTextarea" class="form-label">Decripción del motivo del bloqueo</label>
+              <textarea class="form-control" id="exampleFormControlTextarea" rows="3" required></textarea>
             </div>
-            <td class="col-md-2"><a href="" class=" boton bg-success"> Bloquear</a></td>
-          </div>
+            <td class="col-md-2"><button type="submit" class="boton bg-success"> Bloquear</button></td>
+          </form>
         </div>
       </div>
-    </form>
+    
     <!--Función para desbloquear usuario-->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel2">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Desbloqueo</h5>
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel2">Desbloqueo</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <div>
+        <form class="row needs-validation" action="../html/usuarios_admin.html" method="get" novalidate>  
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Decripción del motivo del bloqueo</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="exampleFormControlTextarea2" class="form-label">Decripción del motivo del Desbloqueo</label>
+            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" required></textarea>
           </div>
-          <td class="col-md-2"><a href="" class=" boton bg-success"> Desbloquear</a></td>
-        </div>
+          <td class="col-md-2"><button type="submit" class="boton bg-success"> Desbloquear</button></td>
+        </form>
       </div>
     </div>
     <!--Contactos-->
@@ -218,5 +219,6 @@
               </div>
           </div>
       </header>
+      <script src="../js/usuario_adm_js.js"></script>
   </body>
 </html>
