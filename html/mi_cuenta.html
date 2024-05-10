@@ -51,7 +51,7 @@
             </div>
         </nav>
     <!--Inicio de formulario mi cuenta-->
-        <form class="row needs-validation" novalidate> 
+         <div class="row">
             <div class="text-center">
                 <h1>Mi cuenta</h1>
             </div>
@@ -69,42 +69,50 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="collapse multi-collapse" id="multiCollapseExample1">
                         <div class="card card-body">
-                            <div class="col-md-12">
-                                <label for="validationCustom01" class="form-label">Correo</label>
-                                <input type="text" class="form-control" id="validationCustom01" value="" required>
-                            </div>
-                            <div class="col-md-12 col-sm-12 ">
-                                <label for="validationCustom01" class="form-label">Contraseña</label>
-                                <input type="text" class="form-control" id="validationCustom01" value="" required>
-                            </div>
-                            <div class="mb-3">
-                                <a class="btn btn-primary w-100 " href="#"> Modificar</a>
-                            </div>
+                            <form class="row needs-validation" action="" method="get" novalidate>
+                                <div class="col-md-12">
+                                    <label for="validationCustom01" class="form-label">run</label>
+                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="validationCustom01" class="form-label">Correo</label>
+                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                </div>
+                                <div class="col-md-12 col-sm-12 ">
+                                    <label for="validationCustom01" class="form-label">Contraseña</label>
+                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                </div>
+                                <div class="mb-3">
+                                    <button type="submit" class="btn btn-primary w-100 "> Modificar</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4  col-sm-12">
                     <div class="collapse multi-collapse" id="multiCollapseExample2">
                         <div class="card card-body">
-                            <div class="col-md-12 mb-1 col-sm-12">
-                                <label for="validationCustom01" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="validationCustom01" value="" required>
-                            </div>
-                            <div class="col-md-12 mb-1 col-sm-12">
-                                <label for="validationCustom02" class="form-label">Apellido</label>
-                                <input type="text" class="form-control" id="validationCustom02" value="" required>
-                            </div>
-                            <div class="col-md-12 mb-1 col-sm-12">
-                                <label for="validationCustom03" class="form-label">Comuna</label>
-                                <input type="text" class="form-control" id="validationCustom03" required>
-                            </div>
-                            <div class="col-md-12 mb-1 col-sm-12">
-                                <label for="validationCustom03" class="form-label">Dirección</label>
-                                <input type="text" class="form-control" id="validationCustom03" required>
-                            </div>
-                            <div class="mb-3">
-                                <a class="btn btn-primary w-100 " href="#"> Modificar</a>
-                            </div>
+                            <form class="row needs-validation" action="" method="get" novalidate>
+                                <div class="col-md-12 mb-1 col-sm-12">
+                                    <label for="validationCustom01" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                </div>
+                                <div class="col-md-12 mb-1 col-sm-12">
+                                    <label for="validationCustom02" class="form-label">Apellido</label>
+                                    <input type="text" class="form-control" id="validationCustom02" value="" required>
+                                </div>
+                                <div class="col-md-12 mb-1 col-sm-12">
+                                    <label for="validationCustom03" class="form-label">Comuna</label>
+                                    <input type="text" class="form-control" id="validationCustom03" required>
+                                </div>
+                                <div class="col-md-12 mb-1 col-sm-12">
+                                    <label for="validationCustom03" class="form-label">Dirección</label>
+                                    <input type="text" class="form-control" id="validationCustom03" required>
+                                </div>
+                                <div class="mb-3">
+                                    <button type="submit" class="btn btn-primary w-100 "> Modificar</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -248,6 +256,7 @@
                     </div>
                 </div>
             </header>
-        </form>    
+        </div>
+        <script src="../js/usuario_adm_js.js"></script>  
     </body>
 </html>
