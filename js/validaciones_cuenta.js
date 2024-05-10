@@ -1,28 +1,34 @@
 //--------------------------------------------------------------------------------------------
 
 function validarCorreoCrear() {
+    var coreoinp = document.getElementById("correoCreado");
     var correo = document.getElementById("correo").value;
     var mensajeError = document.getElementById("mensajeErrorCorreoCrear");
 
     if (correo === "") {
         mensajeError.innerText = "Por favor, ingrese su correo.";
         mensajeError.style.color = "red";
+        coreoinp.setCustomValidity("no valido");
         return false; // Evita que se envíe el formulario si el correo está vacío
     }else if (correo.includes("@trabajador.com")) {
         mensajeError.innerText = "Correo electrónico de trabajador válido ✅";
         mensajeError.style.color = "green";
+        coreoinp.setCustomValidity("");
         return true; // Envía el formulario si el correo contiene "@trabajador.com"
     }else if (correo.includes("@gmail.com") || correo.includes("@hotmail.com")) {
         mensajeError.innerText = "Correo electrónico válido ✅";
         mensajeError.style.color = "green"; 
+        coreoinp.setCustomValidity("");
         return true; // correo valido
     }else if (correo.includes("@gmail.cl") || correo.includes("@hotmail.cl")) {
         mensajeError.innerText = "Correo electrónico válido ✅";
         mensajeError.style.color = "green"; 
+        coreoinp.setCustomValidity("");
         return true; // correo valido
     }else {
         mensajeError.innerText = "Ingrese un correo válido.";
         mensajeError.style.color = "red";
+        coreoinp.setCustomValidity("no valido");
         return false; // Evita que se envíe el formulario si el correo no contiene "@gmail o @hotmail .com o .cl" 
     }
 }
@@ -177,6 +183,7 @@ function tageta_v() {
 }
 
 function vencimiento_v() {
+    var fechaups = document.getElementById("fecha");
     var fechaIngresada = document.getElementById("fecha").value;
     var mensajeError = document.getElementById("mensajeErrorfecha");
 
@@ -184,7 +191,7 @@ function vencimiento_v() {
     var fechaActual = new Date();
     var mesActual = fechaActual.getMonth() + 1; // Se suma 1 porque los meses van de 0 a 11
     var añoActual = fechaActual.getFullYear().toString().slice(-2);
-
+    
     // Obtiene el mes y el año de la fecha ingresada por el usuario
     var partesFecha = fechaIngresada.split('/');
     var mesIngresado = parseInt(partesFecha[0], 10);
@@ -196,22 +203,27 @@ function vencimiento_v() {
     if (fechaIngresada === "") {
         mensajeError.innerText = "Por favor, ingrese una fecha";
         mensajeError.style.color = "red";
+        fechaups.setCustomValidity("no valido");
         return false;
     } else if (fechaIngresada.length !== 5) {
         mensajeError.innerText = "Por favor, ingrese una fecha válida (mes/año)";
         mensajeError.style.color = "red";
+        fechaups.setCustomValidity("no valido");
         return false;
     } else if (!regex.test(partesFecha[0])) {
         mensajeError.innerText = "Por favor, ingrese un mes válido (01-12)";
         mensajeError.style.color = "red";
+        fechaups.setCustomValidity("no valido");
         return false;
     } else if (añoIngresado < añoActual || (añoIngresado === añoActual && mesIngresado < mesActual)) {
         mensajeError.innerText = "Su tarjeta ya expiró, pruebe con otra.";
         mensajeError.style.color = "red";
+        fechaups.setCustomValidity("no valido");
         return false; // Evita que se envíe el formulario
     }  else {
         mensajeError.innerText = "Fecha válida ✅";
         mensajeError.style.color = "green";
+        fechaups.setCustomValidity("");
         return true;
     }
 }
