@@ -55,6 +55,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     // Manejar el evento click del botón de inicio de sesión
     $("#Rut").attr("oninput","formatRut()");
+    $("#Rut").attr("maxlength","10");
     $("#contraseña").attr("minlength","6");
     $("#repetirContraseña").attr("minlength","6");
     $("#fono").attr("maxlength","9");

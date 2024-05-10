@@ -2,7 +2,6 @@
 function verContraseña() {
     var contraseñaInput = document.getElementById("contraseñaCreada");
     var ojoIcono = document.getElementById("show-hide1");
-
     if (contraseñaInput.type === "password") {
         contraseñaInput.type = "text";
         ojoIcono.classList.remove("bi-eye-slash");
