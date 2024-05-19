@@ -54,7 +54,7 @@ function contra_1() {
 
 function verContraseña() {
     var contraseñaInput = document.getElementById("contraseña");
-    var ojoIcono = document.getElementById("show-hide1");
+    var ojoIcono = document.getElementById("ojo");
 
     if (contraseñaInput.type === "password") {
         contraseñaInput.type = "text";
